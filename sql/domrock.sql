@@ -35,3 +35,10 @@ CREATE TABLE IF NOT EXISTS estoque (
     FOREIGN KEY (cliente_id) REFERENCES clientes (id_cliente),
     FOREIGN KEY (produto_id) REFERENCES produtos (id_produto)
 );
+
+CREATE TABLE IF NOT EXISTS usuarios (
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    senha VARCHAR(255) NOT NULL
+);
