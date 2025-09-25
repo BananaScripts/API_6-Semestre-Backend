@@ -37,8 +37,8 @@ pip install -r requirements.txt
    <img src="image-4.png" alt="Tabelas criadas" width="600px" />
 
 > **Obs:**  
-> O usuário padrão é `postgres` e a senha está como `root` no arquivo `db.py`.  
-> Altere no código se necessário para combinar com sua configuração local.
+> O usuário padrão é `postgres`.  
+> Altere seu .env se necessário para combinar com sua configuração local.
 
 ## Rodando o backend
 
