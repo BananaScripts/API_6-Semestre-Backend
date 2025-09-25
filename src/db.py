@@ -1,11 +1,15 @@
 import psycopg2
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 DB_CONFIG = {
-    "host": "localhost", #coloque o host do seu banco
-    "port": 5432, #coloque a porta do seu banco (o padrão do PostgreSQL é 5432)
-    "dbname": "domrock", #coloque o nome do seu banco
-    "user": "postgres", #coloque o usuário do seu banco
-    "password": "root" #coloque a senha do seu usuário configurado no banco de dados
+    "host": os.getenv("DB_HOST"),
+    "port": int(os.getenv("DB_PORT")),
+    "dbname": os.getenv("DB_NAME"),
+    "user": os.getenv("DB_USER"),
+    "password": os.getenv("DB_PASSWORD")
 }
 
 def get_connection():

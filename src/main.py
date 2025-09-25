@@ -5,9 +5,11 @@ import aiofiles
 
 app = FastAPI(title="Dom Rock Backend")
 
-#criar pasta uploads para salvar localmente por enquanto os csvs
+#criar pastas uploads e relatorios para salvar localmente por enquanto os csvs
 UPLOAD_DIR = "../csv/uploads/"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
+RELATORIO_DIR = "../csv/relatorios/"
+os.makedirs(RELATORIO_DIR, exist_ok=True)
 
 #recebe upload dos csv, salva localmente e roda o pipeline de importação
 @app.post("/upload/{tipo}")
