@@ -1,5 +1,14 @@
 import pandas as pd
+from io import BytesIO
 from db import get_connection
+
+#transformar em bytes para enviar por email
+def df_to_bytes(df: pd.DataFrame) -> bytes:
+    buffer = BytesIO()
+    df.to_csv(buffer, index=False)
+    buffer.seek(0)
+    return buffer.read()
+
 
 def gerar_relatorios():
     connection = get_connection()
@@ -19,8 +28,6 @@ def gerar_relatorios():
         ORDER BY total_vendido DESC;
     """
     df_vendas = pd.read_sql_query(query_vendas, connection)
-    df_vendas.to_csv("../csv/relatorios/relatorio_vendas.csv", sep="|", index=False)
-
 
     #relatório de estoque
     query_estoque = """
@@ -40,7 +47,6 @@ def gerar_relatorios():
         ORDER BY quantidade_total DESC;
     """
     df_estoque = pd.read_sql_query(query_estoque, connection)
-    df_estoque.to_csv("../csv/relatorios/relatorio_estoque.csv", sep="|", index=False)
 
     #relatório geral
     query_geral = """
@@ -67,9 +73,11 @@ def gerar_relatorios():
         ORDER BY total_vendido DESC;
     """
     df_geral = pd.read_sql_query(query_geral, connection)
-    df_geral.to_csv("../csv/relatorios/relatorio_geral.csv", sep="|", index=False)
 
     connection.close()
-    return ("../csv/relatorios/relatorio_vendas.csv",
-            "../csv/relatorios/relatorio_estoque.csv",
-            "../csv/relatorios/relatorio_geral.csv")
+
+    return {
+        "relatorio_vendas": df_to_bytes(df_vendas),
+        "relatorio_estoque": df_to_bytes(df_estoque),
+        "relatorio_geral": df_to_bytes(df_geral)
+    }
