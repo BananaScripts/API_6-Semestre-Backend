@@ -5,8 +5,6 @@ def tratar_dados(df, tipo:str):
     # Remover duplicados e cópia independente
     df = df.drop_duplicates().copy()
 
-    print(f"tratando dados do tipo {tipo}")
-
     # Garantir datas no formato YYYY-MM-DD
     if "data" in df.columns:
         df["data"] = pd.to_datetime(df["data"], errors='coerce')
