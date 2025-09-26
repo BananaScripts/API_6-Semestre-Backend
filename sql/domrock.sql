@@ -46,3 +46,10 @@ CREATE TABLE IF NOT EXISTS estoque (
     FOREIGN KEY (cod_produto) REFERENCES produtos (cod_produto)
 );
 
+CREATE TABLE IF NOT EXISTS usuario(
+    id SERIAL PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    senha VARCAHR(100) NOT NULL
+)
+
