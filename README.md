@@ -54,7 +54,7 @@ pip install -r requirements.txt
    uvicorn main:app --reload
    ```
 
-3. Acesse a API em [http://localhost:8000](http://localhost:8000)  
-   A documentação interativa estará disponível em [http://localhost:8000/docs](http://localhost:8000/docs)
+3. Acesse a API em [http://127.0.0.1:8000](http://127.0.0.1:8000))  
+   A documentação interativa estará disponível em [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
 
 
