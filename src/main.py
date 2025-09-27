@@ -1,11 +1,14 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException, status
+from fastapi import FastAPI, UploadFile, File, HTTPException, status, Query
+from typing import List
 from importar import importar_csv
 from gerar_relatorios import gerar_relatorios
 from enviar_email import enviar_email
 import crud_usuario
+import crud_dados
 from BaseModel.Email import Email
 from BaseModel.Upload import Upload
 from BaseModel.Usuario import Usuario, UpdateUsuario, CreateUsuario
+from BaseModel.Dados import Venda, Estoque
 import os
 import aiofiles
 
@@ -87,6 +90,20 @@ def delete_usuario(usuario_id:int):
     if delete_user is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado")
     return crud_usuario.delete_usuario(id=usuario_id)
+
+@app.get("/vendas", response_model=List[Venda])
+def listar_vendas(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1, le=100)):
+    try:
+        return crud_dados.get_vendas(skip=skip, limit=limit)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/estoque", response_model=List[Estoque])
+def listar_estoque(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1, le=100)):
+    try:
+        return crud_dados.get_estoque(skip=skip, limit=limit)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 #só pra ver se o servidor está rodando
 @app.get("/")
