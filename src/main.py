@@ -1,9 +1,11 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException
+from fastapi import FastAPI, UploadFile, File, HTTPException, status
 from importar import importar_csv
 from gerar_relatorios import gerar_relatorios
 from enviar_email import enviar_email
+import crud_usuario
 from BaseModel.Email import Email
 from BaseModel.Upload import Upload
+from BaseModel.Usuario import Usuario, UpdateUsuario, CreateUsuario
 import os
 import aiofiles
 
@@ -14,7 +16,7 @@ UPLOAD_DIR = "../csv/uploads/"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 #recebe upload dos csv, salva localmente e roda o pipeline de importação
-@app.post("/upload/{tipo}")
+@app.post("/upload/{tipo}", status_code=status.HTTP_201_CREATED)
 async def upload_csv(tipo: Upload, file: UploadFile = File(...)):
 
     if tipo not in Upload:
@@ -36,7 +38,7 @@ async def upload_csv(tipo: Upload, file: UploadFile = File(...)):
         raise HTTPException(status_code=500, detail=str(e))
 
 #enviar os relatório em formato csv por email
-@app.post("/relatorios/enviar")
+@app.post("/relatorios/enviar", status_code=status.HTTP_200_OK)
 def gerar_e_enviar(email:Email, assunto: str, corpo: str):
     try:
         arquivos = gerar_relatorios()
@@ -51,6 +53,40 @@ def gerar_e_enviar(email:Email, assunto: str, corpo: str):
         return{"status": "sucesso", "msg": f"Relatórios enviados para {email}"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+#criar usuario   
+@app.post("/usuario", response_model=Usuario, status_code=status.HTTP_201_CREATED)
+def create_usuario(usuario: CreateUsuario):
+    db_user = crud_usuario.read_usuario_byemail(email = usuario.email)
+    if db_user:
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Email already registered")
+    return crud_usuario.create_usuario(
+        nome=usuario.nome, email=usuario.email, senha=usuario.senha
+    )
+
+#pegar usuario
+@app.get("/usuario/{usuario_id}", response_model=Usuario, status_code=status.HTTP_200_OK)
+def read_usuario(usuario_id: int):
+    db_user = crud_usuario.read_usuario_byid(id=usuario_id)
+    if db_user is None:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado")
+    return db_user
+
+#atualizar usuario
+@app.put("/usuario/{usuario_id}", response_model=Usuario, status_code=status.HTTP_200_OK)
+def update_usuario(usuario_id:int, usuario:UpdateUsuario):
+    updated_user = crud_usuario.update_usuario(id=usuario_id, usuario=usuario)
+    if updated_user is None:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado")
+    return updated_user
+
+#deletar usuario
+@app.delete("/usuario/{usuario_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_usuario(usuario_id:int):
+    delete_user = usuario_id
+    if delete_user is None:
+        raise HTTPException(status_code=404, detail="Usuário não encontrado")
+    return crud_usuario.delete_usuario(id=usuario_id)
 
 #só pra ver se o servidor está rodando
 @app.get("/")
