@@ -1,17 +1,20 @@
 from db import get_connection
 from BaseModel.Usuario import Usuario, UpdateUsuario, CreateUsuario
+from auth.auth import hash_senha
+
 
 #função de criar o usuário     
-def create_usuario(nome: str, email: str, senha: str):
+def create_usuario(usuario:CreateUsuario):
+    senha_hash = hash_senha(usuario.senha) #hashear a senha
     with get_connection() as connection: #em todos pega a conexão do banco
         with connection.cursor() as cursor: #e em seguida executa um sql
             cursor.execute(
                 "INSERT INTO domrock.usuario (nome, email, senha) VALUES (%s, %s, %s) RETURNING id, nome, email, senha",
-                (nome, email, senha)
+                (usuario.nome, usuario.email, senha_hash)
             )
             new_user = cursor.fetchone()
             connection.commit()
-            return Usuario(id=new_user[0], nome=new_user[1], email=new_user[2], senha=new_user[3])
+            return Usuario(id=new_user[0], nome=new_user[1], email=new_user[2])
 
 #função para pegar as informações do usuário pelo id
 def read_usuario_byid(id: int):
@@ -22,7 +25,7 @@ def read_usuario_byid(id: int):
             )
             user = cursor.fetchone()
             if user:
-                return Usuario(id=user[0], nome=user[1], email=user[2], senha=user[3])
+                return Usuario(id=user[0], nome=user[1], email=user[2])
             return None
 
 #função para pegar as informações do usuário pelo email        
@@ -61,7 +64,7 @@ def update_usuario(id: int, usuario: UpdateUsuario):
             )
             updated_user_data = cursor.fetchone()
             connection.commit()
-            return Usuario(id=updated_user_data[0], nome=updated_user_data[1], email=updated_user_data[2], senha=updated_user_data[3])
+            return Usuario(id=updated_user_data[0], nome=updated_user_data[1], email=updated_user_data[2])
 
 #função para deletar o usuário        
 def delete_usuario(id: int):

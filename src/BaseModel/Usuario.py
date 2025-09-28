@@ -3,9 +3,10 @@ from typing import Optional
 from pydantic import EmailStr
 
 class Usuario(BaseModel):
+    id: Optional[int] = None
     nome:str
     email:EmailStr
-    senha:str
+    senha: Optional[str] = None
 
 class CreateUsuario(Usuario):
     pass
