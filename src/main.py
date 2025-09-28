@@ -1,10 +1,12 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException, status, Query
+from fastapi import FastAPI, UploadFile, File, HTTPException, status, Query, Depends
+from fastapi.security import OAuth2PasswordRequestForm
 from typing import List
 from importar import importar_csv
 from gerar_relatorios import gerar_relatorios
 from enviar_email import enviar_email
 import crud_usuario
 import crud_dados
+from auth.auth import verifciar_senha, criar_token
 from BaseModel.Email import Email
 from BaseModel.Upload import Upload
 from BaseModel.Usuario import Usuario, UpdateUsuario, CreateUsuario
@@ -63,9 +65,7 @@ def create_usuario(usuario: CreateUsuario):
     db_user = crud_usuario.read_usuario_byemail(email = usuario.email)
     if db_user:
         raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Email already registered")
-    return crud_usuario.create_usuario(
-        nome=usuario.nome, email=usuario.email, senha=usuario.senha
-    )
+    return crud_usuario.create_usuario(usuario)
 
 #pegar usuario
 @app.get("/usuario/{usuario_id}", response_model=Usuario, status_code=status.HTTP_200_OK)
@@ -91,6 +91,7 @@ def delete_usuario(usuario_id:int):
         raise HTTPException(status_code=404, detail="Usuário não encontrado")
     return crud_usuario.delete_usuario(id=usuario_id)
 
+#retornar os dados de vendas
 @app.get("/vendas", response_model=List[Venda])
 def listar_vendas(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1, le=100)):
     try:
@@ -98,12 +99,27 @@ def listar_vendas(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1, le=10
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+#retornar os dados do estoque
 @app.get("/estoque", response_model=List[Estoque])
 def listar_estoque(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1, le=100)):
     try:
         return crud_dados.get_estoque(skip=skip, limit=limit)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+#logar o usuário por email    
+@app.post("/login")
+def login(form_data: OAuth2PasswordRequestForm = Depends()):
+    user = crud_usuario.read_usuario_byemail(form_data.username) #busca o usuário
+
+    #se não achar ou senha estiver errada retorna erro 401
+    if not user or not verifciar_senha(form_data.password, user.senha) :
+        raise HTTPException(status_code=401, detail="Credenciais inválidas")
+
+    #cria e e retorna o token   
+    token = criar_token({"sub": user.email})
+    return {"access_token": token, "token_type": "bearer"}
+
 
 #só pra ver se o servidor está rodando
 @app.get("/")

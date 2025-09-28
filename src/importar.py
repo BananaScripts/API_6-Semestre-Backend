@@ -69,7 +69,7 @@ def importar_csv(filepath:str, tipo:str):
     df = pd.read_csv(filepath, sep="|") 
 
     #normaliza e trata os dados
-    df_tratado  = tratar_dados(df, tipo)
+    df_tratado = tratar_dados(df, tipo)
 
     #inserção dos dados
     if tipo == "vendas":
