@@ -13,6 +13,9 @@ from BaseModel.Usuario import Usuario, UpdateUsuario, CreateUsuario
 from BaseModel.Dados import Venda, Estoque
 import os
 import aiofiles
+from fastapi import FastAPI
+from gerar_relatorios import gerar_metricas_domrock
+
 
 app = FastAPI(title="Dom Rock Backend")
 
@@ -120,6 +123,9 @@ def login(form_data: OAuth2PasswordRequestForm = Depends()):
     token = criar_token({"sub": user.email})
     return {"access_token": token, "token_type": "bearer"}
 
+@app.get("/metricas")
+def metricas_domrock():
+    return gerar_metricas_domrock()
 
 #só pra ver se o servidor está rodando
 @app.get("/")
