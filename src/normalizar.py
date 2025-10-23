@@ -1,5 +1,6 @@
 import pandas as pd
 from pathlib import Path
+import unicodedata
 
 def tratar_dados(df, tipo:str):
     # Remover duplicados e cópia independente
@@ -52,3 +53,11 @@ def tratar_dados(df, tipo:str):
             df["zs_peso_liquido"] = pd.to_numeric(df["zs_peso_liquido"], errors="coerce").fillna(0)
 
     return df
+
+def normalizar_texto(texto):
+    texto = texto.lower().strip()
+    texto = ''.join(
+        c for c in unicodedata.normalize('NFD', texto)
+        if unicodedata.category(c) != 'Mn'
+    )
+    return texto
