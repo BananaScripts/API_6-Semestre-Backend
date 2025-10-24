@@ -2,7 +2,6 @@ import pandas as pd
 from io import BytesIO
 from db import get_connection
 
-#transformar em bytes para enviar por email
 def df_to_bytes(df: pd.DataFrame) -> bytes:
     buffer = BytesIO()
     df.to_csv(buffer, index=False)
@@ -11,81 +10,11 @@ def df_to_bytes(df: pd.DataFrame) -> bytes:
 
 
 def gerar_relatorios():
-    connection = get_connection()
-
-    #relatório de vendas
-    query_vendas = """
-        SELECT 
-            v.cod_cliente AS cliente,
-            v.cod_produto AS codigo_produto,
-            v.produto AS nome_produto,
-            COUNT(*) AS total_vendido,
-            SUM(v.zs_peso_liquido) AS peso_total,
-            MAX(v.data) AS ultima_compra,
-            CURRENT_DATE - MAX(v.data) AS dias_desde_ultima_compra
-        FROM domrock.vendas v
-        GROUP BY v.cod_cliente, v.cod_produto, v.produto
-        ORDER BY total_vendido DESC;
     """
-    df_vendas = pd.read_sql_query(query_vendas, connection)
-
-    #relatório de estoque
-    query_estoque = """
-       SELECT 
-            e.cod_cliente AS cliente,
-            e.cod_produto AS codigo_produto,
-            e.produto AS nome_produto,
-            e.es_totalestoque AS quantidade_total,
-            e.dias_em_estoque,
-            e.es_centro AS centro,
-            CASE
-                WHEN e.dias_em_estoque > 180 THEN 'Alto'
-                WHEN e.dias_em_estoque BETWEEN 90 AND 180 THEN 'Médio'
-                ELSE 'Baixo'
-            END AS risco_obsolescencia
-        FROM domrock.estoque e
-        ORDER BY quantidade_total DESC;
+    Gera métricas resumidas das últimas 52 semanas.
+    Retorna um dicionário com valor e descrição para cada métrica.
     """
-    df_estoque = pd.read_sql_query(query_estoque, connection)
-
-    #relatório geral
-    query_geral = """
-       SELECT 
-            v.cod_cliente AS cliente,
-            v.cod_produto AS codigo_produto,
-            v.produto AS nome_produto,
-            COUNT(*) AS total_vendido,
-            COALESCE(SUM(e.es_totalestoque), 0) AS estoque_atual,
-            CASE 
-                WHEN COUNT(*) > 0 THEN ROUND(COALESCE(SUM(e.es_totalestoque),0)::decimal / COUNT(*), 2)
-                ELSE NULL
-            END AS dias_cobertura,
-            CASE
-                WHEN COALESCE(SUM(e.es_totalestoque), 0) = 0 THEN 'Sem Estoque'
-                WHEN (COALESCE(SUM(e.es_totalestoque), 0)::decimal / COUNT(*)) < 10 THEN 'Crítico'
-                WHEN (COALESCE(SUM(e.es_totalestoque), 0)::decimal / COUNT(*)) < 30 THEN 'Atenção'
-                ELSE 'OK'
-            END AS risco_ruptura
-        FROM domrock.vendas v
-        LEFT JOIN domrock.estoque e 
-            ON v.cod_cliente = e.cod_cliente AND v.cod_produto = e.cod_produto
-        GROUP BY v.cod_cliente, v.cod_produto, v.produto
-        ORDER BY total_vendido DESC;
-    """
-    df_geral = pd.read_sql_query(query_geral, connection)
-
-    connection.close()
-
-    return {
-        "relatorio_vendas": df_to_bytes(df_vendas),
-        "relatorio_estoque": df_to_bytes(df_estoque),
-        "relatorio_geral": df_to_bytes(df_geral)
-    }
-
-def gerar_metricas_domrock():
     import locale
-    import pandas as pd
-    
     locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
 
     connection = get_connection()
@@ -174,8 +103,6 @@ def gerar_metricas_domrock():
         for nome, sql in metricas.items():
             df = pd.read_sql_query(sql, connection)
 
-            print(f"[DEBUG] Consulta '{nome}' retornou {len(df)} linhas e colunas: {list(df.columns)}")
-
             if nome in ["skus_alto_giro_sem_estoque", "itens_para_repor"]:
                 if df.empty:
                     texto = descricoes[nome].format(descricao="Nenhum SKU encontrado.")
@@ -187,10 +114,7 @@ def gerar_metricas_domrock():
                     else:
                         skus_list = []
                     texto = descricoes[nome].format(descricao=", ".join(skus_list))
-                resultados[nome] = {
-                    "valor": len(df),
-                    "descricao": texto
-                }
+                resultados[nome] = {"valor": len(df), "descricao": texto}
 
             elif nome == "risco_desabastecimento_SKU_1":
                 if df.empty:
@@ -201,24 +125,14 @@ def gerar_metricas_domrock():
                     estoque = float(linha["estoque"]) if linha["estoque"] is not None else 0.0
                     consumo = float(linha["consumo"]) if linha["consumo"] is not None else 0.0
                     risco = linha["risco"] if linha["risco"] is not None else "Desconhecido"
-                    texto = descricoes[nome].format(
-                        descricao=risco,
-                        estoque=estoque,
-                        consumo=consumo
-                    )
+                    texto = descricoes[nome].format(descricao=risco, estoque=estoque, consumo=consumo)
                     valor = None
-                resultados[nome] = {
-                    "valor": valor,
-                    "descricao": texto
-                }
+                resultados[nome] = {"valor": valor, "descricao": texto}
 
             else:
                 valor = float(df.iloc[0]["valor"]) if not df.empty and df.iloc[0]["valor"] is not None else 0.0
                 texto = descricoes[nome].format(valor=valor)
-                resultados[nome] = {
-                    "valor": valor,
-                    "descricao": texto
-                }
+                resultados[nome] = {"valor": valor, "descricao": texto}
 
     except Exception as e:
         print(f"Erro ao calcular métricas: {e}")
