@@ -1,4 +1,4 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException, status, Query, Depends
+from fastapi import FastAPI, UploadFile, File, HTTPException, WebSocket, WebSocketDisconnect, status, Query, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 from typing import List
 from importar import importar_csv
@@ -11,6 +11,7 @@ from BaseModel.Email import Email
 from BaseModel.Upload import Upload
 from BaseModel.Usuario import Usuario, UpdateUsuario, CreateUsuario
 from BaseModel.Dados import Venda, Estoque
+from Classes.Chatbot import chatbot 
 import os
 import aiofiles
 
@@ -19,6 +20,16 @@ app = FastAPI(title="Dom Rock Backend")
 #criar pasta uploads para salvar localmente por enquanto os csvs
 UPLOAD_DIR = "../csv/uploads/"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+#-----------------Teste Request-----------------#
+
+#só pra ver se o servidor está rodando
+@app.get("/")
+def check():
+    return {"status": "ok", "msg": "API funfando"}
+
+
+#-----------------Relatórios e Enviar Arquivo CSV-----------------#
 
 #recebe upload dos csv, salva localmente e roda o pipeline de importação
 @app.post("/upload/{tipo}", status_code=status.HTTP_201_CREATED)
@@ -58,6 +69,10 @@ def gerar_e_enviar(email:Email, assunto: str, corpo: str):
         return{"status": "sucesso", "msg": f"Relatórios enviados para {email}"}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+
+
+#-----------------CRUD Usuário-----------------#
 
 #criar usuario   
 @app.post("/usuario", response_model=Usuario, status_code=status.HTTP_201_CREATED)
@@ -91,6 +106,10 @@ def delete_usuario(usuario_id:int):
         raise HTTPException(status_code=404, detail="Usuário não encontrado")
     return crud_usuario.delete_usuario(id=usuario_id)
 
+
+
+#-----------------Read dos Dados do Banco-----------------#
+
 #retornar os dados de vendas
 @app.get("/vendas", response_model=List[Venda])
 def listar_vendas(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1, le=100)):
@@ -106,6 +125,10 @@ def listar_estoque(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1, le=1
         return crud_dados.get_estoque(skip=skip, limit=limit)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+    
+
+
+#-----------------Login-----------------#
 
 #logar o usuário por email    
 @app.post("/login")
@@ -121,7 +144,30 @@ def login(form_data: OAuth2PasswordRequestForm = Depends()):
     return {"access_token": token, "token_type": "bearer"}
 
 
-#só pra ver se o servidor está rodando
-@app.get("/")
-def check():
-    return {"status": "ok", "msg": "API funfando"}
+#-----------------Chatbot-----------------#
+@app.websocket("/wb/chatbot")
+async def websocket_chatbot(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        while True:
+            pergunta_usuario = await websocket.receive_text()
+
+            #prever a intenção do usuário
+            intencao = chatbot.prever_intencao(pergunta_usuario)
+
+            #resposta com base na intenção
+            resposta_texto, match_intencao = chatbot.get_response(intencao, pergunta_usuario)
+
+            #enviar resposta de volta para o cliente
+            await websocket.send_json({
+                "pergunta_original": pergunta_usuario,
+                "match_intencao": match_intencao, #a intenção que foi identificada
+                "answer": resposta_texto
+            })
+    except WebSocketDisconnect:
+        print("Cliente desconectado do chatbot")
+    except Exception as e:
+        print(f"Erro no websocket do chatbot: {e}")
+        await websocket.close(code=status.WS_1011_INTERNAL_ERROR)
+
+
