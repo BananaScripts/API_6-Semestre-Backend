@@ -1,19 +1,24 @@
 import pandas as pd
 from db import get_connection
 from normalizar import tratar_dados
+from psycopg2.extras import execute_values
 
-#função para inserir clientes únicos para evitar erros de chave estrangeira
+
 def inserir_clientes(df: pd.DataFrame):
     connection = get_connection()
     cursor = connection.cursor()
     try:
-        clientes = df["cod_cliente"].drop_duplicates()
-        for cod in clientes:
-            cursor.execute(
-                "INSERT INTO domrock.clientes (cod_cliente) VALUES (%s) ON CONFLICT (cod_cliente) DO NOTHING",
-                (cod,)
-            )
+        clientes = df["cod_cliente"].drop_duplicates().dropna().tolist()
+        if not clientes:
+            return
+        query = """
+            INSERT INTO domrock.clientes (cod_cliente)
+            VALUES %s
+            ON CONFLICT (cod_cliente) DO NOTHING
+        """
+        execute_values(cursor, query, [(c,) for c in clientes])
         connection.commit()
+        print(f"{len(clientes)} clientes únicos processados.")
     except Exception as e:
         connection.rollback()
         print(f"Erro ao inserir clientes: {e}")
@@ -21,18 +26,22 @@ def inserir_clientes(df: pd.DataFrame):
         cursor.close()
         connection.close()
 
-#função para inserir produtos únicos para evitar erros de chave estrangeira
+
 def inserir_produtos(df: pd.DataFrame):
     connection = get_connection()
     cursor = connection.cursor()
     try:
-        produtos = df["cod_produto"].drop_duplicates()
-        for cod in produtos:
-            cursor.execute(
-                "INSERT INTO domrock.produtos (cod_produto) VALUES (%s) ON CONFLICT (cod_produto) DO NOTHING",
-                (cod,)
-            )
+        produtos = df["cod_produto"].drop_duplicates().dropna().tolist()
+        if not produtos:
+            return
+        query = """
+            INSERT INTO domrock.produtos (cod_produto)
+            VALUES %s
+            ON CONFLICT (cod_produto) DO NOTHING
+        """
+        execute_values(cursor, query, [(p,) for p in produtos])
         connection.commit()
+        print(f"{len(produtos)} produtos únicos processados.")
     except Exception as e:
         connection.rollback()
         print(f"Erro ao inserir produtos: {e}")
@@ -40,22 +49,30 @@ def inserir_produtos(df: pd.DataFrame):
         cursor.close()
         connection.close()
 
-def inserir_dados(df: pd.DataFrame, tabela: str, coluna:list):
+
+def inserir_dados(df: pd.DataFrame, tabela: str, colunas: list):
     connection = get_connection()
-    cursor = connection.cursor() #cursor para executar comandos SQL
-
-    #insere clientes e produtos
-    inserir_clientes(df)
-    inserir_produtos(df)
-
-    cols = ",".join(coluna)  #junta os nomes das colunas em uma string separada por vírgula
-    placeholders = ",".join(["%s"] * len(coluna))  #placeholders para os valores do insert
-    query = f"INSERT INTO {tabela} ({cols}) VALUES ({placeholders})"
+    cursor = connection.cursor()
 
     try:
-        for row in df[coluna].itertuples(index=False, name=None):  #itera sobre as linhas do df apenas nas colunas desejadas
-            cursor.execute(query, row)
-        connection.commit()  #confirma as alterações no banco
+        # Inserir clientes e produtos primeiro
+        inserir_clientes(df)
+        inserir_produtos(df)
+
+        # Monta a query dinâmica
+        cols = ",".join(colunas)
+        query = f"""
+            INSERT INTO {tabela} ({cols})
+            VALUES %s
+        """
+
+        # Converte o DataFrame em lista de tuplas (melhor performance)
+        values = [tuple(x) for x in df[colunas].to_numpy()]
+
+        # Inserção em lote (tamanho configurável para controle de memória)
+        execute_values(cursor, query, values, page_size=1000)
+
+        connection.commit()
         print(f"{len(df)} registros inseridos em {tabela}.")
     except Exception as e:
         connection.rollback()
@@ -64,14 +81,11 @@ def inserir_dados(df: pd.DataFrame, tabela: str, coluna:list):
         cursor.close()
         connection.close()
 
-def importar_csv(filepath:str, tipo:str):
-    #lê o csv
-    df = pd.read_csv(filepath, sep="|") 
 
-    #normaliza e trata os dados
+def importar_csv(filepath: str, tipo: str):
+    df = pd.read_csv(filepath, sep="|")
     df_tratado = tratar_dados(df, tipo)
 
-    #inserção dos dados
     if tipo == "vendas":
         colunas = [
             "data", "cod_cliente", "cod_produto", "lote", "origem", "zs_gr_mercad",
@@ -86,6 +100,7 @@ def importar_csv(filepath:str, tipo:str):
             "origem", "lote", "dias_em_estoque", "produto", "grupo_mercadoria",
             "es_totalestoque", "SKU"
         ]
-        inserir_dados(df_tratado, "domrock.estoque", colunas) 
+        inserir_dados(df_tratado, "domrock.estoque", colunas)
+
     else:
         raise ValueError("Tipo inválido. Use 'vendas' ou 'estoque'.")
