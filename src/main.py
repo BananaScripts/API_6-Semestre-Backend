@@ -1,11 +1,6 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException, WebSocket, WebSocketDisconnect, status, Query, Depends
 from fastapi.security import OAuth2PasswordRequestForm
 from typing import List
-import os
-import aiofiles
-from dotenv import load_dotenv
-from io import BytesIO
-import pandas as pd
 from importar import importar_csv
 from gerar_relatorios import gerar_relatorios
 from enviar_email import enviar_email
@@ -22,17 +17,24 @@ import aiofiles
 
 app = FastAPI(title="Dom Rock Backend")
 
-# Criar pasta uploads para salvar CSVs
+#criar pasta uploads para salvar localmente por enquanto os csvs
 UPLOAD_DIR = "../csv/uploads/"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-# Carregar variáveis de ambiente
-load_dotenv(dotenv_path="src/.env")
-EMAIL_REMETENTE = os.getenv("EMAIL_REMETENTE")
-SENHA_APP = os.getenv("SENHA_APP")
+#-----------------Teste Request-----------------#
 
+#só pra ver se o servidor está rodando
+@app.get("/")
+def check():
+    return {"status": "ok", "msg": "API funfando"}
+
+
+#-----------------Relatórios e Enviar Arquivo CSV-----------------#
+
+#recebe upload dos csv, salva localmente e roda o pipeline de importação
 @app.post("/upload/{tipo}", status_code=status.HTTP_201_CREATED)
 async def upload_csv(tipo: Upload, file: UploadFile = File(...)):
+
     if tipo not in Upload:
         raise HTTPException(status_code=400, detail="Tipo inválido. Use 'vendas' ou 'estoque'")
 
@@ -49,64 +51,23 @@ async def upload_csv(tipo: Upload, file: UploadFile = File(...)):
         importar_csv(filepath, tipo)
         return {"status": "sucesso", "arquivo": file.filename, "tipo": tipo}
     except Exception as e:
-        import traceback
-        print("ERRO AO IMPORTAR CSV")
-        traceback.print_exc()
         raise HTTPException(status_code=500, detail=str(e))
 
-
-def metricas_para_bytes(metricas) -> bytes:
-    cleaned = {}
-    for chave, valor in metricas.items():
-        if isinstance(valor, dict):
-            cleaned[chave] = {
-                sub_k: (", ".join(sub_v) if isinstance(sub_v, list) else sub_v)
-                for sub_k, sub_v in valor.items()
-            }
-        else:
-            cleaned[chave] = valor
-
-    df = pd.DataFrame.from_dict(cleaned, orient="index")
-    buffer = BytesIO()
-    df.to_csv(buffer, index=True, encoding="utf-8")
-    buffer.seek(0)
-    return buffer.read()
-
-
-def metricas_para_texto(metricas: dict) -> str:
-    linhas = []
-    for chave, valor in metricas.items():
-        if isinstance(valor, dict) and 'descricao' in valor:
-            linhas.append(valor['descricao'])
-        else:
-            linhas.append(f"{chave}: {valor}")
-    return "\n".join(linhas)
-
+#enviar os relatório em formato csv por email
 @app.post("/relatorios/enviar", status_code=status.HTTP_200_OK)
-def gerar_e_enviar(email: Email, assunto: str, corpo: str = ""):
+def gerar_e_enviar(email:Email, assunto: str, corpo: str):
     try:
-        metricas = gerar_relatorios()
-        print("DEBUG - Métricas geradas com sucesso:", metricas)
-
-        relatorio_texto = metricas_para_texto(metricas)
-        mensagem_final = f"{corpo}\n\n{relatorio_texto}" if corpo else relatorio_texto
-
-        relatorio_bytes = metricas_para_bytes(metricas)
+        arquivos = gerar_relatorios()
 
         enviar_email(
-            destinatario=email.email,
-            assunto=assunto,
-            corpo=mensagem_final,
-            arquivos={"relatorio_metricas.csv": relatorio_bytes}
+            destinatario= email.email,
+            arquivos = arquivos,
+            assunto = assunto,
+            corpo = corpo
         )
 
-        print("DEBUG - E-mail enviado com sucesso!")
-        return {"status": "sucesso", "msg": f"Relatórios enviados para {email.email}"}
+        return{"status": "sucesso", "msg": f"Relatórios enviados para {email}"}
     except Exception as e:
-        import traceback
-        print("=== ERRO AO ENVIAR RELATÓRIO ===")
-        traceback.print_exc()
-        print("===============================")
         raise HTTPException(status_code=500, detail=str(e))
     
 
@@ -116,9 +77,9 @@ def gerar_e_enviar(email: Email, assunto: str, corpo: str = ""):
 #criar usuario   
 @app.post("/usuario", response_model=Usuario, status_code=status.HTTP_201_CREATED)
 def create_usuario(usuario: CreateUsuario):
-    db_user = crud_usuario.read_usuario_byemail(email=usuario.email)
+    db_user = crud_usuario.read_usuario_byemail(email = usuario.email)
     if db_user:
-        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Email já registrado")
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="Email already registered")
     return crud_usuario.create_usuario(usuario)
 
 #pegar usuario
@@ -131,7 +92,7 @@ def read_usuario(usuario_id: int):
 
 #atualizar usuario
 @app.put("/usuario/{usuario_id}", response_model=Usuario, status_code=status.HTTP_200_OK)
-def update_usuario(usuario_id: int, usuario: UpdateUsuario):
+def update_usuario(usuario_id:int, usuario:UpdateUsuario):
     updated_user = crud_usuario.update_usuario(id=usuario_id, usuario=usuario)
     if updated_user is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado")
@@ -139,7 +100,7 @@ def update_usuario(usuario_id: int, usuario: UpdateUsuario):
 
 #deletar usuario
 @app.delete("/usuario/{usuario_id}", status_code=status.HTTP_204_NO_CONTENT)
-def delete_usuario(usuario_id: int):
+def delete_usuario(usuario_id:int):
     delete_user = usuario_id
     if delete_user is None:
         raise HTTPException(status_code=404, detail="Usuário não encontrado")
@@ -172,16 +133,17 @@ def listar_estoque(skip: int = Query(0, ge=0), limit: int = Query(10, ge=1, le=1
 #logar o usuário por email    
 @app.post("/login")
 def login(form_data: OAuth2PasswordRequestForm = Depends()):
-    user = crud_usuario.read_usuario_byemail(form_data.username)
-    if not user or not verifciar_senha(form_data.password, user.senha):
+    user = crud_usuario.read_usuario_byemail(form_data.username) #busca o usuário
+
+    #se não achar ou senha estiver errada retorna erro 401
+    if not user or not verifciar_senha(form_data.password, user.senha) :
         raise HTTPException(status_code=401, detail="Credenciais inválidas")
+
+    #cria e e retorna o token   
     token = criar_token({"sub": user.email})
     return {"access_token": token, "token_type": "bearer"}
 
 
-@app.get("/")
-def check():
-    return {"status": "ok", "msg": "API funcionando"}
 #-----------------Chatbot-----------------#
 @app.websocket("/wb/chatbot")
 async def websocket_chatbot(websocket: WebSocket):
