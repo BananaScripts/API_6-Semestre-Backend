@@ -1,23 +1,20 @@
 import pandas as pd
 from io import BytesIO
 from db import get_connection
+import locale
+import logging
 
 def df_to_bytes(df: pd.DataFrame) -> bytes:
     buffer = BytesIO()
-    df.to_csv(buffer, index=False)
+    df.to_csv(buffer, index=False, encoding='utf-8')
     buffer.seek(0)
     return buffer.read()
 
 
 def gerar_relatorios():
-    """
-    Gera métricas resumidas das últimas 52 semanas.
-    Retorna um dicionário com valor e descrição para cada métrica.
-    """
-    import locale
     locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
-
-    connection = get_connection()
+    connection = None
+    resultados = {}
 
     metricas = {
         "estoque_consumido_toneladas": """
@@ -97,48 +94,45 @@ def gerar_relatorios():
         "risco_desabastecimento_SKU_1": "O risco de desabastecimento do SKU_1 é {descricao} (estoque atual: {estoque:.2f} toneladas, consumo médio semanal: {consumo:.2f} toneladas)."
     }
 
-    resultados = {}
-
     try:
+        connection = get_connection()
         for nome, sql in metricas.items():
             df = pd.read_sql_query(sql, connection)
 
             if nome in ["skus_alto_giro_sem_estoque", "itens_para_repor"]:
                 if df.empty:
-                    texto = descricoes[nome].format(descricao="Nenhum SKU encontrado.")
+                    descricao = descricoes[nome].format(descricao="Nenhum SKU encontrado.")
+                    valor = 0
                 else:
-                    if "SKU" in df.columns:
-                        skus_list = df["SKU"].astype(str).tolist()
-                    elif "sku" in df.columns:
-                        skus_list = df["sku"].astype(str).tolist()
-                    else:
-                        skus_list = []
-                    texto = descricoes[nome].format(descricao=", ".join(skus_list))
-                resultados[nome] = {"valor": len(df), "descricao": texto}
+                    skus_list = df["SKU"].astype(str).tolist() if "SKU" in df.columns else []
+                    descricao = descricoes[nome].format(descricao=", ".join(skus_list))
+                    valor = len(df)
+                resultados[nome] = {"valor": valor, "descricao": descricao}
 
             elif nome == "risco_desabastecimento_SKU_1":
                 if df.empty:
-                    texto = "Não foi possível calcular o risco de desabastecimento para SKU_1."
+                    descricao = "Não foi possível calcular o risco de desabastecimento para SKU_1."
                     valor = None
                 else:
                     linha = df.iloc[0]
                     estoque = float(linha["estoque"]) if linha["estoque"] is not None else 0.0
                     consumo = float(linha["consumo"]) if linha["consumo"] is not None else 0.0
                     risco = linha["risco"] if linha["risco"] is not None else "Desconhecido"
-                    texto = descricoes[nome].format(descricao=risco, estoque=estoque, consumo=consumo)
+                    descricao = descricoes[nome].format(descricao=risco, estoque=estoque, consumo=consumo)
                     valor = None
-                resultados[nome] = {"valor": valor, "descricao": texto}
+                resultados[nome] = {"valor": valor, "descricao": descricao}
 
             else:
                 valor = float(df.iloc[0]["valor"]) if not df.empty and df.iloc[0]["valor"] is not None else 0.0
-                texto = descricoes[nome].format(valor=valor)
-                resultados[nome] = {"valor": valor, "descricao": texto}
+                descricao = descricoes[nome].format(valor=valor)
+                resultados[nome] = {"valor": valor, "descricao": descricao}
 
     except Exception as e:
-        print(f"Erro ao calcular métricas: {e}")
-        resultados["erro"] = str(e)
+        logging.error(f"Erro ao calcular métricas: {e}")
+        resultados["erro"] = {"valor": None, "descricao": f"Erro ao processar métricas: {str(e)}"}
 
     finally:
-        connection.close()
+        if connection:
+            connection.close()
 
     return resultados
