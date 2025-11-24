@@ -12,6 +12,7 @@ from gerar_relatorios import gerar_relatorios
 from enviar_email import enviar_email
 import crud_usuario
 import crud_dados
+import crud_dashboards
 from auth.auth import verifciar_senha, criar_token
 from BaseModel.Email import Email
 from BaseModel.Upload import Upload
@@ -220,6 +221,34 @@ async def websocket_chatbot_endpoint(websocket: WebSocket):
     except Exception as e:
         print(f"Erro no websocket do chatbot: {e}")
         await websocket.close(code=status.WS_1011_INTERNAL_ERROR)
+
+
+#-----------------Dashboards-----------------#
+
+@app.get("/dash/top-produtos")
+def dash_top_produtos(limit: int = Query(5, ge=1, le=20)):
+    try:
+        return crud_dashboards.get_top_produtos(limit)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/dash/vendas-mensais")
+def dash_vendas_mensais():
+    try:
+        return crud_dashboards.get_vendas_mensais()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/dash/estoque-clientes")
+def dash_estoque_clientes():
+    try:
+        return crud_dashboards.get_estoque_por_cliente()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 
 
 

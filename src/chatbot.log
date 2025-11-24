@@ -828,3 +828,75 @@ LINE 1: SELECT COUNT(DISTINCT "SKU") FROM domrock.estoque
 2025-11-24 15:58:15,989 - INFO - Componentes Finais: {'intent': <Intencao.TOP_CIDADES_FATURAMENTO: 'TOP_CIDADES_FATURAMENTO'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
 2025-11-24 15:58:16,933 - INFO - Executando: b'SELECT zs_cidade, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY zs_cidade ORDER BY total DESC LIMIT 5'
 2025-11-24 15:58:17,396 - INFO - Consulta para a intenção TOP_CIDADES_FATURAMENTO foi bem-sucedida.
+2025-11-24 16:15:14,411 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:15:14,448 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:15:17,393 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:15:17,393 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:16:35,715 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:16:35,718 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:16:37,699 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:16:37,699 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:16:45,666 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:16:45,670 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:16:47,744 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:16:47,744 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:16:57,231 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:16:57,239 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:16:59,563 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:16:59,563 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:17:12,331 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:17:12,340 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:17:14,566 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:17:14,566 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:27:38,130 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:27:38,133 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:27:40,414 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:27:40,415 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:27:45,719 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:27:45,725 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:27:47,755 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:27:47,755 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:27:56,489 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:27:56,500 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:27:58,573 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:27:58,573 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:28:12,029 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:28:12,033 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:28:14,067 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:28:14,067 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:28:25,621 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:28:25,622 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:28:27,679 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:28:27,679 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:28:49,988 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:28:49,990 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:28:52,157 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:28:52,157 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:29:21,181 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:29:21,188 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:29:23,452 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:29:23,452 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:29:32,732 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:29:32,737 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:29:34,915 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:29:34,916 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:30:46,314 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:30:46,319 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:30:48,417 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:30:48,417 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:31:18,234 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:31:18,246 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:31:20,642 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:31:20,643 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:34:44,588 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:34:44,592 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:34:46,674 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:34:46,674 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:34:55,213 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:34:55,213 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:34:57,619 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:34:57,619 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 16:35:08,630 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 16:35:08,642 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 16:35:10,982 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 16:35:10,982 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
