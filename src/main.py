@@ -17,7 +17,7 @@ from BaseModel.Email import Email
 from BaseModel.Upload import Upload
 from BaseModel.Usuario import Usuario, UpdateUsuario, CreateUsuario
 from BaseModel.Dados import Venda, Estoque
-from Classes.Chatbot import chatbot 
+from Classes.Chatbot import chatbot_instance 
 import os
 import aiofiles
 
@@ -193,29 +193,33 @@ def login(form_data: OAuth2PasswordRequestForm = Depends()):
 def check():
     return {"status": "ok", "msg": "API funcionando"}
 #-----------------Chatbot-----------------#
-@app.websocket("/wb/chatbot")
-async def websocket_chatbot(websocket: WebSocket):
+@app.websocket("/ws/chatbot")
+async def websocket_chatbot_endpoint(websocket: WebSocket):
     await websocket.accept()
+
+    if chatbot_instance is None:
+        await websocket.send_json({"erro": "O chatbot não está disponível no momento."})
+        await websocket.close(code=status.WS_1011_INTERNAL_ERROR)
+        return
+
     try:
         while True:
-            pergunta_usuario = await websocket.receive_text()
+            user_question = await websocket.receive_text()
+            
+            # Toda a lógica está encapsulada nesta única chamada
+            response_data, matched_intent = chatbot_instance.get_response(user_question)
 
-            #prever a intenção do usuário
-            intencao = chatbot.prever_intencao(pergunta_usuario)
-
-            #resposta com base na intenção
-            resposta_texto, match_intencao = chatbot.get_response(intencao, pergunta_usuario)
-
-            #enviar resposta de volta para o cliente
             await websocket.send_json({
-                "pergunta_original": pergunta_usuario,
-                "match_intencao": match_intencao, #a intenção que foi identificada
-                "answer": resposta_texto
+                "original_question": user_question,
+                "matched_intent": matched_intent, 
+                "answer": response_data
             })
+
     except WebSocketDisconnect:
         print("Cliente desconectado do chatbot")
     except Exception as e:
         print(f"Erro no websocket do chatbot: {e}")
         await websocket.close(code=status.WS_1011_INTERNAL_ERROR)
+
 
 

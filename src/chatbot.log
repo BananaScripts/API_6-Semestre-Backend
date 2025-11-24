@@ -1,0 +1,830 @@
+2025-11-23 19:50:51,596 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:50:54,027 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 19:50:59,497 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:51:01,743 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 19:51:24,129 - INFO - Scores -> TF-IDF: 0.6228 (idx 1), BERT: 0.4587 (idx 1)
+2025-11-23 19:51:24,130 - INFO - Intenção detectada: TOP_PRODUTOS_ESTOQUE (por bert)
+2025-11-23 19:52:07,570 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:52:09,925 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 19:52:13,429 - INFO - Scores -> TF-IDF: 0.6228 (idx 1), BERT: 0.4587 (idx 1)
+2025-11-23 19:52:13,431 - INFO - Intenção detectada: TOP_PRODUTOS_ESTOQUE (por bert)
+2025-11-23 19:53:00,262 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:53:02,520 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 19:53:34,965 - INFO - Scores -> TF-IDF: 0.6228 (idx 1), BERT: 0.4587 (idx 1)
+2025-11-23 19:53:34,966 - INFO - Intenção detectada: TOP_PRODUTOS_ESTOQUE (por bert)
+2025-11-23 19:53:51,899 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:53:54,033 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 19:54:01,948 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:54:04,180 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 19:55:04,548 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:55:07,092 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 19:55:50,556 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:56:11,351 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:56:13,532 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 19:56:29,926 - INFO - Scores -> TF-IDF: 0.6228 (idx 1), BERT: 0.4587 (idx 1)
+2025-11-23 19:56:29,927 - INFO - Intenção detectada: TOP_PRODUTOS_ESTOQUE (por bert)
+2025-11-23 19:58:12,466 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:58:14,597 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 19:58:22,626 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:58:24,611 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 19:58:33,726 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 19:58:35,797 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 19:58:38,518 - INFO - Scores -> TF-IDF: 0.6228 (idx 1), BERT: 0.4587 (idx 1)
+2025-11-23 19:58:38,520 - INFO - Intenção detectada: TOP_PRODUTOS_ESTOQUE (por bert)
+2025-11-23 19:58:57,528 - INFO - Scores -> TF-IDF: 0.0000 (idx 0), BERT: 0.2587 (idx 0)
+2025-11-23 19:58:57,528 - INFO - Intenção decidida por fallback: DESCONHECIDO
+2025-11-23 19:59:13,858 - INFO - Scores -> TF-IDF: 0.0000 (idx 0), BERT: 0.5020 (idx 2)
+2025-11-23 19:59:13,859 - INFO - Intenção detectada: TOP_CIDADES_FATURAMENTO (por bert)
+2025-11-23 20:02:21,463 - INFO - Scores -> TF-IDF: 0.6122 (idx 1), BERT: 0.6076 (idx 1)
+2025-11-23 20:02:21,463 - INFO - Intenção detectada: TOP_PRODUTOS_ESTOQUE (por bert)
+2025-11-23 20:02:37,019 - INFO - Scores -> TF-IDF: 0.4404 (idx 1), BERT: 0.5142 (idx 1)
+2025-11-23 20:02:37,019 - INFO - Intenção detectada: TOP_PRODUTOS_ESTOQUE (por bert)
+2025-11-23 20:04:26,370 - INFO - Scores -> TF-IDF: 0.0000 (idx 0), BERT: 0.2661 (idx 0)
+2025-11-23 20:04:26,372 - INFO - Intenção decidida por fallback: DESCONHECIDO
+2025-11-23 20:13:35,793 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 20:13:38,092 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 20:44:32,743 - INFO - CSV não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 20:44:51,165 - INFO - Chatbot inicializado com 3 exemplos
+2025-11-23 20:44:56,668 - INFO - CSV não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 20:44:59,690 - INFO - Chatbot inicializado com 3 exemplos
+2025-11-23 20:45:05,369 - INFO - CSV não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 20:45:18,801 - INFO - CSV não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 20:45:21,873 - INFO - Chatbot inicializado com 3 exemplos
+2025-11-23 20:45:29,929 - INFO - CSV não encontrado em ..perguntas.csv. Usando fallback.
+2025-11-23 20:45:33,030 - INFO - Chatbot inicializado com 3 exemplos
+2025-11-23 20:47:21,245 - INFO - CSV não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 20:47:25,376 - INFO - Chatbot inicializado com 3 exemplos
+2025-11-23 20:48:55,199 - INFO - CSV não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 20:48:58,645 - INFO - Chatbot inicializado com 3 exemplos
+2025-11-23 20:49:04,082 - INFO - CSV não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 20:49:07,463 - INFO - Chatbot inicializado com 3 exemplos
+2025-11-23 20:49:23,640 - INFO - CSV não encontrado em ../../csv/perguntas.csv. Usando fallback.
+2025-11-23 20:49:27,170 - INFO - Chatbot inicializado com 3 exemplos
+2025-11-23 20:49:32,418 - INFO - CSV não encontrado em ../../csv/perguntas.csv. Usando fallback.
+2025-11-23 20:49:43,633 - INFO - CSV não encontrado em ../../csv/perguntas.csv. Usando fallback.
+2025-11-23 20:49:49,153 - INFO - Chatbot inicializado com 3 exemplos
+2025-11-23 20:51:25,041 - INFO - CSV não encontrado em ../../csv/perguntas.csv. Usando fallback.
+2025-11-23 20:51:36,466 - INFO - CSV não encontrado em ../../csv/perguntas.csv. Usando fallback.
+2025-11-23 20:51:40,218 - INFO - Chatbot inicializado com 3 exemplos
+2025-11-23 20:52:16,161 - INFO - CSV não encontrado em ../../csv/perguntas.csv. Usando fallback.
+2025-11-23 20:52:25,268 - INFO - Chatbot inicializado com 3 exemplos
+2025-11-23 20:54:41,002 - INFO - CSV de perguntas não encontrado em /mnt/data/perguntas.csv. Usando fallback.
+2025-11-23 20:54:47,941 - INFO - Chatbot inicializado com 3 exemplos de treinamento
+2025-11-23 20:54:57,261 - INFO - Chatbot inicializado com 114 exemplos de treinamento
+2025-11-23 20:55:34,278 - INFO - Chatbot inicializado com 114 exemplos de treinamento
+2025-11-23 20:55:58,071 - INFO - Chatbot inicializado com 114 exemplos de treinamento
+2025-11-23 20:56:05,767 - INFO - Chatbot inicializado com 114 exemplos de treinamento
+2025-11-23 20:56:14,870 - INFO - Chatbot inicializado com 114 exemplos de treinamento
+2025-11-23 20:58:07,310 - INFO - Chatbot inicializado com 114 exemplos de treinamento
+2025-11-23 20:58:09,284 - INFO - Scores -> TF-IDF: 0.0000 (idx 0), BERT: 0.3550 (idx 66)
+2025-11-23 20:58:09,286 - INFO - Intenção decidida por fallback: DESCONHECIDO
+2025-11-23 20:58:28,740 - INFO - Chatbot inicializado com 114 exemplos de treinamento
+2025-11-23 20:58:30,186 - INFO - Scores -> TF-IDF: 0.8386 (idx 7), BERT: 0.9831 (idx 7)
+2025-11-23 20:58:30,187 - INFO - Intenção detectada: TOTAL_ITENS_ESTOQUE (por bert)
+2025-11-23 20:58:38,147 - INFO - Scores -> TF-IDF: 1.0000 (idx 7), BERT: 1.0000 (idx 7)
+2025-11-23 20:58:38,147 - INFO - Intenção detectada: TOTAL_ITENS_ESTOQUE (por bert)
+2025-11-23 20:59:04,808 - INFO - Scores -> TF-IDF: 0.5136 (idx 83), BERT: 0.6015 (idx 92)
+2025-11-23 20:59:04,808 - INFO - Intenção detectada: TOTAL_ITENS_ESTOQUE (por bert)
+2025-11-23 20:59:51,971 - INFO - Scores -> TF-IDF: 0.5046 (idx 83), BERT: 0.7089 (idx 63)
+2025-11-23 20:59:51,971 - INFO - Intenção detectada: TOP_CIDADES_FATURAMENTO (por bert)
+2025-11-23 21:00:10,141 - INFO - Scores -> TF-IDF: 0.6097 (idx 54), BERT: 0.6769 (idx 96)
+2025-11-23 21:00:10,141 - INFO - Intenção detectada: TOTAL_PRODUTOS_DISTINTOS (por bert)
+2025-11-23 21:00:22,900 - INFO - Scores -> TF-IDF: 0.6097 (idx 54), BERT: 0.6769 (idx 96)
+2025-11-23 21:00:22,901 - INFO - Intenção detectada: TOTAL_PRODUTOS_DISTINTOS (por bert)
+2025-11-23 21:02:39,680 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:02:39,680 - INFO - Total de perguntas carregadas para treinamento: 206
+2025-11-23 21:02:42,947 - INFO - Chatbot inicializado com 206 exemplos de treinamento
+2025-11-23 21:02:54,952 - INFO - Scores -> TF-IDF: 0.6627 (idx 110), BERT: 0.6769 (idx 170)
+2025-11-23 21:02:54,952 - INFO - Intenção detectada: TOTAL_PRODUTOS_DISTINTOS (por bert)
+2025-11-23 21:04:44,898 - INFO - Scores -> TF-IDF: 1.0000 (idx 0), BERT: 1.0000 (idx 0)
+2025-11-23 21:04:44,898 - INFO - Intenção detectada: TOTAL_ITENS_ESTOQUE (por bert)
+2025-11-23 21:05:04,851 - INFO - Scores -> TF-IDF: 0.5989 (idx 105), BERT: 0.8476 (idx 105)
+2025-11-23 21:05:04,851 - INFO - Intenção detectada: TOTAL_PRODUTOS_DISTINTOS (por bert)
+2025-11-23 21:05:22,299 - INFO - Scores -> TF-IDF: 0.4938 (idx 3), BERT: 0.5852 (idx 186)
+2025-11-23 21:05:22,299 - INFO - Intenção detectada: TOTAL_ITENS_ESTOQUE (por bert)
+2025-11-23 21:05:41,841 - INFO - Scores -> TF-IDF: 0.3888 (idx 19), BERT: 0.6376 (idx 186)
+2025-11-23 21:05:41,841 - INFO - Intenção detectada: TOTAL_ITENS_ESTOQUE (por bert)
+2025-11-23 21:06:09,682 - INFO - Scores -> TF-IDF: 0.7640 (idx 65), BERT: 0.7156 (idx 15)
+2025-11-23 21:06:09,682 - INFO - Intenção detectada: TOTAL_ITENS_ESTOQUE (por bert)
+2025-11-23 21:06:25,579 - INFO - Scores -> TF-IDF: 0.6823 (idx 65), BERT: 0.6891 (idx 178)
+2025-11-23 21:06:25,581 - INFO - Intenção detectada: TOTAL_ITENS_ESTOQUE (por bert)
+2025-11-23 21:06:53,705 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:06:53,706 - INFO - Total de perguntas carregadas para treinamento: 206
+2025-11-23 21:06:56,984 - INFO - Chatbot inicializado com 206 exemplos de treinamento
+2025-11-23 21:07:38,221 - INFO - Scores -> TF-IDF: 0.6823 (idx 65), BERT: 0.6891 (idx 178)
+2025-11-23 21:07:38,221 - INFO - Intenção detectada: TOTAL_ITENS_ESTOQUE (por bert)
+2025-11-23 21:11:23,410 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:11:23,412 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:11:27,003 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:11:51,415 - INFO - CSV não encontrado. Usando fallback.
+2025-11-23 21:11:54,566 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:12:47,706 - INFO - Carregando perguntas do arquivo CSV: 
+2025-11-23 21:12:47,707 - INFO - CSV não encontrado. Usando fallback.
+2025-11-23 21:12:49,829 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:20:41,746 - INFO - Carregando perguntas do arquivo CSV: 
+2025-11-23 21:20:41,746 - INFO - CSV não encontrado. Usando fallback.
+2025-11-23 21:20:44,719 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:20:50,636 - INFO - Carregando perguntas do arquivo CSV: 
+2025-11-23 21:20:50,637 - INFO - CSV não encontrado. Usando fallback.
+2025-11-23 21:20:53,605 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:22:29,898 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:22:29,898 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:22:32,625 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:24:23,331 - INFO - Tentando carregar CSV: C:\Users\migue\OneDrive\Área de Trabalho\API\src\csv\perguntas.csv
+2025-11-23 21:24:23,331 - ERROR - CSV não encontrado ou inválido. Usando fallback.
+2025-11-23 21:24:26,565 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:27:14,559 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:27:14,559 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:27:16,865 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:32:15,951 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:32:15,951 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:32:18,638 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:32:24,247 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:32:24,248 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:32:26,857 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:32:53,258 - INFO - Scores -> TF-IDF: 0.4938, BERT: 0.6423
+2025-11-23 21:38:15,490 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:38:15,490 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:38:17,989 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:38:22,893 - INFO - Scores -> TF-IDF: 0.4938, BERT: 0.6423
+2025-11-23 21:38:22,893 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:40:31,061 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:40:31,063 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:40:34,237 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:41:59,934 - INFO - Scores -> TF-IDF: 0.4938, BERT: 0.6423
+2025-11-23 21:41:59,935 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:42:20,356 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:42:20,357 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:42:23,500 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:42:42,747 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:42:42,747 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:42:45,618 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:42:53,461 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:42:53,461 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:42:56,285 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:43:02,217 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:43:02,217 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:43:17,465 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:43:17,465 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:43:20,703 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:43:23,465 - INFO - Scores -> TF-IDF: 0.4938, BERT: 0.6423
+2025-11-23 21:43:23,468 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:46:10,134 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:46:10,136 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:46:12,471 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:46:27,101 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:46:27,102 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:46:29,841 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:46:31,233 - INFO - Scores -> TF-IDF: 0.4938, BERT: 0.6423
+2025-11-23 21:46:31,233 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:48:20,448 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:48:20,448 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:48:23,177 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:48:45,012 - INFO - Scores -> TF-IDF: 0.4938, BERT: 0.6423
+2025-11-23 21:48:45,013 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:48:51,534 - INFO - Scores -> TF-IDF: 0.0000, BERT: 0.3437
+2025-11-23 21:48:51,534 - INFO - Intenção detectada (usuário): DESCONHECIDO
+2025-11-23 21:49:03,423 - INFO - Scores -> TF-IDF: 0.4938, BERT: 0.6822
+2025-11-23 21:49:03,423 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:49:13,828 - INFO - Scores -> TF-IDF: 0.4938, BERT: 0.7635
+2025-11-23 21:49:13,828 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:52:08,325 - INFO - Scores -> TF-IDF: 1.0000, BERT: 1.0000
+2025-11-23 21:52:08,325 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:52:20,226 - INFO - Scores -> TF-IDF: 1.0000, BERT: 1.0000
+2025-11-23 21:52:20,227 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:52:28,380 - INFO - Scores -> TF-IDF: 0.4938, BERT: 0.6423
+2025-11-23 21:52:28,381 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:52:49,045 - INFO - Scores -> TF-IDF: 0.7640, BERT: 0.7532
+2025-11-23 21:52:49,045 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:53:05,807 - INFO - Scores -> TF-IDF: 0.4412, BERT: 0.7070
+2025-11-23 21:53:05,808 - INFO - Intenção detectada (usuário): PESO_TOTAL_FATURADO
+2025-11-23 21:53:18,325 - INFO - Scores -> TF-IDF: 0.7504, BERT: 0.8374
+2025-11-23 21:53:18,325 - INFO - Intenção detectada (usuário): TOTAL_PRODUTOS_DISTINTOS
+2025-11-23 21:53:39,417 - INFO - Scores -> TF-IDF: 0.5993, BERT: 0.7962
+2025-11-23 21:53:39,418 - INFO - Intenção detectada (usuário): PESO_TOTAL_FATURADO
+2025-11-23 21:54:21,467 - INFO - Scores -> TF-IDF: 0.5073, BERT: 0.7501
+2025-11-23 21:54:21,468 - INFO - Intenção detectada (usuário): PESO_TOTAL_FATURADO
+2025-11-23 21:54:39,964 - INFO - Scores -> TF-IDF: 0.4894, BERT: 0.5479
+2025-11-23 21:54:39,965 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:54:53,524 - INFO - Scores -> TF-IDF: 0.7676, BERT: 0.7773
+2025-11-23 21:54:53,524 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:55:09,367 - INFO - Scores -> TF-IDF: 0.6823, BERT: 0.6891
+2025-11-23 21:55:09,367 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:56:15,445 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:56:15,445 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:56:18,541 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:56:26,651 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:56:26,652 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:56:29,236 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:56:56,194 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:56:56,194 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:56:59,387 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:57:05,626 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:57:05,627 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:57:08,682 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:57:18,632 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:57:18,632 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:57:21,258 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:57:30,174 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:57:30,174 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:57:33,273 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:58:46,344 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 21:58:46,346 - INFO - Total de perguntas carregadas: 206
+2025-11-23 21:58:49,594 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 21:58:51,931 - INFO - Keyword match: pattern='\b(top\s*\d+|top)\b.*produtos' -> TOP_PRODUTOS_ESTOQUE
+2025-11-23 21:58:51,955 - INFO - Scores -> TF-IDF: 0.6823, BERT: 0.6891
+2025-11-23 21:58:51,956 - INFO - Intenção detectada (usuário): TOP_PRODUTOS_ESTOQUE
+2025-11-23 21:59:00,577 - INFO - Keyword match: pattern='\b(top\s*\d+|top)\b.*produtos' -> TOP_PRODUTOS_ESTOQUE
+2025-11-23 21:59:00,600 - INFO - Scores -> TF-IDF: 0.6823, BERT: 0.6379
+2025-11-23 21:59:00,602 - INFO - Intenção detectada (usuário): TOP_PRODUTOS_ESTOQUE
+2025-11-23 21:59:20,334 - INFO - Scores -> TF-IDF: 0.5993, BERT: 0.7962
+2025-11-23 21:59:20,334 - INFO - Intenção detectada (usuário): DESCONHECIDO
+2025-11-23 21:59:20,354 - INFO - Fallback sugerido por BERT: Intencao.DESCONHECIDO
+2025-11-23 21:59:40,171 - INFO - Keyword match: pattern='\b(total|quantidade|qtde)\b.*\bestoque\b' -> TOTAL_ITENS_ESTOQUE
+2025-11-23 21:59:40,193 - INFO - Scores -> TF-IDF: 1.0000, BERT: 1.0000
+2025-11-23 21:59:40,195 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:59:43,671 - INFO - Keyword match: pattern='\b(total|quantidade|qtde)\b.*\bestoque\b' -> TOTAL_ITENS_ESTOQUE
+2025-11-23 21:59:43,691 - INFO - Scores -> TF-IDF: 1.0000, BERT: 1.0000
+2025-11-23 21:59:43,692 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 21:59:51,553 - INFO - Keyword match: pattern='\b(peso).*\b(faturad[oa]?|vendid[oa]?|total)\b' -> PESO_TOTAL_FATURADO
+2025-11-23 21:59:51,571 - INFO - Scores -> TF-IDF: 0.4938, BERT: 0.6423
+2025-11-23 21:59:51,571 - INFO - Intenção detectada (usuário): PESO_TOTAL_FATURADO
+2025-11-23 21:59:55,638 - INFO - Keyword match: pattern='\bprincipais.*estoque\b' -> TOP_PRODUTOS_ESTOQUE
+2025-11-23 21:59:55,653 - INFO - Scores -> TF-IDF: 0.7640, BERT: 0.7532
+2025-11-23 21:59:55,653 - INFO - Intenção detectada (usuário): TOP_PRODUTOS_ESTOQUE
+2025-11-23 22:00:00,397 - INFO - Keyword match: pattern='\b(10|5|20)\s+cidades\b' -> TOP_CIDADES_FATURAMENTO
+2025-11-23 22:00:00,418 - INFO - Scores -> TF-IDF: 0.4412, BERT: 0.7070
+2025-11-23 22:00:00,420 - INFO - Intenção detectada (usuário): TOP_CIDADES_FATURAMENTO
+2025-11-23 22:00:04,684 - INFO - Keyword match: pattern='\b(produtos).*\b(diferentes|distintos)\b' -> TOTAL_PRODUTOS_DISTINTOS
+2025-11-23 22:00:04,708 - INFO - Scores -> TF-IDF: 0.7504, BERT: 0.8374
+2025-11-23 22:00:04,709 - INFO - Intenção detectada (usuário): TOTAL_PRODUTOS_DISTINTOS
+2025-11-23 22:00:08,412 - INFO - Scores -> TF-IDF: 0.5993, BERT: 0.7962
+2025-11-23 22:00:08,413 - INFO - Intenção detectada (usuário): DESCONHECIDO
+2025-11-23 22:00:08,428 - INFO - Fallback sugerido por BERT: Intencao.DESCONHECIDO
+2025-11-23 22:00:12,024 - INFO - Keyword match: pattern='\bcidades.*(faturamento|peso)' -> TOP_CIDADES_FATURAMENTO
+2025-11-23 22:00:12,052 - INFO - Scores -> TF-IDF: 0.5073, BERT: 0.7501
+2025-11-23 22:00:12,052 - INFO - Intenção detectada (usuário): TOP_CIDADES_FATURAMENTO
+2025-11-23 22:00:16,019 - INFO - Keyword match: pattern='\b(peso).*\b(faturad[oa]?|vendid[oa]?|total)\b' -> PESO_TOTAL_FATURADO
+2025-11-23 22:00:16,090 - INFO - Scores -> TF-IDF: 0.4894, BERT: 0.5479
+2025-11-23 22:00:16,091 - INFO - Intenção detectada (usuário): PESO_TOTAL_FATURADO
+2025-11-23 22:00:21,762 - INFO - Keyword match: pattern='\bquantos\s+itens\b' -> TOTAL_ITENS_ESTOQUE
+2025-11-23 22:00:21,781 - INFO - Scores -> TF-IDF: 0.7676, BERT: 0.7773
+2025-11-23 22:00:21,781 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-23 22:00:26,449 - INFO - Keyword match: pattern='\b(top\s*\d+|top)\b.*produtos' -> TOP_PRODUTOS_ESTOQUE
+2025-11-23 22:00:26,475 - INFO - Scores -> TF-IDF: 0.6823, BERT: 0.6891
+2025-11-23 22:00:26,475 - INFO - Intenção detectada (usuário): TOP_PRODUTOS_ESTOQUE
+2025-11-23 22:00:29,990 - INFO - Keyword match: pattern='\b(top\s*\d+|top)\b.*produtos' -> TOP_PRODUTOS_ESTOQUE
+2025-11-23 22:00:30,010 - INFO - Scores -> TF-IDF: 0.6823, BERT: 0.6379
+2025-11-23 22:00:30,011 - INFO - Intenção detectada (usuário): TOP_PRODUTOS_ESTOQUE
+2025-11-23 23:56:11,895 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 23:56:11,896 - INFO - Total de perguntas carregadas: 206
+2025-11-23 23:56:14,256 - INFO - Chatbot inicializado com sucesso.
+2025-11-23 23:56:27,781 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-23 23:56:27,781 - INFO - Total de perguntas carregadas: 206
+2025-11-23 23:56:30,572 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:00:55,675 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:00:55,677 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:00:58,440 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:23:39,771 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:23:39,771 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:23:42,577 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:25:28,398 - INFO - Keyword match: pattern='\b(top\s*\d+|top)\b.*produtos' -> TOP_PRODUTOS_ESTOQUE
+2025-11-24 00:25:28,428 - INFO - Scores -> TF-IDF: 0.6823, BERT: 0.6379
+2025-11-24 00:25:28,428 - INFO - Intenção detectada (usuário): TOP_PRODUTOS_ESTOQUE
+2025-11-24 00:25:39,728 - INFO - Keyword match: pattern='\b(top\s*\d+|top)\b.*produtos' -> TOP_PRODUTOS_ESTOQUE
+2025-11-24 00:25:39,744 - INFO - Scores -> TF-IDF: 0.6823, BERT: 0.6891
+2025-11-24 00:25:39,745 - INFO - Intenção detectada (usuário): TOP_PRODUTOS_ESTOQUE
+2025-11-24 00:25:49,026 - INFO - Scores -> TF-IDF: 0.6823, BERT: 0.5562
+2025-11-24 00:25:49,027 - INFO - Intenção detectada (usuário): DESCONHECIDO
+2025-11-24 00:25:57,642 - INFO - Scores -> TF-IDF: 0.6823, BERT: 0.6810
+2025-11-24 00:25:57,642 - INFO - Intenção detectada (usuário): DESCONHECIDO
+2025-11-24 00:26:03,949 - INFO - Scores -> TF-IDF: 0.6823, BERT: 0.7695
+2025-11-24 00:26:03,950 - INFO - Intenção detectada (usuário): DESCONHECIDO
+2025-11-24 00:26:03,975 - INFO - Fallback sugerido por BERT: Intencao.DESCONHECIDO
+2025-11-24 00:26:39,523 - INFO - Keyword match: pattern='\b(total|quantidade|qtde)\b.*\bestoque\b' -> TOTAL_ITENS_ESTOQUE
+2025-11-24 00:26:39,546 - INFO - Scores -> TF-IDF: 1.0000, BERT: 1.0000
+2025-11-24 00:26:39,546 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-24 00:26:49,850 - INFO - Keyword match: pattern='\bitens.*estoque\b' -> TOTAL_ITENS_ESTOQUE
+2025-11-24 00:26:49,871 - INFO - Scores -> TF-IDF: 0.7860, BERT: 0.7984
+2025-11-24 00:26:49,871 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-24 00:26:59,169 - INFO - Keyword match: pattern='\b(produtos).*\b(diferentes|distintos)\b' -> TOTAL_PRODUTOS_DISTINTOS
+2025-11-24 00:26:59,188 - INFO - Scores -> TF-IDF: 0.4830, BERT: 0.6010
+2025-11-24 00:26:59,189 - INFO - Intenção detectada (usuário): TOTAL_PRODUTOS_DISTINTOS
+2025-11-24 00:27:09,888 - INFO - Keyword match: pattern='\b(peso).*\b(faturad[oa]?|vendid[oa]?|total)\b' -> PESO_TOTAL_FATURADO
+2025-11-24 00:27:09,975 - INFO - Scores -> TF-IDF: 0.4894, BERT: 0.5439
+2025-11-24 00:27:09,976 - INFO - Intenção detectada (usuário): PESO_TOTAL_FATURADO
+2025-11-24 00:27:26,979 - INFO - Keyword match: pattern='\bfaturamento.*produto\b' -> FATURAMENTO_POR_PRODUTO
+2025-11-24 00:27:26,998 - INFO - Scores -> TF-IDF: 0.4086, BERT: 0.7473
+2025-11-24 00:27:26,999 - INFO - Intenção detectada (usuário): FATURAMENTO_POR_PRODUTO
+2025-11-24 00:27:26,999 - ERROR - Erro na função: get_faturamento_por_produto() missing 1 required positional argument: 'cod_produto'
+2025-11-24 00:27:34,436 - INFO - Scores -> TF-IDF: 0.7696, BERT: 0.8421
+2025-11-24 00:27:34,437 - INFO - Intenção detectada (usuário): DESCONHECIDO
+2025-11-24 00:27:34,473 - INFO - Fallback sugerido por BERT: Intencao.DESCONHECIDO
+2025-11-24 00:28:17,838 - INFO - Keyword match: pattern='\btotal clientes\b' -> TOTAL_CLIENTES
+2025-11-24 00:28:17,856 - INFO - Scores -> TF-IDF: 0.6798, BERT: 0.6157
+2025-11-24 00:28:17,857 - INFO - Intenção detectada (usuário): TOTAL_CLIENTES
+2025-11-24 00:31:41,219 - INFO - Keyword match: pattern='\bquantos\s+itens\b' -> TOTAL_ITENS_ESTOQUE
+2025-11-24 00:31:41,252 - INFO - Scores -> TF-IDF: 0.7676, BERT: 0.7773
+2025-11-24 00:31:41,253 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-24 00:33:52,942 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:33:52,944 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:33:55,202 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:34:03,861 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:34:03,861 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:34:06,206 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:34:11,827 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:34:11,827 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:34:14,240 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:34:20,014 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:34:20,015 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:34:22,455 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:34:30,931 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:34:30,931 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:34:33,168 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:34:45,819 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:34:45,820 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:34:48,803 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:35:26,026 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:35:26,027 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:35:28,942 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:35:47,263 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:35:47,264 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:35:49,678 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:35:55,684 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:35:55,684 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:35:58,069 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:36:03,779 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:36:03,779 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:36:06,003 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:36:17,186 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:36:17,186 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:36:19,494 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:37:22,301 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:37:22,301 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:37:25,221 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:38:55,336 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:38:55,337 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:38:58,409 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:39:41,646 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:39:41,646 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:39:44,148 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:39:58,941 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:39:58,941 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:40:01,440 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:40:16,119 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:40:16,121 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:40:18,510 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:40:31,986 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:40:31,987 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:40:34,281 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:40:46,523 - INFO - Keyword match: pattern='\bquantos\s+itens\b' -> TOTAL_ITENS_ESTOQUE
+2025-11-24 00:40:46,543 - INFO - Scores -> TF-IDF: 0.7676, BERT: 0.7773
+2025-11-24 00:40:46,544 - INFO - Intenção detectada (usuário): TOTAL_ITENS_ESTOQUE
+2025-11-24 00:44:06,968 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:44:06,969 - INFO - Total de perguntas carregadas: 206
+2025-11-24 00:44:09,437 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:44:11,108 - INFO - Keyword match: pattern='\bquantos\s+itens\b' -> TOTAL_ITENS_ESTOQUE
+2025-11-24 00:44:11,122 - INFO - Scores -> TF-IDF: 0.7676, BERT: 0.7773
+2025-11-24 00:48:36,296 - INFO - Scores -> TF-IDF: 0.3746, BERT: 0.6596
+2025-11-24 00:49:55,696 - INFO - Scores -> TF-IDF: 0.3746, BERT: 0.6596
+2025-11-24 00:50:48,171 - INFO - CSV não encontrado. Usando fallback.
+2025-11-24 00:50:50,285 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:50:55,094 - INFO - Scores -> TF-IDF: 0.5286, BERT: 0.4535
+2025-11-24 00:52:31,609 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:52:31,610 - INFO - Total de perguntas carregadas: 260
+2025-11-24 00:52:33,963 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:53:34,930 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:53:34,930 - INFO - Total de perguntas carregadas: 260
+2025-11-24 00:53:37,367 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:53:43,120 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:53:43,121 - INFO - Total de perguntas carregadas: 260
+2025-11-24 00:53:45,481 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:53:51,399 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:53:51,399 - INFO - Total de perguntas carregadas: 260
+2025-11-24 00:53:54,049 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:53:59,858 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:53:59,858 - INFO - Total de perguntas carregadas: 260
+2025-11-24 00:54:02,391 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:54:11,195 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:54:11,195 - INFO - Total de perguntas carregadas: 260
+2025-11-24 00:54:14,049 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:54:25,236 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 00:54:25,236 - INFO - Total de perguntas carregadas: 260
+2025-11-24 00:54:27,818 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 00:54:58,009 - INFO - Scores -> TF-IDF: 1.0000, BERT: 1.0000
+2025-11-24 00:54:59,853 - INFO - Keyword match: pattern='\b(total|quantidade|qtde)\b.*\bestoque\b' -> TOTAL_ITENS_ESTOQUE
+2025-11-24 00:54:59,874 - INFO - Scores -> TF-IDF: 0.6861, BERT: 0.8754
+2025-11-24 00:55:06,899 - INFO - Keyword match: pattern='\bprodutos.*vendidos\b' -> TOP_PRODUTOS_ESTOQUE
+2025-11-24 00:55:06,921 - INFO - Scores -> TF-IDF: 0.6216, BERT: 0.7152
+2025-11-24 00:55:12,678 - INFO - Scores -> TF-IDF: 0.6725, BERT: 0.7602
+2025-11-24 00:55:20,532 - INFO - Keyword match: pattern='\bcidades.*faturamento' -> TOP_CIDADES_FATURAMENTO
+2025-11-24 00:55:20,557 - INFO - Scores -> TF-IDF: 0.4568, BERT: 0.7112
+2025-11-24 00:55:29,803 - INFO - Keyword match: pattern='\b(produtos).*(diferentes|distintos)\b' -> TOTAL_PRODUTOS_DISTINTOS
+2025-11-24 00:55:29,826 - INFO - Scores -> TF-IDF: 0.6245, BERT: 0.7690
+2025-11-24 01:05:22,956 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 01:05:22,957 - INFO - Total de perguntas carregadas: 260
+2025-11-24 01:05:25,349 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 01:05:35,073 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 01:05:35,073 - INFO - Total de perguntas carregadas: 260
+2025-11-24 01:05:37,777 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 01:05:50,040 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 01:05:50,041 - INFO - Total de perguntas carregadas: 260
+2025-11-24 01:05:52,393 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 01:10:39,312 - INFO - Keyword match: pattern='\b(produtos).*(diferentes|distintos)\b' -> TOTAL_PRODUTOS_DISTINTOS
+2025-11-24 01:10:39,353 - INFO - Scores -> TF-IDF: 0.6245, BERT: 0.7690
+2025-11-24 08:18:55,707 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 08:18:55,711 - INFO - Total de perguntas carregadas: 260
+2025-11-24 08:19:02,242 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 08:19:07,492 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 08:19:07,492 - INFO - Total de perguntas carregadas: 260
+2025-11-24 08:19:17,689 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 08:55:18,141 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 08:55:18,142 - INFO - Total de perguntas carregadas: 260
+2025-11-24 08:55:23,328 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 08:55:33,918 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 08:55:33,918 - INFO - Total de perguntas carregadas: 260
+2025-11-24 08:55:41,667 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 08:55:44,019 - INFO - Keyword match: pattern='\b(produtos).*(diferentes|distintos)\b' -> TOTAL_PRODUTOS_DISTINTOS
+2025-11-24 08:55:44,034 - INFO - Scores -> TF-IDF: 0.6245, BERT: 0.7690
+2025-11-24 08:59:11,459 - INFO - CSV de perguntas carregado com sucesso: ../csv/perguntas.csv
+2025-11-24 08:59:11,459 - INFO - Total de perguntas carregadas: 260
+2025-11-24 09:07:42,267 - INFO - Chatbot inicializado com sucesso.
+2025-11-24 09:43:16,544 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 09:43:21,548 - INFO - Chatbot inicializado.
+2025-11-24 13:06:23,826 - INFO - Inicializando a NlpEngine...
+2025-11-24 13:06:23,828 - ERROR - Arquivo de treinamento não encontrado: csv/perguntas.csv
+2025-11-24 13:06:23,832 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 13:06:23,832 - INFO - Chatbot inicializado com sucesso, pronto para receber perguntas.
+2025-11-24 13:06:34,558 - INFO - Inicializando a NlpEngine...
+2025-11-24 13:06:34,558 - ERROR - Arquivo de treinamento não encontrado: csv/perguntas.csv
+2025-11-24 13:06:34,560 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 13:06:34,560 - INFO - Chatbot inicializado com sucesso, pronto para receber perguntas.
+2025-11-24 13:08:45,335 - INFO - Inicializando a NlpEngine...
+2025-11-24 13:08:45,337 - ERROR - Arquivo de treinamento não encontrado: csv/perguntas.csv
+2025-11-24 13:08:45,339 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 13:08:45,340 - INFO - Chatbot inicializado com sucesso, pronto para receber perguntas.
+2025-11-24 13:08:50,726 - INFO - Inicializando a NlpEngine...
+2025-11-24 13:08:50,726 - ERROR - Arquivo de treinamento não encontrado: csv/perguntas.csv
+2025-11-24 13:08:50,726 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 13:08:50,731 - INFO - Chatbot inicializado com sucesso, pronto para receber perguntas.
+2025-11-24 13:09:32,470 - INFO - Inicializando a NlpEngine...
+2025-11-24 13:09:32,471 - ERROR - Arquivo de treinamento não encontrado: csv/perguntas.csv
+2025-11-24 13:09:32,473 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 13:09:32,474 - INFO - Chatbot inicializado com sucesso, pronto para receber perguntas.
+2025-11-24 13:09:45,019 - INFO - Inicializando a NlpEngine...
+2025-11-24 13:09:45,019 - ERROR - Arquivo de treinamento não encontrado: csv/perguntas.csv
+2025-11-24 13:09:45,019 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 13:09:45,019 - INFO - Chatbot inicializado com sucesso, pronto para receber perguntas.
+2025-11-24 13:09:58,427 - INFO - Regex match: 'produtos?.*(distintos|diferentes|unicos)' -> TOTAL_PRODUTOS_DISTINTOS
+2025-11-24 13:09:58,427 - INFO - Intenção prevista: TOTAL_PRODUTOS_DISTINTOS com score 1.0000
+2025-11-24 13:10:00,387 - INFO - Função get_total_produtos_distintos executada com sucesso.
+2025-11-24 13:10:21,285 - INFO - Regex match: 'produtos?.*(distintos|diferentes|unicos)' -> TOTAL_PRODUTOS_DISTINTOS
+2025-11-24 13:10:21,286 - INFO - Intenção prevista: TOTAL_PRODUTOS_DISTINTOS com score 1.0000
+2025-11-24 13:10:22,684 - INFO - Função get_total_produtos_distintos executada com sucesso.
+2025-11-24 13:10:28,840 - INFO - Regex match: 'quantos\s+produtos?' -> TOTAL_PRODUTOS_DISTINTOS
+2025-11-24 13:10:28,840 - INFO - Intenção prevista: TOTAL_PRODUTOS_DISTINTOS com score 1.0000
+2025-11-24 13:10:30,216 - INFO - Função get_total_produtos_distintos executada com sucesso.
+2025-11-24 13:17:29,236 - INFO - Intenção prevista: DESCONHECIDO com score 0.0000
+2025-11-24 13:17:29,236 - INFO - Intenção desconhecida ou sem função de busca associada.
+2025-11-24 13:18:11,760 - INFO - Intenção prevista: DESCONHECIDO com score 0.0000
+2025-11-24 13:18:11,760 - INFO - Intenção desconhecida ou sem função de busca associada.
+2025-11-24 13:20:25,109 - INFO - Regex match: 'top\s*\d*\s*produtos?' -> TOP_PRODUTOS_ESTOQUE
+2025-11-24 13:20:25,109 - INFO - Intenção prevista: TOP_PRODUTOS_ESTOQUE com score 1.0000
+2025-11-24 13:20:26,963 - INFO - Função get_top_n_produtos_estoque executada com sucesso.
+2025-11-24 13:20:32,367 - INFO - Regex match: 'top\s*\d*\s*produtos?' -> TOP_PRODUTOS_ESTOQUE
+2025-11-24 13:20:32,368 - INFO - Intenção prevista: TOP_PRODUTOS_ESTOQUE com score 1.0000
+2025-11-24 13:20:33,798 - INFO - Função get_top_n_produtos_estoque executada com sucesso.
+2025-11-24 13:57:36,719 - INFO - Inicializando a NlpEngine...
+2025-11-24 13:57:36,719 - ERROR - Arquivo de treinamento não encontrado: csv/perguntas.csv
+2025-11-24 13:57:36,720 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 13:57:36,720 - INFO - Chatbot inicializado e usando a função execute_metric.
+2025-11-24 13:57:41,634 - INFO - Regex match: 'top\s*\d*\s*produtos?' -> TOP_PRODUTOS_ESTOQUE
+2025-11-24 13:57:41,634 - INFO - Intenção prevista: TOP_PRODUTOS_ESTOQUE com score 1.0000
+2025-11-24 13:57:43,619 - INFO - execute_metric para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-11-24 13:57:53,248 - INFO - Intenção prevista: DESCONHECIDO com score 0.0000
+2025-11-24 13:57:53,249 - INFO - Intenção desconhecida.
+2025-11-24 13:58:14,677 - INFO - Regex match: 'peso.*(faturado|vendido|total)' -> PESO_TOTAL_FATURADO
+2025-11-24 13:58:14,677 - INFO - Intenção prevista: PESO_TOTAL_FATURADO com score 1.0000
+2025-11-24 13:58:16,126 - INFO - execute_metric para a intenção PESO_TOTAL_FATURADO foi bem-sucedida.
+2025-11-24 14:00:27,318 - INFO - Inicializando a NlpEngine...
+2025-11-24 14:00:27,318 - ERROR - Arquivo de treinamento não encontrado: csv/perguntas.csv
+2025-11-24 14:00:27,318 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 14:00:27,318 - INFO - Chatbot inicializado e usando a função execute_metric.
+2025-11-24 14:00:54,597 - INFO - Regex match: 'peso.*(faturado|vendido|total)' -> PESO_TOTAL_FATURADO
+2025-11-24 14:00:54,598 - INFO - Intenção prevista: PESO_TOTAL_FATURADO com score 1.0000
+2025-11-24 14:00:56,038 - INFO - execute_metric para a intenção PESO_TOTAL_FATURADO foi bem-sucedida.
+2025-11-24 14:01:04,006 - INFO - Regex match: 'peso.*(faturado|vendido|total)' -> PESO_TOTAL_FATURADO
+2025-11-24 14:01:04,007 - INFO - Intenção prevista: PESO_TOTAL_FATURADO com score 1.0000
+2025-11-24 14:01:05,464 - INFO - execute_metric para a intenção PESO_TOTAL_FATURADO foi bem-sucedida.
+2025-11-24 14:02:31,366 - INFO - Intenção prevista: DESCONHECIDO com score 0.0000
+2025-11-24 14:02:31,367 - INFO - Intenção desconhecida.
+2025-11-24 14:02:38,037 - INFO - Intenção prevista: DESCONHECIDO com score 0.0000
+2025-11-24 14:02:38,038 - INFO - Intenção desconhecida.
+2025-11-24 14:02:49,545 - INFO - Regex match: 'produtos?.*(distintos|diferentes|unicos)' -> TOTAL_PRODUTOS_DISTINTOS
+2025-11-24 14:02:49,546 - INFO - Intenção prevista: TOTAL_PRODUTOS_DISTINTOS com score 1.0000
+2025-11-24 14:02:50,991 - ERROR - Erro ao executar execute_metric para a intenção TOTAL_PRODUTOS_DISTINTOS: column "SKU" does not exist
+LINE 1: SELECT COUNT(DISTINCT "SKU") FROM domrock.estoque 
+                              ^
+
+2025-11-24 14:02:56,268 - INFO - Regex match: 'quantos\s+produtos?' -> TOTAL_PRODUTOS_DISTINTOS
+2025-11-24 14:02:56,269 - INFO - Intenção prevista: TOTAL_PRODUTOS_DISTINTOS com score 1.0000
+2025-11-24 14:02:57,660 - ERROR - Erro ao executar execute_metric para a intenção TOTAL_PRODUTOS_DISTINTOS: column "SKU" does not exist
+LINE 1: SELECT COUNT(DISTINCT "SKU") FROM domrock.estoque 
+                              ^
+
+2025-11-24 14:03:05,798 - INFO - Regex match: 'peso.*(faturado|vendido|total)' -> PESO_TOTAL_FATURADO
+2025-11-24 14:03:05,799 - INFO - Intenção prevista: PESO_TOTAL_FATURADO com score 1.0000
+2025-11-24 14:03:07,235 - INFO - execute_metric para a intenção PESO_TOTAL_FATURADO foi bem-sucedida.
+2025-11-24 14:06:38,726 - INFO - Intenção prevista: DESCONHECIDO com score 0.0000
+2025-11-24 14:06:38,726 - INFO - Intenção desconhecida.
+2025-11-24 14:06:47,482 - INFO - Intenção prevista: DESCONHECIDO com score 0.0000
+2025-11-24 14:06:47,482 - INFO - Intenção desconhecida.
+2025-11-24 14:45:48,331 - INFO - Inicializando a NlpEngine...
+2025-11-24 14:45:48,331 - ERROR - Arquivo de treinamento não encontrado: csv/perguntas.csv
+2025-11-24 14:45:48,338 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 14:45:48,339 - INFO - Chatbot inicializado e usando a função execute_metric.
+2025-11-24 14:48:09,934 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:48:09,934 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:48:09,934 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:48:09,934 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:48:45,381 - INFO - Componentes extraídos: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': {}, 'n_top': 5}
+2025-11-24 14:48:45,381 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 14:51:38,329 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:51:38,329 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:51:38,330 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:51:38,331 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:51:43,512 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:51:43,512 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:51:43,512 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:51:43,512 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:51:48,727 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:51:48,727 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:51:48,736 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:51:48,736 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:51:53,816 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:51:53,816 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:51:53,821 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:51:53,821 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:51:58,794 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:51:58,796 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:51:58,798 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:51:58,798 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:53:01,355 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:53:01,355 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:53:01,357 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:53:01,357 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:53:13,243 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:53:13,243 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:53:13,243 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:53:13,243 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:53:19,917 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:53:19,917 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:53:19,919 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:53:19,919 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:53:29,318 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:53:29,327 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:53:29,328 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:53:29,328 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:54:33,470 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:54:33,471 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:54:33,472 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:54:33,472 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:55:29,881 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:55:29,897 - ERROR - Erro ao carregar CSV de perguntas: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 14:55:29,899 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:55:29,899 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:55:35,986 - INFO - Componentes extraídos: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {'distinct': True}, 'filters': {}, 'n_top': 5}
+2025-11-24 14:55:35,986 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 14:55:40,595 - INFO - Componentes extraídos: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {'distinct': True}, 'filters': {}, 'n_top': 5}
+2025-11-24 14:55:40,596 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 14:56:07,950 - INFO - Componentes extraídos: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {'distinct': True}, 'filters': {}, 'n_top': 5}
+2025-11-24 14:56:07,950 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 14:56:13,033 - INFO - Componentes extraídos: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': {}, 'n_top': 5}
+2025-11-24 14:56:13,034 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 14:56:17,253 - INFO - Componentes extraídos: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': {}, 'n_top': 10}
+2025-11-24 14:56:17,254 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 14:58:27,042 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 14:58:27,050 - ERROR - Erro ao carregar CSV de perguntas: CSV de treinamento deve ter colunas 'pergunta' e 'intent'.
+2025-11-24 14:58:27,052 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 14:58:27,052 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 14:58:28,424 - INFO - Componentes extraídos: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': {}, 'n_top': 10}
+2025-11-24 14:58:28,425 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 14:58:34,109 - INFO - Componentes extraídos: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': {}, 'n_top': 10}
+2025-11-24 14:58:34,110 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 14:58:43,878 - INFO - Componentes extraídos: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {'distinct': True}, 'filters': {}, 'n_top': 5}
+2025-11-24 14:58:43,878 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 14:59:16,950 - INFO - Componentes extraídos: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {'distinct': True}, 'filters': {}, 'n_top': 5}
+2025-11-24 14:59:16,950 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:01:16,969 - INFO - Inicializando a NlpEngine Híbrida...
+2025-11-24 15:01:16,969 - ERROR - Erro ao carregar CSV de perguntas: CSV de treinamento deve ter colunas 'pergunta' e 'intent'.
+2025-11-24 15:01:16,985 - INFO - NlpEngine Híbrida inicializada.
+2025-11-24 15:01:16,985 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:01:18,816 - INFO - Componentes extraídos: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {'distinct': True}, 'filters': {}, 'n_top': 5}
+2025-11-24 15:01:18,816 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:02:28,388 - INFO - Inicializando a NlpEngine...
+2025-11-24 15:02:28,392 - ERROR - CSV deve ter as colunas 'pergunta' e 'intent'.
+2025-11-24 15:02:28,392 - ERROR - Erro ao carregar CSV: Colunas faltando no CSV de treinamento.
+2025-11-24 15:02:28,392 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 15:02:28,392 - INFO - Chatbot inicializado e usando a função execute_metric.
+2025-11-24 15:03:04,703 - INFO - Inicializando a NlpEngine...
+2025-11-24 15:03:04,705 - ERROR - CSV deve ter as colunas 'pergunta' e 'intent'.
+2025-11-24 15:03:04,706 - ERROR - Erro ao carregar CSV: Colunas faltando no CSV de treinamento.
+2025-11-24 15:03:04,707 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 15:03:04,707 - INFO - Chatbot inicializado e usando a função execute_metric.
+2025-11-24 15:15:10,911 - INFO - Inicializando a NlpEngine...
+2025-11-24 15:15:10,911 - ERROR - CSV deve ter as colunas 'pergunta' e 'intent'.
+2025-11-24 15:15:10,911 - ERROR - Erro ao carregar CSV: Colunas faltando no CSV de treinamento.
+2025-11-24 15:15:10,914 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 15:15:10,914 - INFO - Chatbot inicializado e usando a função execute_metric.
+2025-11-24 15:15:16,144 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:15:16,159 - ERROR - Erro ao carregar CSV: ['intent']
+2025-11-24 15:15:16,159 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:15:16,159 - INFO - Chatbot inicializado e usando a função execute_metric.
+2025-11-24 15:15:21,139 - INFO - Inicializando a NlpEngine...
+2025-11-24 15:15:21,141 - ERROR - CSV deve ter as colunas 'pergunta' e 'intent'.
+2025-11-24 15:15:21,141 - ERROR - Erro ao carregar CSV: Colunas faltando no CSV de treinamento.
+2025-11-24 15:15:21,144 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 15:15:21,144 - INFO - Chatbot inicializado e usando a função execute_metric.
+2025-11-24 15:15:26,111 - INFO - Inicializando a NlpEngine...
+2025-11-24 15:15:26,111 - ERROR - CSV deve ter as colunas 'pergunta' e 'intent'.
+2025-11-24 15:15:26,111 - ERROR - Erro ao carregar CSV: Colunas faltando no CSV de treinamento.
+2025-11-24 15:15:26,111 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 15:15:26,111 - INFO - Chatbot inicializado e usando a função execute_metric.
+2025-11-24 15:15:36,017 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:15:36,029 - ERROR - Erro ao carregar CSV: ['intent']
+2025-11-24 15:15:36,033 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:15:36,034 - INFO - Chatbot inicializado e usando a função execute_metric.
+2025-11-24 15:15:49,791 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:15:49,804 - ERROR - Erro ao carregar CSV: ['intent']
+2025-11-24 15:15:49,804 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:15:49,804 - INFO - Chatbot inicializado e usando a função execute_metric.
+2025-11-24 15:18:13,040 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:18:13,040 - ERROR - Erro ao carregar CSV: [Errno 2] No such file or directory: 'csv/perguntas.csv'
+2025-11-24 15:18:13,040 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:18:13,040 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:18:21,939 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {'distinct': True}, 'filters': [], 'n_top': 5}
+2025-11-24 15:18:21,940 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:19:12,376 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:19:12,385 - ERROR - Erro ao carregar CSV: ['intent']
+2025-11-24 15:19:12,385 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:19:12,385 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:21:28,329 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {'distinct': True}, 'filters': [], 'n_top': 5}
+2025-11-24 15:21:28,330 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:21:44,082 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:21:46,616 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:21:46,618 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:23:04,266 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:23:06,812 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:23:06,813 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:23:12,101 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:23:12,101 - INFO - Erro ao carregar CSV: ../csv/perguntas.csv
+2025-11-24 15:23:23,372 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:23:25,602 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:23:25,603 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:23:30,787 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:23:30,792 - ERROR - Erro ao carregar CSV: cannot access local variable 'e' where it is not associated with a value
+2025-11-24 15:23:30,792 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:23:30,793 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:23:35,988 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:23:35,988 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 15:23:37,979 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:23:37,979 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:23:42,997 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:23:42,999 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 15:23:45,125 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:23:45,127 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:25:31,131 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:25:31,135 - ERROR - Erro ao carregar CSV: cannot access local variable 'e' where it is not associated with a value
+2025-11-24 15:25:31,135 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:25:31,137 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:25:36,467 - INFO - Inicializando a NlpEngine...
+2025-11-24 15:25:36,471 - INFO - CSV de perguntas carregado e processado: ../csv/perguntas.csv
+2025-11-24 15:25:36,473 - INFO - Modelo TF-IDF construído.
+2025-11-24 15:25:38,551 - INFO - Modelo BERT (all-MiniLM-L6-v2) carregado e embeddings criados.
+2025-11-24 15:25:38,552 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 15:25:38,552 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:25:43,770 - INFO - Inicializando a NlpEngine...
+2025-11-24 15:25:43,772 - INFO - CSV de perguntas carregado e processado: ../csv/perguntas.csv
+2025-11-24 15:25:43,774 - INFO - Modelo TF-IDF construído.
+2025-11-24 15:25:45,834 - INFO - Modelo BERT (all-MiniLM-L6-v2) carregado e embeddings criados.
+2025-11-24 15:25:45,834 - INFO - NlpEngine inicializada com sucesso.
+2025-11-24 15:25:45,835 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:28:12,951 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:28:15,027 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:28:15,027 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:28:20,065 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:28:22,098 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:28:22,098 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:28:28,011 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:28:30,352 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:28:30,352 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:28:32,672 - INFO - Componentes Finais: {'intent': <Intencao.TOP_PRODUTOS_ESTOQUE: 'TOP_PRODUTOS_ESTOQUE'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:28:34,119 - INFO - Executando Query TOP N / Filtrada: b'\n                        SELECT produto, SUM(es_totalestoque) as total\n                        FROM domrock.estoque \n                        GROUP BY produto\n                        ORDER BY total DESC\n                        LIMIT 5\n                    '
+2025-11-24 15:28:34,671 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-11-24 15:29:17,851 - INFO - Componentes Finais: {'intent': <Intencao.FATURAMENTO_TOTAL: 'FATURAMENTO_TOTAL'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:29:18,795 - INFO - Executando Query de Agregação: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-11-24 15:29:19,257 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-11-24 15:33:46,584 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:33:48,605 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:33:48,606 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:33:53,995 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:33:56,062 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:33:56,062 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:34:03,831 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:34:05,872 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:34:05,872 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:34:13,165 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:34:13,169 - ERROR - Erro ao carregar CSV: cannot access local variable 'e' where it is not associated with a value
+2025-11-24 15:34:13,171 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:34:13,171 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:34:18,587 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:34:18,591 - ERROR - Erro ao carregar CSV: cannot access local variable 'e' where it is not associated with a value
+2025-11-24 15:34:18,591 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:34:18,591 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:34:24,126 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:34:24,142 - ERROR - Erro ao carregar CSV: cannot access local variable 'e' where it is not associated with a value
+2025-11-24 15:34:24,142 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:34:24,142 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:34:29,596 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:34:29,605 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 15:34:31,597 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:34:31,598 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:34:42,216 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:34:42,222 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 15:34:44,286 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:34:44,287 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:35:05,407 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:35:05,412 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 15:35:07,730 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:35:07,730 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:36:42,612 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:36:42,616 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 15:36:44,671 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:36:44,672 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:36:53,128 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:36:53,133 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 15:36:55,435 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:36:55,436 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:42:13,161 - INFO - Confiança de similaridade baixa (0.62 <= 0.7). Retornando DESCONHECIDO.
+2025-11-24 15:42:13,161 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:42:13,161 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:44:34,583 - INFO - Confiança de similaridade baixa (0.70 <= 0.7). Retornando DESCONHECIDO.
+2025-11-24 15:44:34,583 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:44:34,583 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:44:40,530 - INFO - Componentes Finais: {'intent': <Intencao.FATURAMENTO_TOTAL: 'FATURAMENTO_TOTAL'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:44:41,930 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-11-24 15:44:42,437 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-11-24 15:45:37,769 - INFO - Componentes Finais: {'intent': <Intencao.TOP_CLIENTES_FATURAMENTO: 'TOP_CLIENTES_FATURAMENTO'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:45:38,725 - INFO - Executando: b'SELECT cod_cliente, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY cod_cliente ORDER BY total DESC LIMIT 5'
+2025-11-24 15:45:39,208 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-11-24 15:46:27,401 - INFO - Componentes Finais: {'intent': <Intencao.FATURAMENTO_TOTAL: 'FATURAMENTO_TOTAL'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:46:28,376 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-11-24 15:46:28,833 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-11-24 15:46:35,562 - INFO - Componentes Finais: {'intent': <Intencao.TOTAL_ITENS_ESTOQUE: 'TOTAL_ITENS_ESTOQUE'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:46:36,520 - INFO - Executando: b'SELECT SUM(es_totalestoque) FROM domrock.estoque '
+2025-11-24 15:46:37,004 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-11-24 15:46:47,319 - INFO - Componentes Finais: {'intent': <Intencao.PESO_TOTAL_FATURADO: 'PESO_TOTAL_FATURADO'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:46:48,246 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-11-24 15:46:48,698 - INFO - Consulta para a intenção PESO_TOTAL_FATURADO foi bem-sucedida.
+2025-11-24 15:46:56,424 - INFO - Componentes Finais: {'intent': <Intencao.TOTAL_ITENS_ESTOQUE: 'TOTAL_ITENS_ESTOQUE'>, 'modifiers': {'distinct': True}, 'filters': [], 'n_top': 5}
+2025-11-24 15:46:57,376 - INFO - Executando: b'SELECT SUM(DISTINCT es_totalestoque) FROM domrock.estoque '
+2025-11-24 15:46:57,834 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-11-24 15:47:02,972 - INFO - Componentes Finais: {'intent': <Intencao.TOP_CIDADES_FATURAMENTO: 'TOP_CIDADES_FATURAMENTO'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:47:03,941 - INFO - Executando: b'SELECT zs_cidade, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY zs_cidade ORDER BY total DESC LIMIT 5'
+2025-11-24 15:47:04,410 - INFO - Consulta para a intenção TOP_CIDADES_FATURAMENTO foi bem-sucedida.
+2025-11-24 15:47:08,737 - INFO - Componentes Finais: {'intent': <Intencao.TOP_CLIENTES_FATURAMENTO: 'TOP_CLIENTES_FATURAMENTO'>, 'modifiers': {}, 'filters': [], 'n_top': 10}
+2025-11-24 15:47:09,681 - INFO - Executando: b'SELECT cod_cliente, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY cod_cliente ORDER BY total DESC LIMIT 10'
+2025-11-24 15:47:10,142 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-11-24 15:47:15,493 - INFO - Componentes Finais: {'intent': <Intencao.TOP_PRODUTOS_ESTOQUE: 'TOP_PRODUTOS_ESTOQUE'>, 'modifiers': {}, 'filters': [], 'n_top': 3}
+2025-11-24 15:47:16,454 - INFO - Executando: b'SELECT produto, SUM(es_totalestoque) as total FROM domrock.estoque  GROUP BY produto ORDER BY total DESC LIMIT 3'
+2025-11-24 15:47:16,919 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-11-24 15:47:22,383 - INFO - Componentes Finais: {'intent': <Intencao.TOP_PRODUTOS_ESTOQUE: 'TOP_PRODUTOS_ESTOQUE'>, 'modifiers': {}, 'filters': [], 'n_top': 2}
+2025-11-24 15:47:23,312 - INFO - Executando: b'SELECT produto, SUM(es_totalestoque) as total FROM domrock.estoque  GROUP BY produto ORDER BY total DESC LIMIT 2'
+2025-11-24 15:47:23,789 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-11-24 15:47:31,746 - INFO - Confiança de similaridade baixa (0.69 <= 0.7). Retornando DESCONHECIDO.
+2025-11-24 15:47:31,746 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': [{'column': 'zs_cidade', 'value': 'sao paulo'}], 'n_top': 5}
+2025-11-24 15:47:31,747 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:47:36,507 - INFO - Confiança de similaridade baixa (0.68 <= 0.7). Retornando DESCONHECIDO.
+2025-11-24 15:47:36,507 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': [], 'n_top': 17841}
+2025-11-24 15:47:36,508 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:47:41,048 - INFO - Confiança de similaridade baixa (0.67 <= 0.7). Retornando DESCONHECIDO.
+2025-11-24 15:47:41,050 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': [{'column': 'produto', 'value': 'banana'}], 'n_top': 5}
+2025-11-24 15:47:41,051 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:47:49,387 - INFO - Confiança de similaridade baixa (0.62 <= 0.7). Retornando DESCONHECIDO.
+2025-11-24 15:47:49,387 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:47:49,388 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:47:53,185 - INFO - Confiança de similaridade baixa (0.51 <= 0.7). Retornando DESCONHECIDO.
+2025-11-24 15:47:53,185 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:47:53,185 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:47:56,980 - INFO - Pergunta classificada como FORA_DE_ESCOPO.
+2025-11-24 15:52:50,593 - INFO - Inicializando NlpEngine com Extração de Entidades...
+2025-11-24 15:52:50,601 - INFO - CSV carregado: ../csv/perguntas.csv
+2025-11-24 15:52:53,211 - INFO - NlpEngine (com Entidades) inicializada.
+2025-11-24 15:52:53,212 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-24 15:54:31,707 - INFO - Pergunta classificada como FORA_DE_ESCOPO.
+2025-11-24 15:58:06,502 - INFO - Confiança de similaridade baixa (0.68 <= 0.7). Retornando DESCONHECIDO.
+2025-11-24 15:58:06,502 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 'DESCONHECIDO'>, 'modifiers': {}, 'filters': [], 'n_top': 17841}
+2025-11-24 15:58:06,504 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-24 15:58:15,989 - INFO - Componentes Finais: {'intent': <Intencao.TOP_CIDADES_FATURAMENTO: 'TOP_CIDADES_FATURAMENTO'>, 'modifiers': {}, 'filters': [], 'n_top': 5}
+2025-11-24 15:58:16,933 - INFO - Executando: b'SELECT zs_cidade, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY zs_cidade ORDER BY total DESC LIMIT 5'
+2025-11-24 15:58:17,396 - INFO - Consulta para a intenção TOP_CIDADES_FATURAMENTO foi bem-sucedida.
