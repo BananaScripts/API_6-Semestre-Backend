@@ -32,10 +32,13 @@ class Chatbot:
 
         # 3. Chamar a nova função de construção de query dinâmica
         try:
-            # A NlpEngine já extraiu tudo que a camada de dados precisa
-            result_string = execute_query_from_components(components)
+            # A função execute_query_from_components agora retorna uma lista.
+            result_list = execute_query_from_components(components)
             
-            formatted_response = {"resposta": result_string.splitlines()}
+            # CORREÇÃO: A variável agora é uma lista (result_list), 
+            # então o .splitlines() foi removido pois não é necessário (e causa o erro).
+            formatted_response = {"resposta": result_list}
+            
             log_info(f"Consulta para a intenção {intent_name} foi bem-sucedida.")
             return formatted_response, intent_name
 

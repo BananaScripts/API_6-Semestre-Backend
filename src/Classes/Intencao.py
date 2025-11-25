@@ -1,16 +1,26 @@
-
-from enum import Enum
+from enum import Enum, auto
 
 class Intencao(Enum):
-    # === Intenções de Negócio ===
-    TOTAL_ITENS_ESTOQUE = "TOTAL_ITENS_ESTOQUE"          # Quantidade total de itens no estoque
-    TOTAL_PRODUTOS_DISTINTOS = "TOTAL_PRODUTOS_DISTINTOS"  # Contagem de SKUs únicos
-    PESO_TOTAL_FATURADO = "PESO_TOTAL_FATURADO"          # Soma do peso líquido vendido
-    TOP_PRODUTOS_ESTOQUE = "TOP_PRODUTOS_ESTOQUE"        # Ranking de produtos por quantidade em estoque
-    TOP_CIDADES_FATURAMENTO = "TOP_CIDADES_FATURAMENTO"     # Ranking de cidades por peso vendido
-    FATURAMENTO_TOTAL = "FATURAMENTO_TOTAL"              # Alias para PESO_TOTAL_FATURADO
-    TOP_CLIENTES_FATURAMENTO = "TOP_CLIENTES_FATURAMENTO" # Ranking de clientes por peso vendido
+    # Intenções de Agregação Total
+    FATURAMENTO_TOTAL = auto()
+    TOTAL_ITENS_ESTOQUE = auto()
+    TOTAL_PRODUTOS_DISTINTOS = auto()
 
-    # === Intenções de Sistema ===
-    DESCONHECIDO = "DESCONHECIDO"                        # A PNL não conseguiu identificar a intenção
-    FORA_DE_ESCOPO = "FORA_DE_ESCOPO"                    # A pergunta é válida, mas não pode ser respondida
+    # Intenções de Ranking (TOP N)
+    TOP_PRODUTOS_ESTOQUE = auto()
+    TOP_PRODUTOS_VENDIDOS = auto()
+    TOP_CIDADES_FATURAMENTO = auto()
+    TOP_CLIENTES_FATURAMENTO = auto()
+
+    # Intenções de Agregação Filtrada
+    FATURAMENTO_POR_CIDADE = auto()
+    FATURAMENTO_POR_PRODUTO = auto()
+    FATURAMENTO_POR_CLIENTE = auto()
+
+    # Nova Intenção de Filtro de Data (Ponto 2.2)
+    FILTRO_DATA = auto()
+
+    # Intenções de Controle e Fallback
+    PESO_TOTAL_FATURADO = auto() # Alias para FATURAMENTO_TOTAL
+    FORA_DE_ESCOPO = auto()
+    DESCONHECIDO = auto()
