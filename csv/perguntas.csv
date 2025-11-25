@@ -1,23 +1,605 @@
 pergunta,intent
-"Qual o total de itens em nosso estoque?",TOTAL_ITENS_ESTOQUE
-"Quantas unidades temos armazenadas?",TOTAL_ITENS_ESTOQUE
-"Me diga a quantidade total de produtos no estoque",TOTAL_ITENS_ESTOQUE
-"Número total de itens disponíveis",TOTAL_ITENS_ESTOQUE
-"Quantos produtos distintos existem?",TOTAL_PRODUTOS_DISTINTOS
-"Qual o número de SKUs únicos em estoque?",TOTAL_PRODUTOS_DISTINTOS
+quais cidades mais faturaram ontem? eh?,TOP_CIDADES_FATURAMENTO
+lista dos 3 melhores clientes por faturamento entre 100325 e 040425 vlw,TOP_CLIENTES_FATURAMENTO
+diz o valor do faturamento,FATURAMENTO_TOTAL
+diz o valor do faturamento vlw,FATURAMENTO_TOTAL
+pedidos não faturados,FORA_DE_ESCOPO
+Cidades  com  maior  faturamento  entre  230124  e  100224,TOP_CIDADES_FATURAMENTO
+quais cidades mais faturaram mes passado? agora eh?,TOP_CIDADES_FATURAMENTO
+Quanto entrou de dinheiro no periodo 30032024 a 25042024? eh?,FATURAMENTO_TOTAL
+quais foram os 15 produtos vendidos entre 240425 e 230525? do produto arroz tipo 1 na cidade recife pro cliente 1099 entre 240425 e 230525,TOP_PRODUTOS_VENDIDOS
+peso  faturado  em  semana  passada  rápido,PESO_TOTAL_FATURADO
+clientes que mais faturaram mes passado,TOP_CLIENTES_FATURAMENTO
+produtos únicos em estoque,TOTAL_PRODUTOS_DISTINTOS
+quantos itens tem no estoque de farinha de trigo? por favor,TOTAL_ITENS_ESTOQUE
+diz o valor do faturamento pode?,FATURAMENTO_TOTAL
+Top 20 cidades por faturamento mes passado,TOP_CIDADES_FATURAMENTO
+maiores  estoques  por  produto  do  produto  Açúcar  Refinado  na  cidade  Salvador  pro  cliente  1062  entre  16072025  e  21072025,TOP_PRODUTOS_ESTOQUE
+Quanto faturou o cliente 1015? pode?,FATURAMENTO_POR_CLIENTE
+Cidades com maior faturamento entre 21102024 e 27102024,TOP_CIDADES_FATURAMENTO
+Quantos produtos distintos temos?,TOTAL_PRODUTOS_DISTINTOS
+Total de SKUs diferentes,TOTAL_PRODUTOS_DISTINTOS
+top 5 cidades por faturamento semana passada do produto azeite extra virgem na cidade são paulo pro cliente 1091 entre 020224 e 040224,TOP_CIDADES_FATURAMENTO
+quais cidades mais faturaram hoje?,TOP_CIDADES_FATURAMENTO
+Cidades com maior faturamento entre 13062025 e 10072025,TOP_CIDADES_FATURAMENTO
+lista dos 15 melhores clientes por faturamento entre 27072025 e 19082025,TOP_CLIENTES_FATURAMENTO
+Quanto entrou de dinheiro no periodo 22092024 a 02102024? pfv,FATURAMENTO_TOTAL
+Faturamento por cidade do produto Macarrão Espaguete na cidade Porto Alegre pro cliente 1042 entre 030725 e 070725,FATURAMENTO_POR_CIDADE
+diz o valor do faturamento eh?,FATURAMENTO_TOTAL
+lista dos 20 melhores clientes por faturamento entre 290624 e 030724,TOP_CLIENTES_FATURAMENTO
+top 3 produtos em estoque vlw,TOP_PRODUTOS_ESTOQUE
+top 15 produtos em estoque pode?,TOP_PRODUTOS_ESTOQUE
+maiores estoques por produto,TOP_PRODUTOS_ESTOQUE
+Cidades com maior faturamento entre 251025 e 061125,TOP_CIDADES_FATURAMENTO
+Top 3 prod.s mais vendidos semana passada,TOP_PRODUTOS_VENDIDOS
+faturamento por cliente vlw,FATURAMENTO_POR_CLIENTE
+clientes que mais faturaram mes passado,TOP_CLIENTES_FATURAMENTO
+Quantos itens tem no estoque de Óleo de Soja? pfv,TOTAL_ITENS_ESTOQUE
+quais foram os 3 produtos vendidos entre 27042024 e 26052024?,TOP_PRODUTOS_VENDIDOS
+faturamento total entre 23122024 e 29122024,FATURAMENTO_TOTAL
+quanto faturou o produto sal refinado?,FATURAMENTO_POR_PRODUTO
+Quanto faturou a cidade de Vitória?,FATURAMENTO_POR_CIDADE
+lista  dos  10  melhores  clientes  por  faturamento  entre  17112025  e  17122025,TOP_CLIENTES_FATURAMENTO
+Faturamento por cliente,FATURAMENTO_POR_CLIENTE
+mostrar  vendas  entre  07102025  e  05112025  do  produto  Café  Torrado  na  cidade  São  Paulo  pro  cliente  1046  entre  07102025  e  05112025,FILTRO_DATA
+Quais são os 5 produtos com mais estoque? eh?,TOP_PRODUTOS_ESTOQUE
+lista dos 5 melhores clientes por faturamentoo entre 190125 e 250125,TOP_CLIENTES_FATURAMENTO
+Top 20 clientes por faturamento rápido,TOP_CLIENTES_FATURAMENTO
+quais cidades mais faturaram semana passada?,TOP_CIDADES_FATURAMENTO
+Faturamento por produto,FATURAMENTO_POR_PRODUTO
+Quanto faturou o produto Azeite Extra Virgem?,FATURAMENTO_POR_PRODUTO
+quantidade em estoque de Leite UHT na Rio de Janeiro?,TOTAL_ITENS_ESTOQUE
+Produtos únicos em estoque por favor,TOTAL_PRODUTOS_DISTINTOS
+maiores estoques por produto pode?,TOP_PRODUTOS_ESTOQUE
+Me mostra o faturamento de ontem? do produto Leite UHT na cidade Campinas pro cliente 1034 entre 22112024 e 18122024 eh?,FATURAMENTO_TOTAL
+Quanto faturou o produto Azeite Extra Virgem? pfv,FATURAMENTO_POR_PRODUTO
+Faturamento por cliente,FATURAMENTO_POR_CLIENTE
+faturamento total entre 26102024 e 21112024,FATURAMENTO_TOTAL
+clientes que mais faturaram hoje,TOP_CLIENTES_FATURAMENTO
+cidades com maior faturamento entre 13112024 e 13122024 do produto macarrão espaguete na cidade porto alegre pro clientee 1019 entre 13112024 e 13122024,TOP_CIDADES_FATURAMENTO
+diz o valor do faturamento do produto sal refinado na cidade recife pro clientee 1020 entre 29052025 e 31052025,FATURAMENTO_TOTAL
+top 20 clientes por faturamento,TOP_CLIENTES_FATURAMENTO
+Top 5 clientes por faturameto,TOP_CLIENTES_FATURAMENTO
+peso  total  entre  20122024  e  23122024,PESO_TOTAL_FATURADO
+Top 10 produtos mais vendidos ontem,TOP_PRODUTOS_VENDIDOS
+Quanto faturou a cidade de Belo Horizonte? eh?,FATURAMENTO_POR_CIDADE
+quanto faturou a cidade de recife?,FATURAMENTO_POR_CIDADE
+quais cidades mais faturaram hoje?,TOP_CIDADES_FATURAMENTO
+faturamento em Porto Alegre entre 16092024 e 02102024,FATURAMENTO_POR_CIDADE
+lista dos 5 melhores clientes por faturamento entre 200225 e 280225 do produto Azeite Extra Virgem na cidade Rio de Janeiro pro cliente 1039 entre 200225 e 280225,TOP_CLIENTES_FATURAMENTO
+quais cidades mais faturaram ontem?,TOP_CIDADES_FATURAMENTO
+quantos produtos distintos temos?,TOTAL_PRODUTOS_DISTINTOS
+lista dos 20 melhores clientes por faturamento entre 310824 e 240924,TOP_CLIENTES_FATURAMENTO
+clientes que mais faturaram ontem pfv,TOP_CLIENTES_FATURAMENTO
+Produtos únicos em estoque do produto Café Torrado na cidade Rio de Janeiro pro cliente 1047 entre 060824 e 050924,TOTAL_PRODUTOS_DISTINTOS
+Quanto faturamos mes passado em Porto Alegre?,FATURAMENTO_TOTAL
+quantos itens tem no estoque de arroz tipo 1? rápido,TOTAL_ITENS_ESTOQUE
+dados de mes passado,FILTRO_DATA
+lista dos 3 mais vendidos do produto Arroz Tipo 1 na cidade Campinas pro cliente 1007 entre 111124 e 301124,TOP_PRODUTOS_VENDIDOS
+faturamento por produto,FATURAMENTO_POR_PRODUTO
+lista  dos  10  mais  vendidos,TOP_PRODUTOS_VENDIDOS
+quantidade em estoque de Azeite Extra Virgem na Vitória?,TOTAL_ITENS_ESTOQUE
+top 5 produtos mais vendidos hoje do produto café torrado na cidade fortaleza pro cliente 1016 entre 21012025 e 06022025,TOP_PRODUTOS_VENDIDOS
+quantidade em estoque de Leite UHT na Vitória?,TOTAL_ITENS_ESTOQUE
+Quais são os 10 produtos com mais estoque?,TOP_PRODUTOS_ESTOQUE
+quanto faturou o produto arroz tipo 1? rápido,FATURAMENTO_POR_PRODUTO
+produtos únicos em estoque,TOTAL_PRODUTOS_DISTINTOS
+lista dos 20 mais vendidos do produto leite uht na cidade fortaleza pro cliente 1034 entre 21012024 e 31012024,TOP_PRODUTOS_VENDIDOS
+vendas para o cliente 1041 entre 10082025 e 17082025 pode?,FATURAMENTO_POR_CLIENTE
+quais cidades mais faturaram semana passada?,TOP_CIDADES_FATURAMENTO
+Total de SKUs diferentes,TOTAL_PRODUTOS_DISTINTOS
+Quais pedidos foram cancelados? do produto Leite UHT na cidade Curitiba pro cliente 1014 entre 300424 e 140524 eh?,FORA_DE_ESCOPO
+Me mostra os pedidos devolvidos,FORA_DE_ESCOPO
+pedidos não faturados,FORA_DE_ESCOPO
+Quanto faturou o produto Farinha de Trigo?,FATURAMENTO_POR_PRODUTO
+diz o valor do faturamento,FATURAMENTO_TOTAL
+Quanto faturou o produto Feijão Carioca?,FATURAMENTO_POR_PRODUTO
+Me mostra o faturamento de ontem?,FATURAMENTO_TOTAL
+maiores estoques por produto do produto Arroz Tipo 1 na cidade Recife pro cliente 1097 entre 07072025 e 13072025,TOP_PRODUTOS_ESTOQUE
+Peso  faturado  em  hoje,PESO_TOTAL_FATURADO
+lista dos 15 mais vendidos por favor,TOP_PRODUTOS_VENDIDOS
+quantidade em estoque de café torrado na belo horizonte? eh?,TOTAL_ITENS_ESTOQUE
+Top 3 produtos mais vendidos ontem,TOP_PRODUTOS_VENDIDOS
+vendas para o cliente 1024 entre 26052024 e 16062024 eh?,FATURAMENTO_POR_CLIENTE
+pedidos não faturados,FORA_DE_ESCOPO
+diz o valor do faturamento,FATURAMENTO_TOTAL
+faturamento  em  Curitiba  entre  01112024  e  25112024,FATURAMENTO_POR_CIDADE
+qual foi o faturamento total? rápido,FATURAMENTO_TOTAL
+Quanto faturou a cidade de Vitória? ❤️,FATURAMENTO_POR_CIDADE
+Top 10 produtos mais vendidos mes passado do produto Café Torrado na cidade Curitiba pro cliente 1047 entre 26052025 e 07062025 ❤️,TOP_PRODUTOS_VENDIDOS
+Quais são os 15 produtos com mais estoque?,TOP_PRODUTOS_ESTOQUE
+Total de itens no estoque,TOTAL_ITENS_ESTOQUE
+clientes que mais faturaram mes passado pode?,TOP_CLIENTES_FATURAMENTO
+Faturamento por cidade,FATURAMENTO_POR_CIDADE
+vendas  do  feijão  carioca  em  rio  de  janeiro  ontem,FATURAMENTO_POR_PRODUTO
+Produtos únicos em estoque,TOTAL_PRODUTOS_DISTINTOS
+lista dos 20 mais vendidos,TOP_PRODUTOS_VENDIDOS
+Top  15  produtos  em  estoque,TOP_PRODUTOS_ESTOQUE
+faturamento por cliente,FATURAMENTO_POR_CLIENTE
+diz o valor do faturamento,FATURAMENTO_TOTAL
+Qual foi o faturamento total? do produto Arroz Tipo 1 na cidade Curitiba pro cliente 1079 entre 26082024 e 30082024,FATURAMENTO_TOTAL
+quanto  faturou  o  produto  macarrão  espaguete? eh?,FATURAMENTO_POR_PRODUTO
+Filtrar por data hoje,FILTRO_DATA
+diz o valor do faturamento,FATURAMENTO_TOTAL
+total de skus diferentes do produto farinha de trigo na cidade recife pro clientee 1006 entre 15012025 e 05022025,TOTAL_PRODUTOS_DISTINTOS
+Cidades com maior fatramento entre 221024 e 051124 vlw,TOP_CIDADES_FATURAMENTO
+Quantos itens tem no estoque de Feijão Carioca?,TOTAL_ITENS_ESTOQUE
+top 10 cidades por faturamento ontem,TOP_CIDADES_FATURAMENTO
+maiores estoques por produto,TOP_PRODUTOS_ESTOQUE
+lista dos 15 melhores clientes por faturamento entre 020325 e 220325,TOP_CLIENTES_FATURAMENTO
+peso faturado em mes passado vlw,PESO_TOTAL_FATURADO
+Quanto entrou de dinheiro no periodo 26042025 a 16052025? vlw,FATURAMENTO_TOTAL
+mostrar vendas entre 01072024 e 07072024 do produto Azeite Extra Virgem na cidade Belo Horizonte pro cliente 1033 entre 01072024 e 07072024,FILTRO_DATA
+qual o peso total faturado?,PESO_TOTAL_FATURADO
+faturamento por cliente,FATURAMENTO_POR_CLIENTE
+Peso faturado em hoje do produto Azeite Extra Virgem na cidade Campinas pro cliente 1009 entre 191124 e 081224,PESO_TOTAL_FATURADO
+Quanto faturou a cidade de Fortaleza?,FATURAMENTO_POR_CIDADE
+clientes que mais faturaram ontem,TOP_CLIENTES_FATURAMENTO
+dados de semana passada,FILTRO_DATA
+mostrar vendas entre 011124 e 191124 vlw,FILTRO_DATA
+faturamento em Belo Horizonte entre 27102025 e 25112025 do produto Leite UHT na cidade Belo Horizonte pro cliente 1098 entre 27102025 e 25112025,FATURAMENTO_POR_CIDADE
+Quais foram os 10 produtos vendidos entre 27122024 e 25012025?,TOP_PRODUTOS_VENDIDOS
+Quantos itens tem no estoque de Macarrão Espaguete? agora,TOTAL_ITENS_ESTOQUE
+Total de itens no estoque do produto Azeite Extra Virgem na cidade São Paulo pro cliente 1047 entre 060625 e 030725 rápido,TOTAL_ITENS_ESTOQUE
+Quais foram os 5 produtos vendidos entre 070725 e 190725?,TOP_PRODUTOS_VENDIDOS
+top  20  cidades  por  faturamento  mes  passado,TOP_CIDADES_FATURAMENTO
+Top 15 produtos em estoque por favor,TOP_PRODUTOS_ESTOQUE
+lista dos 20 melhores clientes por faturamento entre 07092024 e 24092024 do produto óleo de soja na cidade recife pro cliente 1062 entre 07092024 e 24092024,TOP_CLIENTES_FATURAMENTO
+maiores estoques por produto,TOP_PRODUTOS_ESTOQUE
+peso total entre 22112025 e 21122025,PESO_TOTAL_FATURADO
+quantidade  em  estoque  de  Feijão  Carioca  na  Vitória?,TOTAL_ITENS_ESTOQUE
+diz o valor do faturamento agora,FATURAMENTO_TOTAL
+Quanto  entrou  de  dinheiro  no  periodo  30082024  a  24092024?  vlw,FATURAMENTO_TOTAL
+Quanto entrou de dinheiro no periodo 060425 a 230425? eh?,FATURAMENTO_TOTAL
+Cidades  com  maior  faturameto  entre  01072024  e  08072024,TOP_CIDADES_FATURAMENTO
+Faturamento total entre 14012024 e 06022024,FATURAMENTO_TOTAL
+faturamento em Recife entre 31032024 e 01042024 do produto Sal Refinado na cidade Recife pro cliente 1071 entre 31032024 e 01042024,FATURAMENTO_POR_CIDADE
+top 15 produtos mais vendidos ontem,TOP_PRODUTOS_VENDIDOS
+Quais foram os 3 produtos vendidos entre 12042024 e 30042024?,TOP_PRODUTOS_VENDIDOS
+Top 10 produtos em estoque,TOP_PRODUTOS_ESTOQUE
+peso faturado em hoje eh?,PESO_TOTAL_FATURADO
+quais cidades mais faturaram ontem?,TOP_CIDADES_FATURAMENTO
+lista dos 5 mais vendidos,TOP_PRODUTOS_VENDIDOS
+clientes que mais faturaram mes passado,TOP_CLIENTES_FATURAMENTO
+Quanto faturou a cidade de Salvador? do produto Café Torrado na cidade Salvador pro cliente 1056 entre 290524 e 220624 ❤️,FATURAMENTO_POR_CIDADE
+Cidades com maior faturamento entre 07062024 e 16062024 do produto Arroz Tipo 1 na cidade São Paulo pro cliente 1025 entre 07062024 e 16062024 rápido,TOP_CIDADES_FATURAMENTO
+vendas do Café Torrado em Campinas hoje,FATURAMENTO_POR_PRODUTO
+lista  dos  20  mais  vendidos  por  favor,TOP_PRODUTOS_VENDIDOS
+Quantos itens tem no estoque de Café Torrado? vlw,TOTAL_ITENS_ESTOQUE
+peso total entre 05042024 e 30042024,PESO_TOTAL_FATURADO
+mostrar vendas entre 26072025 e 18082025,FILTRO_DATA
+Quais foram os 10 produtos vendidos entre 100125 e 050225? do produto Macarrão Espaguete na cidade Campinas pro cliente 1034 entre 100125 e 050225,TOP_PRODUTOS_VENDIDOS
+Quanto  faturamos  hoje  em  Vitória?,FATURAMENTO_TOTAL
+qual o peso total faturado?,PESO_TOTAL_FATURADO
+Faturamento por cidade ❤️,FATURAMENTO_POR_CIDADE
+Qual foi o faturamento total? ❤️,FATURAMENTO_TOTAL
+maiores  estoques  por  produto,TOP_PRODUTOS_ESTOQUE
+maiores estoques por produto,TOP_PRODUTOS_ESTOQUE
+Produtos únicos em estoque,TOTAL_PRODUTOS_DISTINTOS
+Faturamento total entre 05082025 e 14082025,FATURAMENTO_TOTAL
+top 5 produtos em estoque ❤️,TOP_PRODUTOS_ESTOQUE
+peso faturado em ontem pode?,PESO_TOTAL_FATURADO
+Quais foram os 20 produtos vendidos entre 19042024 e 17052024? do produto Açúcar Refinado na cidade São Paulo pro cliente 1061 entre 19042024 e 17052024,TOP_PRODUTOS_VENDIDOS
+vendas  do  sal  refinado  em  rio  de  janeiro  semana  passada,FATURAMENTO_POR_PRODUTO
+faturamento por cidade,FATURAMENTO_POR_CIDADE
+Total de itens no estoque,TOTAL_ITENS_ESTOQUE
+quanto faturou a cidade de campinas?,FATURAMENTO_POR_CIDADE
+lista dos 3 mais vendidos do produto Leite UHT na cidade Rio de Janeiro pro cliente 1052 entre 180725 e 040825,TOP_PRODUTOS_VENDIDOS
+Faturamento total entre 26092025 e 10102025,FATURAMENTO_TOTAL
+Total  de  itens  no  estoque,TOTAL_ITENS_ESTOQUE
+diz  o  valor  do  faturamento  por  favor,FATURAMENTO_TOTAL
+fatramento  em  Vitória  entre  020724  e  060724,FATURAMENTO_POR_CIDADE
+quais foram os 20 produtos vendidos entre 281025 e 041125?,TOP_PRODUTOS_VENDIDOS
+lista dos 20 mais vendidos,TOP_PRODUTOS_VENDIDOS
+diz o valor do faturamento,FATURAMENTO_TOTAL
+quais cidades mais faturaram semana passada?,TOP_CIDADES_FATURAMENTO
+produtos únicos em estoque,TOTAL_PRODUTOS_DISTINTOS
+Quanto faturou a cidade de Vitória? ❤️,FATURAMENTO_POR_CIDADE
+Top 15 produtos em estoque,TOP_PRODUTOS_ESTOQUE
+top 3 produtos mais vendidos semana passada,TOP_PRODUTOS_VENDIDOS
+top 5 produtos mais vendidos ontem,TOP_PRODUTOS_VENDIDOS
+Faturamento por produto,FATURAMENTO_POR_PRODUTO
+Faturamento por cidade,FATURAMENTO_POR_CIDADE
+Quanto faturou o cliente 1049?,FATURAMENTO_POR_CLIENTE
+top 5 clientes por faturamento,TOP_CLIENTES_FATURAMENTO
+maiores  estoques  por  produto  agora,TOP_PRODUTOS_ESTOQUE
+Qual o peso total faturado?,PESO_TOTAL_FATURADO
+dados de ontem do produto azeite extra virgem na cidade salvador pro cliente 1036 entre 04032025 e 27032025,FILTRO_DATA
+total de itens no estoque,TOTAL_ITENS_ESTOQUE
+Total de itens no estoque eh?,TOTAL_ITENS_ESTOQUE
+Quais são os 20 produtos com mais estoque? do produto Sal Refinado na cidade Recife pro cliente 1052 entre 210124 e 230124,TOP_PRODUTOS_ESTOQUE
+vendas do Macarrão Espaguete em Recife hoje,FATURAMENTO_POR_PRODUTO
+Top  10  produtos  em  estoque,TOP_PRODUTOS_ESTOQUE
+Quanto entrou de dinheiro no periodo 150424 a 220424? vlw,FATURAMENTO_TOTAL
+faturamento em fortaleza entre 06062025 e 27062025 pode?,FATURAMENTO_POR_CIDADE
+Top 5 produtos mais vendidos semana passada agora eh?,TOP_PRODUTOS_VENDIDOS
+quantidade em estoque de Azeite Extra Virgem na Campinas?,TOTAL_ITENS_ESTOQUE
+Total de itens no estoque,TOTAL_ITENS_ESTOQUE
+quantidade  em  estoque  de  sal  refinado  na  recife?,TOTAL_ITENS_ESTOQUE
+diz o valor do faturamento,FATURAMENTO_TOTAL
+Quantos itens tem no estoque de Macarrão Espaguete?,TOTAL_ITENS_ESTOQUE
+Quanto entrou de dinheiro no periodo 26092025 a 05102025? ❤️,FATURAMENTO_TOTAL
+Qual foi o faturamento total?,FATURAMENTO_TOTAL
+Quanto faturamos mes passado em Porto Alegre? eh?,FATURAMENTO_TOTAL
+Faturamento  por  produto,FATURAMENTO_POR_PRODUTO
+Quanto  entrou  de  dinheiro  no  periodo  160524  a  080624?,FATURAMENTO_TOTAL
+lista dos 10 melhores clientes por faturamento entre 261224 e 180125,TOP_CLIENTES_FATURAMENTO
+Quantos itens tem no estoque de Óleo de Soja?,TOTAL_ITENS_ESTOQUE
+Top 15 produtos mais vendidos ontem,TOP_PRODUTOS_VENDIDOS
+vendas do Leite UHT em Rio de Janeiro hoje,FATURAMENTO_POR_PRODUTO
+me mostra os pedidos devolvidos,FORA_DE_ESCOPO
+vendas para o cliente 1058 entre 22082025 e 24082025 do produto Feijão Carioca na cidade Porto Alegre pro cliente 1058 entre 22082025 e 24082025,FATURAMENTO_POR_CLIENTE
+quanto  faturou  o  produto  azeite  extra  virgem?,FATURAMENTO_POR_PRODUTO
+Quanto entrou de dinheiro no periodo 070925 a 021025?,FATURAMENTO_TOTAL
+lista  dos  10  melhores  clientes  por  faturamento  entre  15092025  e  20092025,TOP_CLIENTES_FATURAMENTO
+lista dos 15 mais vendidos,TOP_PRODUTOS_VENDIDOS
+faturamento por cliente,FATURAMENTO_POR_CLIENTE
+Me mostra o faturamento de hojee?,FATURAMENTO_TOTAL
+total de skus diferentes agora eh?,TOTAL_PRODUTOS_DISTINTOS
+Cidades com maior faturamento entre 12012024 e 24012024,TOP_CIDADES_FATURAMENTO
+mostrar vendas entre 29062024 e 04072024 eh?,FILTRO_DATA
+quantos produtos distintos temos? do produto óleo de soja na cidade recife pro cliente 1032 entre 13102025 e 05112025,TOTAL_PRODUTOS_DISTINTOS
+Produtos únicos em estoque do produto Café Torrado na cidade Curitiba pro cliente 1087 entre 25102025 e 21112025,TOTAL_PRODUTOS_DISTINTOS
+top  3  produtos  mais  vendidos  ontem  do  produto  sal  refinado  na  cidade  porto  alegre  pro  cliente  1051  entre  14062025  e  12072025 eh?,TOP_PRODUTOS_VENDIDOS
+Quais são os 15 produtos com mais estoque? vlw,TOP_PRODUTOS_ESTOQUE
+quais são os 15 produtos com mais estoque? do produto açúcar refinado na cidade vitória pro cliente 1086 entre 150925 e 031025 por favor,TOP_PRODUTOS_ESTOQUE
+Filtrar por data mes passado,FILTRO_DATA
+pedidos não faturados do produto Sal Refinado na cidade Curitiba pro cliente 1078 entre 25022025 e 11032025 pfv,FORA_DE_ESCOPO
+total de skus diferentes pfv,TOTAL_PRODUTOS_DISTINTOS
+Quais  foram  os  5  produtos  vendidos  entre  110725  e  310725?  pode?,TOP_PRODUTOS_VENDIDOS
+Faturamento por produto,FATURAMENTO_POR_PRODUTO
+quais pedidos foram cancelados? pode? eh?,FORA_DE_ESCOPO
+clientes  que  mais  faturaram  hoje,TOP_CLIENTES_FATURAMENTO
+Faturamento por cidade,FATURAMENTO_POR_CIDADE
+diz o valor do faturamento eh?,FATURAMENTO_TOTAL
+Quantos produtos distintos temos?,TOTAL_PRODUTOS_DISTINTOS
+quanto faturou o cliente 1063?,FATURAMENTO_POR_CLIENTE
+quais pedidos foram cancelados?,FORA_DE_ESCOPO
+vendas para o cliente 1011 entre 161224 e 291224 pfv,FATURAMENTO_POR_CLIENTE
+vendas do sal refinado em porto alegre ultimo mês,FATURAMENTO_POR_PRODUTO
+clientes que mais faturaram mes passado,TOP_CLIENTES_FATURAMENTO
+quais são os 3 produtos com mais estoque?,TOP_PRODUTOS_ESTOQUE
+quanto faturou o produto leite uht?,FATURAMENTO_POR_PRODUTO
+clientes que mais faturaram ontem,TOP_CLIENTES_FATURAMENTO
+lista dos 5 mais vendidos,TOP_PRODUTOS_VENDIDOS
+Quais  pedidos  foram  cancelados?,FORA_DE_ESCOPO
+Quais foram os 5 produtos vendidos entre 201025 e 301025?,TOP_PRODUTOS_VENDIDOS
+Quantos itens tem no estoque de Feijão Carioca?,TOTAL_ITENS_ESTOQUE
+Faturamento por produtoo,FATURAMENTO_POR_PRODUTO
+qual foi o faturamento total?,FATURAMENTO_TOTAL
+Top 10 produtos mais vendidos hoje do produto Óleo de Soja na cidade Belo Horizonte pro cliente 1007 entre 25052024 e 12062024 pfv,TOP_PRODUTOS_VENDIDOS
+mostrar vendas entre 29092025 e 20102025 por favor,FILTRO_DATA
+Quais foram os 3 produtos vendidos entre 24112025 e 01122025?,TOP_PRODUTOS_VENDIDOS
+Quantos produtos distintos temos?,TOTAL_PRODUTOS_DISTINTOS
+lista dos 10 mais vendidos do produto Macarrão Espaguete na cidade Recife pro cliente 1077 entre 261024 e 161124,TOP_PRODUTOS_VENDIDOS
+Quantos  produtos  distintos  temos?,TOTAL_PRODUTOS_DISTINTOS
+lista dos 20 mais vendidos,TOP_PRODUTOS_VENDIDOS
+Faturamento total entre 23032024 e 31032024 eh?,FATURAMENTO_TOTAL
+Quantos itens tem no estoque de Feijão Carioca?,TOTAL_ITENS_ESTOQUE
+quais cidades mais faturaram hoje?,TOP_CIDADES_FATURAMENTO
+maiores estoques por produto pf,TOP_PRODUTOS_ESTOQUE
+Total de itens no estoque do produto Macarrão Espaguete na cidade Campinas pro cliente 1000 entre 140124 e 220124,TOTAL_ITENS_ESTOQUE
+produtos únicos em estoque do produto arroz tipo 1 na cidade porto alegre pro cliente 1009 entre 04072025 e 22072025,TOTAL_PRODUTOS_DISTINTOS
+diz o valor do faturamento,FATURAMENTO_TOTAL
+pedidos não faturados,FORA_DE_ESCOPO
+Qual o peso total faturado? do produto Feijão Carioca na cidade Rio de Janeiro pro cliente 1055 entre 100125 e 040225,PESO_TOTAL_FATURADO
+faturamento total entre 23112025 e 21122025,FATURAMENTO_TOTAL
+Faturamento total entre 220125 e 060225 do produto Azeite Extra Virgem na cidade Rio de Janeiro pro cliente 1053 entre 220125 e 060225,FATURAMENTO_TOTAL
+peso  total  entre  01012025  e  12012025,PESO_TOTAL_FATURADO
+faturamento por cliente eh?,FATURAMENTO_POR_CLIENTE
+Faturamento por produto do produto Arroz Tipo 1 na cidade Rio de Janeiro pro cliente 1018 entre 29102025 e 11112025 rápido,FATURAMENTO_POR_PRODUTO
+Quais foram os 3 produtos vendidos entre 27022025 e 05032025? rápido,TOP_PRODUTOS_VENDIDOS
+Me mostra o faturamento de ontem?,FATURAMENTO_TOTAL
+Cidades com maior faturamento entre 04022024 e 08022024,TOP_CIDADES_FATURAMENTO
+Faturamento por cidade,FATURAMENTO_POR_CIDADE
+Quanto  entrou  de  dinheiro  no  periodo  18032025  a  20032025?,FATURAMENTO_TOTAL
+quais pedidos foram cancelados? do produto farinha de trigo na cidade vitória pro clinte 1064 entre 05042024 e 01052024 eh?,FORA_DE_ESCOPO
+quais  pedidos  foram  cancelados?  vlw,FORA_DE_ESCOPO
+quanto faturou o produto açúcar refinado?,FATURAMENTO_POR_PRODUTO
+Quanto entrou de dinheiro no periodo 04102024 a 27102024?,FATURAMENTO_TOTAL
+Quais pedidos foram cancelados? do produto Farinha de Trigo na cidade Vitória pro cliente 1075 entre 020724 e 230724,FORA_DE_ESCOPO
+Top 10 clientes por faturamento,TOP_CLIENTES_FATURAMENTO
+Faturamento total entre 18072025 e 25072025 do produto Sal Refinado na cidade Belo Horizonte pro cliente 1059 entre 18072025 e 25072025 rápido,FATURAMENTO_TOTAL
+quanto faturamos hoje em porto alegre?,FATURAMENTO_TOTAL
+diz o valor do faturamento,FATURAMENTO_TOTAL
+Faturamento  por  cidade  por  favor eh?,FATURAMENTO_POR_CIDADE
+quais cidades mais faturaram mes passado? do prod. Óleo de Soja na cidade Fortaleza pro cliente 1062 entre 04092025 e 04092025,TOP_CIDADES_FATURAMENTO
+lista dos 15 mais vendidos do produto Leite UHT na cidade São Paulo pro cliente 1083 entre 07092025 e 05102025,TOP_PRODUTOS_VENDIDOS
+quais são os 5 produtos com mais estoque?,TOP_PRODUTOS_ESTOQUE
+quanto faturamos semana passada em campinas?,FATURAMENTO_TOTAL
+quais cidades mais faturaram hoje?,TOP_CIDADES_FATURAMENTO
+quais são os 15 produtos com mais estoque?,TOP_PRODUTOS_ESTOQUE
+Top 3 produtos em estoque,TOP_PRODUTOS_ESTOQUE
+Quanto  faturou  a  cidade  de  Curitiba?  pode?,FATURAMENTO_POR_CIDADE
+quais cidades mais faturaram semana passada?,TOP_CIDADES_FATURAMENTO
+Me  mostra  o  faturamento  de  mes  passado?  do  produto  Café  Torrado  na  cidade  Curitiba  pro  cliente  1064  entre  08092024  e  06102024,FATURAMENTO_TOTAL
+Quais foram os 5 produtos vendidos entre 240125 e 250125?,TOP_PRODUTOS_VENDIDOS
+Top 20 cidades por faturamento hoje agora,TOP_CIDADES_FATURAMENTO
+Quais  são  os  5  produtos  com  mais  estoque?  do  produto  Café  Torrado  na  cidade  Belo  Horizonte  pro  cliente  1020  entre  300324  e  190424,TOP_PRODUTOS_ESTOQUE
+Quantos itens tem no estoque de Azeite Extra Virgem?,TOTAL_ITENS_ESTOQUE
+diz o valor do faturamento,FATURAMENTO_TOTAL
+Quais são os 10 produtos com mais estoque? do produto Café Torrado na cidade Rio de Janeiro pro cliente 1005 entre 180124 e 140224,TOP_PRODUTOS_ESTOQUE
+Top 15 produtos em estoque,TOP_PRODUTOS_ESTOQUE
+quantidade em estoque de óleo de soja na vitória? do produto óleo de soja na cidade vitória pro cliente 1064 entre 24072025 e 02082025,TOTAL_ITENS_ESTOQUE
+cidades com maior faturamento entre 25122024 e 29122024,TOP_CIDADES_FATURAMENTO
+total de itens no estoque,TOTAL_ITENS_ESTOQUE
+Quais são os 10 produtos com mais estoque?,TOP_PRODUTOS_ESTOQUE
+mostrar vendas entre 03102024 e 06102024,FILTRO_DATA
+vendas do Sal Refinado em Fortaleza hoje agora,FATURAMENTO_POR_PRODUTO
+Filtrar por data mes passado eh?,FILTRO_DATA
+lista  dos  3  mais  vendidos,TOP_PRODUTOS_VENDIDOS
+quais são os 10 produtos com mais estoque?,TOP_PRODUTOS_ESTOQUE
+Quanto entrou de dinheiro no periodo 07082025 a 08082025? do produto Arroz Tipo 1 na cidade Vitória pro cliente 1097 entre 07082025 e 08082025,FATURAMENTO_TOTAL
+Filtrar por data mes passado,FILTRO_DATA
+Quanto faturamos ontem em Vitória? do produto Leite UHT na cidade Vitória pro cliente 1095 entre 030325 e 090325,FATURAMENTO_TOTAL
+faturamento em porto alegre entre 02112024 e 16112024,FATURAMENTO_POR_CIDADE
+quanto faturou a cidade de vitória?,FATURAMENTO_POR_CIDADE
+maiores estoques por produto rápido,TOP_PRODUTOS_ESTOQUE
+Qual o peso total faturado?,PESO_TOTAL_FATURADO
+quantidade em estoque de arroz tipo 1 na porto alegre? do produto arroz tipo 1 na cidade porto alegre pro cliente 1096 entre 13102024 e 24102024,TOTAL_ITENS_ESTOQUE
+Top 20 produtos mais vendidos ontem do produto Azeite Extra Virgem na cidade Rio de Janeiro pro cliente 1058 entre 19052025 e 19052025,TOP_PRODUTOS_VENDIDOS
+quantidade em estoque de Açúcar Refinado na São Paulo? pfv,TOTAL_ITENS_ESTOQUE
+fatramento em Campinas entre 120525 e 270525,FATURAMENTO_POR_CIDADE
+maiores estoques por produto,TOP_PRODUTOS_ESTOQUE
+faturamento por cliente eh?,FATURAMENTO_POR_CLIENTE
+Quanto entrou de dinheiro no periodo 19102025 a 23102025? ❤️,FATURAMENTO_TOTAL
+Quais são os 3 produtos com mais estoque? do produto Café Torrado na cidade Fortaleza pro cliente 1031 entre 250825 e 130925,TOP_PRODUTOS_ESTOQUE
+lista dos 10 melhores clientes por faturamento entre 30062024 e 24072024 ❤️,TOP_CLIENTES_FATURAMENTO
+top 5 produtos em estoque do produto arroz tipo 1 na cidade curitiba pro cliente 1072 entre 23062025 e 01072025,TOP_PRODUTOS_ESTOQUE
+maiores estoques por produto do produto arroz tipo 1 na cidade fortaleza pro cliente 1005 entre 27092025 e 22102025,TOP_PRODUTOS_ESTOQUE
+clientes que mais faturaram hoje,TOP_CLIENTES_FATURAMENTO
+maiores estoques por produto,TOP_PRODUTOS_ESTOQUE
+vendas do Sal Refinado em São Paulo hoje,FATURAMENTO_POR_PRODUTO
+total de itens no estoque,TOTAL_ITENS_ESTOQUE
+top 3 produtos mais vendidos mes passado,TOP_PRODUTOS_VENDIDOS
+total  de  itens  no  estoque,TOTAL_ITENS_ESTOQUE
+Top 5 clientes por faturamento,TOP_CLIENTES_FATURAMENTO
+lista dos 15 melhores clientes por faturamento entre 02102025 e 25102025,TOP_CLIENTES_FATURAMENTO
+Faturamento por cidade,FATURAMENTO_POR_CIDADE
+qual foi o faturamento total? pode?,FATURAMENTO_TOTAL
+peso total entre 230824 e 260824,PESO_TOTAL_FATURADO
+Quais são os 10 produtos com mais estoque?,TOP_PRODUTOS_ESTOQUE
+Produtos únicos em estoque eh?,TOTAL_PRODUTOS_DISTINTOS
+total de skus diferentes,TOTAL_PRODUTOS_DISTINTOS
+maiores estoques por produto do produto leite uht na cidade belo horizonte pro cliente 1078 entre 04082024 e 06082024 vlw,TOP_PRODUTOS_ESTOQUE
+Total de SKUs diferentes do produto Feijão Carioca na cidade Salvador pro cliente 1087 entre 251025 e 211125,TOTAL_PRODUTOS_DISTINTOS
+clientes que mais faturaram hoje,TOP_CLIENTES_FATURAMENTO
+quanto faturou o produto café torrado?,FATURAMENTO_POR_PRODUTO
+faturamento total entre 23022024 e 01032024 rápido,FATURAMENTO_TOTAL
+Quais foram os 15 produtos vendidos entre 06062024 e 09062024?,TOP_PRODUTOS_VENDIDOS
+Peso  faturado  em  semana  passada,PESO_TOTAL_FATURADO
+maiores estoques por produto eh?,TOP_PRODUTOS_ESTOQUE
+Top 5 produtos mais vendidos hoje,TOP_PRODUTOS_VENDIDOS
+Faturamento total entre 01122024 e 11122024,FATURAMENTO_TOTAL
+Cidades com maior faturamento entre 070525 e 240525 ❤️,TOP_CIDADES_FATURAMENTO
+faturamento em Vitória entre 080224 e 030324,FATURAMENTO_POR_CIDADE
+clientes que mais faturaram hoje eh?,TOP_CLIENTES_FATURAMENTO
+Faturamento total entre 06082025 e 18082025,FATURAMENTO_TOTAL
+Faturamento por produto do produto Café Torrado na cidade Fortaleza pro cliente 1008 entre 070325 e 130325,FATURAMENTO_POR_PRODUTO
+Me mostra o faturamento de hoje? pode?,FATURAMENTO_TOTAL
+vendas  para  o  cliente  1041  entre  16072024  e  08082024,FATURAMENTO_POR_CLIENTE
+Top 15 clientes por faturamento rápido,TOP_CLIENTES_FATURAMENTO
+Qual foi o faturamento total?,FATURAMENTO_TOTAL
+maiores estoques por produto do produto Feijão Carioca na cidade Salvador pro cliente 1090 entre 27122023 e 02012024 pode?,TOP_PRODUTOS_ESTOQUE
+Quanto faturamos semana passada em Fortaleza?,FATURAMENTO_TOTAL
+Quais foram os 15 produtos vendidos entre 240425 e 160525?,TOP_PRODUTOS_VENDIDOS
+Total de SKUs diferentes,TOTAL_PRODUTOS_DISTINTOS
+quantos produtos distintos temos?,TOTAL_PRODUTOS_DISTINTOS
+Quanto  faturou  o  cliente  1032?  por  favor,FATURAMENTO_POR_CLIENTE
+Quanto entrou de dinheiro no periodo 041224 a 071224? do produto Café Torrado na cidade Fortaleza pro cliente 1019 entre 041224 e 071224,FATURAMENTO_TOTAL
+faturamento total entre 300725 e 180825 pfv eh?,FATURAMENTO_TOTAL
+Top  10  produtos  mais  vendidos  semana  passada,TOP_PRODUTOS_VENDIDOS
+Quais foram os 10 produtos vendidos entre 31012024 e 18022024? agora,TOP_PRODUTOS_VENDIDOS
+filtrar por data mes passado,FILTRO_DATA
+quais foram os 15 produtos vendidos entre 110125 e 100225?,TOP_PRODUTOS_VENDIDOS
+lista dos 5 melhores clientes por faturamento entre 270325 e 240425,TOP_CLIENTES_FATURAMENTO
+faturamento em vitória entre 14012025 e 01022025,FATURAMENTO_POR_CIDADE
+clientes que mais faturaram ontem do produto leite uht na cidade salvador pro cliente 1075 entre 08062025 e 08062025 pfv,TOP_CLIENTES_FATURAMENTO
+Quais  são  os  15  produtos  com  mais  estoque?,TOP_PRODUTOS_ESTOQUE
+Quantos produtos distintos temos?,TOTAL_PRODUTOS_DISTINTOS
+dados de mes passado agora,FILTRO_DATA
+quais cidades mais faturaram ontem?,TOP_CIDADES_FATURAMENTO
+top 15 produtos em estoque,TOP_PRODUTOS_ESTOQUE
+Faturamento  total  entre  19102025  e  21102025 eh?,FATURAMENTO_TOTAL
+Top 5 clientes por faturamento,TOP_CLIENTES_FATURAMENTO
+lista dos 15 mais vendidos,TOP_PRODUTOS_VENDIDOS
+Me mostra os pedidos devolvidos do produto Sal Refinado na cidade Fortaleza pro cliente 1069 entre 27012024 e 09022024 eh?,FORA_DE_ESCOPO
+Peso faturado em semana passada,PESO_TOTAL_FATURADO
+Top 15 produtos mais vendidos hoje,TOP_PRODUTOS_VENDIDOS
+Quantos produtos distintos temos?,TOTAL_PRODUTOS_DISTINTOS
+Quanto  faturou  o  produto  Azeite  Extra  Virgem?,FATURAMENTO_POR_PRODUTO
+top 20 produtos mais vendidos hoje,TOP_PRODUTOS_VENDIDOS
+quais cidades mais faturaram semana passada?,TOP_CIDADES_FATURAMENTO
+Total de itens no estoque agora,TOTAL_ITENS_ESTOQUE
+Quantos produtos distintos temos?,TOTAL_PRODUTOS_DISTINTOS
+Peso faturado em mes passado,PESO_TOTAL_FATURADO
+vendas para o cliente 1070 entre 23032024 e 05042024,FATURAMENTO_POR_CLIENTE
+Quantos produtos distintos temos?,TOTAL_PRODUTOS_DISTINTOS
+Top 5 clientes por faturamento rápido,TOP_CLIENTES_FATURAMENTO
+Faturamento por cidade eh?,FATURAMENTO_POR_CIDADE
+Top 20 produtos mais vendidos mes passado,TOP_PRODUTOS_VENDIDOS
+quantidade em estoque de Arroz Tipo 1 na Vitória?,TOTAL_ITENS_ESTOQUE
+maiores estoques por produto do produto Leite UHT na cidade Belo Horizonte pro cliente 1007 entre 27102025 e 31102025 rápido,TOP_PRODUTOS_ESTOQUE
+lista  dos  5  mais  vendidos,TOP_PRODUTOS_VENDIDOS
+me mostra o faturamento de mes passado? eh?,FATURAMENTO_TOTAL
+quantidade em estoque de Arroz Tipo 1 na Campinas?,TOTAL_ITENS_ESTOQUE
+quantos produtos distintos temos?,TOTAL_PRODUTOS_DISTINTOS
+Cidades  com  maior  faturamento  entre  15112025  e  08122025,TOP_CIDADES_FATURAMENTO
+Quanto faturou a cidade de São Paulo?,FATURAMENTO_POR_CIDADE
+quais foram os 20 produtos vendidos entre 270324 e 280324?,TOP_PRODUTOS_VENDIDOS
+faturamento em vitória entre 21082024 e 27082024 do produto açúcar refinado na cidade vitória pro cliente 1056 entre 21082024 e 27082024,FATURAMENTO_POR_CIDADE
+Quanto faturamos mes passado em Rio de Janeiro? eh?,FATURAMENTO_TOTAL
+maiores estoques por produto,TOP_PRODUTOS_ESTOQUE
+Faturamento total entre 23052025 e 22062025,FATURAMENTO_TOTAL
+qual foi o faturamento total?,FATURAMENTO_TOTAL
+Top 20 cidades por faturamento hoje,TOP_CIDADES_FATURAMENTO
+Quanto faturou a cidade de Salvador? pode?,FATURAMENTO_POR_CIDADE
+Total de itens no estoque do produto Arroz Tipo 1 na cidade Rio de Janeiro pro cliente 1030 entre 10102025 e 04112025,TOTAL_ITENS_ESTOQUE
+Top 3 clientes por faturamento do produto Sal Refinado na cidade Salvador pro cliente 1097 entre 10042024 e 18042024,TOP_CLIENTES_FATURAMENTO
+Cidades com maior faturamento entre 20042024 e 05052024,TOP_CIDADES_FATURAMENTO
+Me  mostra  o  faturamento  de  semana  passada?,FATURAMENTO_TOTAL
+quanto entrou de dinheiro no periodo 07102024 a 08102024?,FATURAMENTO_TOTAL
+Faturamento total entre 300524 e 120624,FATURAMENTO_TOTAL
+top 10 cidades por faturamento mes passado,TOP_CIDADES_FATURAMENTO
+diz o valor do fatramento agora,FATURAMENTO_TOTAL
+dados de ontem do produto Arroz Tipo 1 na cidade Porto Alegre pro cliente 1051 entre 260325 e 060425,FILTRO_DATA
+quanto faturamos ontem em porto alegre?,FATURAMENTO_TOTAL
+Quanto  faturou  o  produto  Óleo  de  Soja?,FATURAMENTO_POR_PRODUTO
+Faturamento por cidade pfv,FATURAMENTO_POR_CIDADE
+quantos produtos distintos temos?,TOTAL_PRODUTOS_DISTINTOS
+Quanto faturamos semana passada em Recife?,FATURAMENTO_TOTAL
+Quantos itens tem no estoque de Óleo de Soja?,TOTAL_ITENS_ESTOQUE
+Quanto faturou o cliente 1007?,FATURAMENTO_POR_CLIENTE
+Quantos  itens  tem  no  estoque  de  Óleo  de  Soja?,TOTAL_ITENS_ESTOQUE
+Filtrar por data mes passado pode?,FILTRO_DATA
+quais são os 10 produtos com mais estoque? vlw,TOP_PRODUTOS_ESTOQUE
+Quais foram os 20 produtos vendidos entre 01062025 e 24062025?,TOP_PRODUTOS_VENDIDOS
+quais são os 20 produtos com mais estoque? do produto café torrado na cidade rio de janeiro pro cliente 1091 entre 17052025 e 31052025,TOP_PRODUTOS_ESTOQUE
+Cidades com maior faturamento entre 21112025 e 03122025,TOP_CIDADES_FATURAMENTO
+faturamento em salvador entre 161024 e 051124 eh?,FATURAMENTO_POR_CIDADE
+Me  mostra  o  faturamento  de  ontem?,FATURAMENTO_TOTAL
+Cidades com maior faturamento entre 16082024 e 15092024,TOP_CIDADES_FATURAMENTO
+me  mostra  o  faturamento  de  mes  passado?,FATURAMENTO_TOTAL
+cidades com maior faturamento entre 15052024 e 11062024 do produto óleo de soja na cidade vitória pro cliente 1099 entre 15052024 e 11062024,TOP_CIDADES_FATURAMENTO
+Top 15 cidades por faturamento semana passada,TOP_CIDADES_FATURAMENTO
+Quanto  faturamos  hoje  em  Belo  Horizonte?,FATURAMENTO_TOTAL
+qual o peso total faturado?,PESO_TOTAL_FATURADO
+Total de SKUs diferentes,TOTAL_PRODUTOS_DISTINTOS
+peso faturado em mes passado,PESO_TOTAL_FATURADO
+lista dos 15 melhores clientes por faturamento entre 12072025 e 16072025 eh?,TOP_CLIENTES_FATURAMENTO
+lista dos 3 mais vendidos,TOP_PRODUTOS_VENDIDOS
+Quais são os 15 produtos com mais estoque? pfv,TOP_PRODUTOS_ESTOQUE
+Faturamento total entre 131224 e 311224,FATURAMENTO_TOTAL
+qual  foi  o  faturamento  total?,FATURAMENTO_TOTAL
+Quanto faturou a cidade de São Paulo? pfv,FATURAMENTO_POR_CIDADE
+vendas do arroz tipo 1 em fortaleza mes passado ❤️,FATURAMENTO_POR_PRODUTO
+Produtos únicos em estoque,TOTAL_PRODUTOS_DISTINTOS
+lista dos 10 mais vendidos eh?,TOP_PRODUTOS_VENDIDOS
+faturamento em Porto Alegre entre 290924 e 121024,FATURAMENTO_POR_CIDADE
+dados de ontem,FILTRO_DATA
+Quanto faturou o produto Farinha de Trigo?,FATURAMENTO_POR_PRODUTO
+Top 5 clientes por faturamento,TOP_CLIENTES_FATURAMENTO
+top 20 produtos mais vendidos mes passado,TOP_PRODUTOS_VENDIDOS
+lista dos 5 mais vendidos do produto Óleo de Soja na cidade São Paulo pro cliente 1045 entre 080725 e 240725,TOP_PRODUTOS_VENDIDOS
+maiores estoques por produto,TOP_PRODUTOS_ESTOQUE
+quais cidades mais faturaram semana passada?,TOP_CIDADES_FATURAMENTO
+Quanto faturou a cidade de Belo Horizonte?,FATURAMENTO_POR_CIDADE
+lista dos 10 mais vendidos pfv,TOP_PRODUTOS_VENDIDOS
+Me mostra o faturamento de hoje? do produto Café Torrado na cidade São Paulo pro cliente 1056 entre 10082025 e 21082025,FATURAMENTO_TOTAL
+mostrar vendas entre 18112025 e 09122025,FILTRO_DATA
+total de itens no estoque,TOTAL_ITENS_ESTOQUE
+produtos únicos em estoque do produto sal refinado na cidade belo horizonte pro cliente 1059 entre 100724 e 040824,TOTAL_PRODUTOS_DISTINTOS
+vendas para o cliente 1094 entre 05062025 e 05072025 vlw,FATURAMENTO_POR_CLIENTE
+clientes que mais faturaram mes passado do produto sal refinado na cidade vitória pro cliente 1057 entre 14062024 e 19062024 por favor,TOP_CLIENTES_FATURAMENTO
+quantidade em estoque de Arroz Tipo 1 na São Paulo?,TOTAL_ITENS_ESTOQUE
+maiores estoques por produto eh?,TOP_PRODUTOS_ESTOQUE
+Quanto faturou a cidade de Campinas?,FATURAMENTO_POR_CIDADE
+Top  5  produtos  mais  vendidos  semana  passada eh?,TOP_PRODUTOS_VENDIDOS
+diz o valor do faturamento,FATURAMENTO_TOTAL
+faturamento por cidade,FATURAMENTO_POR_CIDADE
+lista  dos  20  mais  vendidos,TOP_PRODUTOS_VENDIDOS
+diz o valor do faturamento,FATURAMENTO_TOTAL
+Qual foi o faturamento total?,FATURAMENTO_TOTAL
+Qual o valor total de vendas?,FATURAMENTO_TOTAL
+Qual o total de itens em estoque?,TOTAL_ITENS_ESTOQUE
+Qual a quantidade total de produtos no inventário?,TOTAL_ITENS_ESTOQUE
+Quantos produtos diferentes existem?,TOTAL_PRODUTOS_DISTINTOS
+Qual o número de produtos únicos?,TOTAL_PRODUTOS_DISTINTOS
+Quais são os 5 produtos com mais estoque?,TOP_PRODUTOS_ESTOQUE
+Me mostre os top 10 produtos em estoque,TOP_PRODUTOS_ESTOQUE
+Quais foram os 5 produtos mais vendidos?,TOP_PRODUTOS_VENDIDOS
+Me liste os 10 produtos com maior volume de vendas,TOP_PRODUTOS_VENDIDOS
+Quais são as 5 cidades com maior faturamento?,TOP_CIDADES_FATURAMENTO
+Top 3 cidades por vendas,TOP_CIDADES_FATURAMENTO
+Quais são os 5 clientes que mais compraram?,TOP_CLIENTES_FATURAMENTO
+Liste os top 10 clientes por faturamento,TOP_CLIENTES_FATURAMENTO
+Qual o faturamento para a cidade de São Paulo?,FATURAMENTO_POR_CIDADE
+Quanto foi vendido em Guarulhos?,FATURAMENTO_POR_CIDADE
+Quanto vendemos do produto bobina?,FATURAMENTO_POR_PRODUTO
+Qual o faturamento do produto chapa?,FATURAMENTO_POR_PRODUTO
+Qual foi o faturamento do cliente 12345?,FATURAMENTO_POR_CLIENTE
+Quanto o cliente 04967 comprou?,FATURAMENTO_POR_CLIENTE
+Qual foi o faturamento de ontem?,FILTRO_DATA
+Qual o total de vendas da semana passada?,FILTRO_DATA
+Me mostre os pedidos cancelados.,FORA_DE_ESCOPO
+qual o estoque de bobina,TOTAL_ITENS_ESTOQUE
+qual o estoque da chapa,TOTAL_ITENS_ESTOQUE
+estoque do rolo,TOTAL_ITENS_ESTOQUE
+qual o estoque para tira,TOTAL_ITENS_ESTOQUE
+quanto vendemos de bobina,FATURAMENTO_POR_PRODUTO
+quanto vendemos da chapa,FATURAMENTO_POR_PRODUTO
+faturamento de rolo,FATURAMENTO_POR_PRODUTO
+qual o faturamento para tira,FATURAMENTO_POR_PRODUTO
+Qual o total de itens em nosso estoque?",TOTAL_ITENS_ESTOQUE
+Quantas unidades temos armazenadas?",TOTAL_ITENS_ESTOQUE
+Me diga a quantidade total de produtos no estoque",TOTAL_ITENS_ESTOQUE
+Número total de itens disponíveis",TOTAL_ITENS_ESTOQUE
+qual o estoque do produto específico?",TOTAL_ITENS_ESTOQUE
+quanto em estoque do produto específico?",TOTAL_ITENS_ESTOQUE
+Quantos produtos distintos existem?",TOTAL_PRODUTOS_DISTINTOS
+Qual o número de SKUs únicos em estoque?",TOTAL_PRODUTOS_DISTINTOS
 "Contagem de produtos diferentes",TOTAL_PRODUTOS_DISTINTOS
-"Qual o peso total que já foi vendido?",PESO_TOTAL_FATURADO
-"Me diga o peso total faturado",PESO_TOTAL_FATURADO
-"Qual o montante de peso vendido?",PESO_TOTAL_FATURADO
+"Qual o peso total que já foi vendido?",FATURAMENTO_TOTAL
+"Me diga o peso total faturado",FATURAMENTO_TOTAL
+"Qual o montante de peso vendido?",FATURAMENTO_TOTAL
 "Qual o faturamento total?",FATURAMENTO_TOTAL
 "Me diga a receita total de vendas",FATURAMENTO_TOTAL
 "Qual o valor total vendido?",FATURAMENTO_TOTAL
+"qual o faturamento da cidade de específico?",FATURAMENTO_POR_CIDADE
+"quanto foi vendido para a cidade de específico?",FATURAMENTO_POR_CIDADE
+"qual o total de vendas para o cliente específico?",FATURAMENTO_POR_CLIENTE
+"quanto o cliente específico comprou?",FATURAMENTO_POR_CLIENTE
 "Quais os produtos mais estocados?",TOP_PRODUTOS_ESTOQUE
 "Liste os top 5 produtos em estoque",TOP_PRODUTOS_ESTOQUE
 "Ranking de itens no armazém",TOP_PRODUTOS_ESTOQUE
+"Quais são os 3 produtos com maior estoque?",TOP_PRODUTOS_ESTOQUE
+"top 10 produtos em estoque",TOP_PRODUTOS_ESTOQUE
 "Quais cidades mais compram?",TOP_CIDADES_FATURAMENTO
 "Top 10 cidades por faturamento",TOP_CIDADES_FATURAMENTO
 "Ranking de cidades por volume de venda",TOP_CIDADES_FATURAMENTO
 "Quais são os principais clientes?",TOP_CLIENTES_FATURAMENTO
 "Me diga os clientes com maior faturamento",TOP_CLIENTES_FATURAMENTO
 "Top 10 clientes por valor de compra",TOP_CLIENTES_FATURAMENTO
+"Quais são os 5 clientes que mais compraram?",TOP_CLIENTES_FATURAMENTO
+"quais clientes mais compraram?",TOP_CLIENTES_FATURAMENTO
+"ranking de clientes por compra",TOP_CLIENTES_FATURAMENTO
+"quais os produtos mais vendidos?",TOP_PRODUTOS_VENDIDOS
+"top produtos por venda",TOP_PRODUTOS_VENDIDOS
+"liste os mais vendidos",TOP_PRODUTOS_VENDIDOS
+"ranking de produtos vendidos",TOP_PRODUTOS_VENDIDOS
+"Quais foram os 10 produtos mais vendidos?",TOP_PRODUTOS_VENDIDOS
+"Top 5 produtos mais vendidos",TOP_PRODUTOS_VENDIDOS
+"Quais cidades faturaram mais?",TOP_CIDADES_FATURAMENTO
+"top cidades por faturamento",TOP_CIDADES_FATURAMENTO
+"ranking de cidades com mais vendas",TOP_CIDADES_FATURAMENTO
+"Quais são os produtos com o maior peso em estoque?",TOP_PRODUTOS_ESTOQUE
+"Quais produtos tem mais estoque?",TOP_PRODUTOS_ESTOQUE
+"Me mostre os 5 produtos com mais unidades no estoque",TOP_PRODUTOS_ESTOQUE
+"Qual a quantidade total de itens que foram vendidos?",FATURAMENTO_TOTAL
+"Qual o volume total de itens vendidos?",FATURAMENTO_TOTAL
+"Mostre o ranking dos produtos por volume de venda.",TOP_PRODUTOS_VENDIDOS
+"Quais produtos geraram mais faturamento?",TOP_PRODUTOS_VENDIDOS
+"Quais foram os itens mais comprados pelos clientes?",TOP_PRODUTOS_VENDIDOS
+"ranking de produtos por receita",TOP_PRODUTOS_VENDIDOS
+"Quais são os 3 produtos mais vendidos",TOP_PRODUTOS_VENDIDOS
+"ranking de produtos por quantidade em estoque",TOP_PRODUTOS_ESTOQUE
+"Quais produtos estão ocupando mais espaço no armazém?",TOP_PRODUTOS_ESTOQUE
+"Mostre os itens com maior volume de estoque.",TOP_PRODUTOS_ESTOQUE
+"Quanto foi vendido no total?",FATURAMENTO_TOTAL
+"Quanto vendemos neste produto?",FATURAMENTO_POR_PRODUTO
+"Quanto vendemos desse produto X?",FATURAMENTO_POR_PRODUTO
+"Quanto vendeu na cidade X?",FATURAMENTO_POR_CIDADE
+"Qual o total vendido para o cliente Y?",FATURAMENTO_POR_CLIENTE
+"Quais produtos mais vendem?",TOP_PRODUTOS_VENDIDOS
+"Me mostre os itens mais vendidos",TOP_PRODUTOS_VENDIDOS
+"Quais cidades compram mais?",TOP_CIDADES_FATURAMENTO
+"Ranking de cidades por venda",TOP_CIDADES_FATURAMENTO
+"Quanto vendeu o produto X na cidade Y?",FATURAMENTO_POR_CIDADE
+"Quanto comprou o cliente Z do produto W?",FATURAMENTO_POR_CLIENTE
+"Qual o faturamento de ontem?",FILTRO_DATA
+"faturamento de hoje",FILTRO_DATA
+"Vendas da semana passada",FILTRO_DATA
+"Quanto vendemos no mês passado?",FILTRO_DATA
+"qual o faturamento entre 01/01/2024 e 10/01/2024",FILTRO_DATA
+"Top 5 produtos mais vendidos ontem",TOP_PRODUTOS_VENDIDOS
+"Faturamento de hoje na cidade de sao paulo",FILTRO_DATA

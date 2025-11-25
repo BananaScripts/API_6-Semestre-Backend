@@ -194,7 +194,7 @@ def login(form_data: OAuth2PasswordRequestForm = Depends()):
 def check():
     return {"status": "ok", "msg": "API funcionando"}
 #-----------------Chatbot-----------------#
-@app.websocket("/ws/chatbot")
+@app.websocket("/wb/chatbot")
 async def websocket_chatbot_endpoint(websocket: WebSocket):
     await websocket.accept()
 

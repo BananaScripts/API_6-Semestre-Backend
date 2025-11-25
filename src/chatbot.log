@@ -2199,3 +2199,23 @@ LINE 1: ..._peso_liquido) as total FROM domrock.vendas WHERE zs_data_em...
 2025-11-25 20:00:36,577 - INFO - Componentes Finais: {'intent': <Intencao.FATURAMENTO_POR_CIDADE: 8>, 'modifiers': {}, 'filters': [{'type': 'cidade', 'column': 'zs_cidade', 'value': 'curitiba'}], 'n_top': 5} (Score: 0.8027)
 2025-11-25 20:00:38,227 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'curitiba'"
 2025-11-25 20:00:38,711 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-11-25 20:20:46,027 - INFO - Inicializando NlpEngine com sistema de score Híbrido e Stopwords...
+2025-11-25 20:20:46,038 - INFO - 604 perguntas carregadas e processadas do CSV.
+2025-11-25 20:20:49,392 - INFO - NlpEngine Híbrida inicializada e pronta.
+2025-11-25 20:20:49,394 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-25 20:23:18,617 - INFO - Componentes Finais: {'intent': <Intencao.FATURAMENTO_POR_CIDADE: 8>, 'modifiers': {}, 'filters': [{'type': 'cidade', 'column': 'zs_cidade', 'value': 'curitiba'}], 'n_top': 5} (Score: 0.8027)
+2025-11-25 20:23:19,711 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'curitiba'"
+2025-11-25 20:23:20,203 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-11-25 20:24:04,794 - INFO - Componentes Finais: {'intent': <Intencao.TOP_PRODUTOS_VENDIDOS: 5>, 'modifiers': {}, 'filters': [], 'n_top': 5} (Score: 0.8016)
+2025-11-25 20:24:05,726 - INFO - Executando: b'SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY produto ORDER BY total DESC LIMIT 5'
+2025-11-25 20:24:06,205 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-11-25 20:24:13,954 - INFO - Componentes Finais: {'intent': <Intencao.TOP_PRODUTOS_VENDIDOS: 5>, 'modifiers': {}, 'filters': [], 'n_top': 2} (Score: 0.7389)
+2025-11-25 20:24:14,887 - INFO - Executando: b'SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY produto ORDER BY total DESC LIMIT 2'
+2025-11-25 20:24:15,390 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-11-25 20:37:08,023 - INFO - Inicializando NlpEngine com sistema de score Híbrido e Stopwords...
+2025-11-25 20:37:08,031 - INFO - 604 perguntas carregadas e processadas do CSV.
+2025-11-25 20:37:12,516 - INFO - NlpEngine Híbrida inicializada e pronta.
+2025-11-25 20:37:12,517 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-25 20:37:19,707 - INFO - Componentes Finais: {'intent': <Intencao.TOP_PRODUTOS_VENDIDOS: 5>, 'modifiers': {}, 'filters': [], 'n_top': 2} (Score: 0.7389)
+2025-11-25 20:37:20,730 - INFO - Executando: b'SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY produto ORDER BY total DESC LIMIT 2'
+2025-11-25 20:37:21,217 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
