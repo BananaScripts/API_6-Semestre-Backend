@@ -602,4 +602,9 @@ Qual o número de SKUs únicos em estoque?",TOTAL_PRODUTOS_DISTINTOS
 "Quanto vendemos no mês passado?",FILTRO_DATA
 "qual o faturamento entre 01/01/2024 e 10/01/2024",FILTRO_DATA
 "Top 5 produtos mais vendidos ontem",TOP_PRODUTOS_VENDIDOS
-"Faturamento de hoje na cidade de sao paulo",FILTRO_DATA
+"qual o faturamento em sao paulo",FATURAMENTO_POR_CIDADE
+"faturamento na cidade de sao paulo",FATURAMENTO_POR_CIDADE
+"vendas em sao paulo",FATURAMENTO_POR_CIDADE
+"qual o faturamento em são paulo",FATURAMENTO_POR_CIDADE
+"faturamento na cidade de são paulo",FATURAMENTO_POR_CIDADE
+"vendas em são paulo",FATURAMENTO_POR_CIDADE

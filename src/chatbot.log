@@ -2219,3 +2219,590 @@ LINE 1: ..._peso_liquido) as total FROM domrock.vendas WHERE zs_data_em...
 2025-11-25 20:37:19,707 - INFO - Componentes Finais: {'intent': <Intencao.TOP_PRODUTOS_VENDIDOS: 5>, 'modifiers': {}, 'filters': [], 'n_top': 2} (Score: 0.7389)
 2025-11-25 20:37:20,730 - INFO - Executando: b'SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY produto ORDER BY total DESC LIMIT 2'
 2025-11-25 20:37:21,217 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-11-25 21:10:18,604 - INFO - Inicializando NlpEngine com sistema de score Híbrido e Stopwords...
+2025-11-25 21:10:18,617 - INFO - 604 perguntas carregadas e processadas do CSV.
+2025-11-25 21:10:24,509 - INFO - NlpEngine Híbrida inicializada e pronta.
+2025-11-25 21:10:24,509 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-25 21:11:21,709 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 14>, 'modifiers': {}, 'filters': [], 'n_top': 5} (Score: 0.2964)
+2025-11-25 21:11:21,710 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-25 21:31:00,195 - INFO - Inicializando NlpEngine com sistema de score Híbrido e Stopwords...
+2025-11-25 21:31:00,209 - INFO - 604 perguntas carregadas e processadas do CSV.
+2025-11-25 21:31:03,831 - INFO - NlpEngine Híbrida inicializada e pronta.
+2025-11-25 21:31:03,831 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-25 21:31:12,237 - INFO - Componentes Finais: {'intent': <Intencao.TOP_PRODUTOS_VENDIDOS: 5>, 'modifiers': {}, 'filters': [], 'n_top': 2} (Score: 0.7389)
+2025-11-25 21:31:13,285 - INFO - Executando: b'SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY produto ORDER BY total DESC LIMIT 2'
+2025-11-25 21:31:13,843 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-11-25 21:50:08,408 - INFO - Inicializando NlpEngine com sistema de score Híbrido e Stopwords...
+2025-11-25 21:50:08,421 - INFO - 604 perguntas carregadas e processadas do CSV.
+2025-11-25 21:50:11,876 - INFO - NlpEngine Híbrida inicializada e pronta.
+2025-11-25 21:50:11,877 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-25 21:50:19,178 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 14>, 'modifiers': {}, 'filters': [], 'n_top': 5} (Score: 0.2414)
+2025-11-25 21:50:19,179 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-25 22:09:33,343 - INFO - Inicializando NlpEngine com sistema de score Híbrido e Stopwords...
+2025-11-25 22:09:33,372 - INFO - 604 perguntas carregadas e processadas do CSV.
+2025-11-25 22:09:38,446 - INFO - NlpEngine Híbrida inicializada e pronta.
+2025-11-25 22:09:38,447 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-25 22:33:05,288 - INFO - Inicializando NlpEngine com sistema de score Híbrido e Stopwords...
+2025-11-25 22:33:05,298 - INFO - 604 perguntas carregadas e processadas do CSV.
+2025-11-25 22:33:09,232 - INFO - NlpEngine Híbrida inicializada e pronta.
+2025-11-25 22:33:09,234 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-25 22:34:28,478 - INFO - Componentes Finais: {'intent': <Intencao.DESCONHECIDO: 14>, 'modifiers': {}, 'filters': [], 'n_top': 5} (Score: 0.2414)
+2025-11-25 22:34:28,479 - INFO - Intenção não identificada pela NlpEngine.
+2025-11-25 22:34:35,916 - INFO - Componentes Finais: {'intent': <Intencao.TOTAL_PRODUTOS_DISTINTOS: 3>, 'modifiers': {'distinct': True}, 'filters': [], 'n_top': 5} (Score: 0.9260)
+2025-11-25 22:34:38,273 - INFO - Executando: b'SELECT COUNT(DISTINCT SKU) FROM domrock.estoque '
+2025-11-25 22:34:38,904 - INFO - Consulta para a intenção TOTAL_PRODUTOS_DISTINTOS foi bem-sucedida.
+2025-11-26 10:49:58,193 - INFO - Inicializando NlpEngine refatorado (NER + fuzzy + whitelists)...
+2025-11-26 10:50:00,469 - ERROR - Erro ao carregar whitelists: column "zs_cidade" does not exist
+LINE 4:                         SELECT DISTINCT zs_cidade FROM domro...
+                                                ^
+DETAIL:  There is a column named "zs_cidade" in table "*SELECT* 1", but it cannot be referenced from this part of the query.
+
+2025-11-26 10:50:00,507 - INFO - 604 perguntas carregadas do CSV de intenções.
+2025-11-26 10:50:04,252 - INFO - spaCy disponível mas modelo pt_core_news_sm não carregou: [E050] Can't find model 'pt_core_news_sm'. It doesn't seem to be a Python package or a valid path to a data directory.
+2025-11-26 10:50:04,253 - INFO - NlpEngine pronto.
+2025-11-26 10:50:04,253 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-11-26 10:50:16,240 - ERROR - Erro ao carregar whitelists: column "zs_cidade" does not exist
+LINE 4:                         SELECT DISTINCT zs_cidade FROM domro...
+                                                ^
+DETAIL:  There is a column named "zs_cidade" in table "*SELECT* 1", but it cannot be referenced from this part of the query.
+
+2025-11-26 10:50:16,371 - INFO - Components gerados: intent=TOTAL_PRODUTOS_DISTINTOS products=['rzn'] cities=[] clients=[] date_range=None (score approx)
+2025-11-26 17:29:04,645 - INFO - Inicializando NlpEngine com sistema de score Híbrido e Stopwords...
+2025-11-26 17:29:04,655 - INFO - 604 perguntas carregadas e processadas do CSV.
+2025-11-26 17:29:08,342 - INFO - NlpEngine Híbrida inicializada e pronta.
+2025-11-26 17:29:08,342 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:01:15,645 - INFO - Inicializando NlpEngine com Pipeline Híbrido (spaCy + BERT)...
+2025-12-02 10:01:20,698 - ERROR - Modelo spaCy não encontrado. Baixando...
+2025-12-02 10:01:31,382 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:01:59,142 - INFO - Executando: b'SELECT COUNT(DISTINCT SKU) FROM domrock.estoque '
+2025-12-02 10:01:59,706 - INFO - Consulta para a intenção TOTAL_PRODUTOS_DISTINTOS foi bem-sucedida.
+2025-12-02 10:02:12,702 - INFO - Executando: b'SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY produto ORDER BY total DESC LIMIT 5'
+2025-12-02 10:02:13,249 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:02:23,647 - INFO - Executando: b'SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY produto ORDER BY total DESC LIMIT 5'
+2025-12-02 10:02:24,106 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:04:44,076 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE cod_cliente = '10179'"
+2025-12-02 10:04:44,559 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-02 10:04:59,808 - INFO - Executando: b"SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas WHERE zs_cidade ILIKE 'Aruja' GROUP BY produto ORDER BY total DESC LIMIT 5"
+2025-12-02 10:05:00,281 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:05:15,601 - INFO - Executando: b'SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY produto ORDER BY total DESC LIMIT 5'
+2025-12-02 10:05:16,058 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:06:41,538 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE cod_cliente = '04967'"
+2025-12-02 10:06:41,998 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-02 10:06:51,632 - INFO - Pergunta classificada como FORA_DE_ESCOPO.
+2025-12-02 10:06:58,417 - INFO - Executando: b'SELECT produto, SUM(es_totalestoque) as total FROM domrock.estoque  GROUP BY produto ORDER BY total DESC LIMIT 5'
+2025-12-02 10:06:58,874 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:07:06,921 - INFO - Executando: b'SELECT produto, SUM(es_totalestoque) as total FROM domrock.estoque  GROUP BY produto ORDER BY total DESC LIMIT 5'
+2025-12-02 10:07:07,385 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:11:00,514 - INFO - Inicializando NlpEngine com Pipeline Híbrido (spaCy + BERT)...
+2025-12-02 10:11:07,171 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:11:31,991 - INFO - Executando: b'SELECT produto, SUM(es_totalestoque) as total FROM domrock.estoque  GROUP BY produto ORDER BY total DESC LIMIT 2'
+2025-12-02 10:11:32,446 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:11:41,694 - INFO - Executando: b"SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas WHERE zs_cidade ILIKE 'Aruja' GROUP BY produto ORDER BY total DESC LIMIT 3"
+2025-12-02 10:11:42,167 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:11:52,204 - INFO - Executando: b"SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas WHERE zs_cidade ILIKE 'cidade de' GROUP BY produto ORDER BY total DESC LIMIT 3"
+2025-12-02 10:11:52,664 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:12:09,818 - INFO - Executando: b"SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas WHERE zs_cidade ILIKE 'Curitiba' GROUP BY produto ORDER BY total DESC LIMIT 3"
+2025-12-02 10:12:10,280 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:12:46,044 - INFO - Executando: b'SELECT SUM(es_totalestoque) FROM domrock.estoque '
+2025-12-02 10:12:46,492 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:12:53,725 - INFO - Executando: b'SELECT SUM(es_totalestoque) FROM domrock.estoque '
+2025-12-02 10:12:54,181 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:12:59,157 - INFO - Executando: b'SELECT SUM(es_totalestoque) FROM domrock.estoque '
+2025-12-02 10:12:59,611 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:13:05,247 - INFO - Executando: b'SELECT SUM(es_totalestoque) FROM domrock.estoque '
+2025-12-02 10:13:05,704 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:14:00,189 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:14:00,645 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-02 10:14:05,512 - INFO - Executando: b'SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY produto ORDER BY total DESC LIMIT 8'
+2025-12-02 10:14:05,975 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:14:13,852 - INFO - Executando: b"SELECT cod_cliente, SUM(zs_peso_liquido) as total FROM domrock.vendas WHERE zs_cidade ILIKE 'S\xc3\xa3o Paulo' GROUP BY cod_cliente ORDER BY total DESC LIMIT 3"
+2025-12-02 10:14:14,334 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-12-02 10:14:43,321 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE nome_produto ILIKE 'parafuso sextavado'"
+2025-12-02 10:14:43,777 - ERROR - Erro ao executar a query: column "nome_produto" does not exist
+LINE 1: ...CT SUM(zs_peso_liquido) FROM domrock.vendas WHERE nome_produ...
+                                                             ^
+HINT:  Perhaps you meant to reference the column "vendas.cod_produto".
+
+2025-12-02 10:14:43,777 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-02 10:14:56,504 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE cod_cliente = '04967'"
+2025-12-02 10:14:56,955 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-02 10:14:57,896 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE cod_cliente = '04967'"
+2025-12-02 10:14:58,346 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-02 10:15:03,472 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE cod_cliente = '10179'"
+2025-12-02 10:15:03,935 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-02 10:15:15,630 - INFO - Intenção de Ranking detectada, usando n_top default: 5.
+2025-12-02 10:15:16,572 - INFO - Executando: b'SELECT zs_cidade, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY zs_cidade ORDER BY total DESC LIMIT 5'
+2025-12-02 10:15:17,041 - INFO - Consulta para a intenção TOP_CIDADES_FATURAMENTO foi bem-sucedida.
+2025-12-02 10:15:25,219 - INFO - Executando: b'SELECT SUM(es_totalestoque) FROM domrock.estoque '
+2025-12-02 10:15:25,673 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:15:31,893 - INFO - Executando: b'SELECT COUNT(DISTINCT SKU) FROM domrock.estoque '
+2025-12-02 10:15:32,350 - INFO - Consulta para a intenção TOTAL_PRODUTOS_DISTINTOS foi bem-sucedida.
+2025-12-02 10:15:37,862 - INFO - Executando: b'SELECT produto, SUM(es_totalestoque) as total FROM domrock.estoque  GROUP BY produto ORDER BY total DESC LIMIT 10'
+2025-12-02 10:15:38,315 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:15:44,333 - INFO - Executando: b"SELECT SUM(es_totalestoque) FROM domrock.estoque WHERE zs_cidade ILIKE 'Bobina'"
+2025-12-02 10:15:44,796 - ERROR - Erro ao executar a query: column "zs_cidade" does not exist
+LINE 1: ...T SUM(es_totalestoque) FROM domrock.estoque WHERE zs_cidade ...
+                                                             ^
+
+2025-12-02 10:15:44,797 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:15:50,657 - INFO - Intenção não identificada pela NlpEngine.
+2025-12-02 10:15:58,260 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:15:58,717 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-02 10:16:02,671 - INFO - Intenção de Ranking detectada, usando n_top default: 5.
+2025-12-02 10:16:03,708 - INFO - Executando: b'SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY produto ORDER BY total DESC LIMIT 5'
+2025-12-02 10:16:04,171 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:16:10,154 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE sku ILIKE '01/01/2024' AND sku ILIKE '31/01/2024'"
+2025-12-02 10:16:10,609 - INFO - Consulta para a intenção FILTRO_DATA foi bem-sucedida.
+2025-12-02 10:16:23,792 - INFO - Pergunta classificada como FORA_DE_ESCOPO.
+2025-12-02 10:16:28,597 - INFO - Intenção não identificada pela NlpEngine.
+2025-12-02 10:16:32,107 - INFO - Intenção não identificada pela NlpEngine.
+2025-12-02 10:16:47,114 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:16:47,576 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-02 10:16:48,552 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:16:49,014 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-02 10:16:54,931 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:16:55,395 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-02 10:21:43,932 - INFO - Inicializando NlpEngine com Pipeline Híbrido (spaCy + BERT)...
+2025-12-02 10:21:48,823 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:21:56,387 - INFO - Inicializando NlpEngine com Pipeline Híbrido (spaCy + BERT)...
+2025-12-02 10:22:00,829 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:22:13,431 - INFO - Inicializando NlpEngine com Pipeline Híbrido (spaCy + BERT)...
+2025-12-02 10:22:19,976 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:22:35,790 - INFO - Inicializando NlpEngine com Pipeline Híbrido (spaCy + BERT)...
+2025-12-02 10:22:41,564 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:22:45,664 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:22:46,277 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-02 10:23:44,314 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:23:44,772 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-02 10:24:10,423 - INFO - Inicializando NlpEngine com Pipeline Híbrido (spaCy + BERT)...
+2025-12-02 10:24:15,401 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:24:21,648 - INFO - Inicializando NlpEngine com Pipeline Híbrido (spaCy + BERT)...
+2025-12-02 10:24:26,038 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:24:31,815 - INFO - Inicializando NlpEngine com sistema de score Híbrido e Stopwords...
+2025-12-02 10:24:31,824 - INFO - 604 perguntas carregadas e processadas do CSV.
+2025-12-02 10:24:35,241 - INFO - NlpEngine Híbrida inicializada e pronta.
+2025-12-02 10:24:35,241 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:41:00,613 - INFO - Inicializando NlpEngine com Pipeline Híbrido (spaCy + BERT)...
+2025-12-02 10:41:07,757 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:42:26,422 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:42:27,018 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-02 10:42:35,375 - INFO - Executando: b'SELECT SUM(es_totalestoque) FROM domrock.estoque '
+2025-12-02 10:42:35,840 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:42:48,251 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:42:48,726 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-02 10:42:55,124 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:42:55,584 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-02 10:43:07,872 - INFO - Executando: b'SELECT SUM(es_totalestoque) FROM domrock.estoque '
+2025-12-02 10:43:08,324 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:43:18,018 - INFO - Executando: b'SELECT produto, SUM(es_totalestoque) as total FROM domrock.estoque  GROUP BY produto ORDER BY total DESC LIMIT 5'
+2025-12-02 10:43:18,489 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:43:25,167 - INFO - Executando: b'SELECT COUNT(DISTINCT SKU) FROM domrock.estoque '
+2025-12-02 10:43:25,634 - INFO - Consulta para a intenção TOTAL_PRODUTOS_DISTINTOS foi bem-sucedida.
+2025-12-02 10:43:31,382 - INFO - Executando: b'SELECT COUNT(DISTINCT SKU) FROM domrock.estoque '
+2025-12-02 10:43:31,830 - INFO - Consulta para a intenção TOTAL_PRODUTOS_DISTINTOS foi bem-sucedida.
+2025-12-02 10:43:37,734 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:43:38,200 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-02 10:43:42,596 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'Pompeia'"
+2025-12-02 10:43:43,072 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 10:43:52,463 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'cidade de S\xc3\xa3o Paulo'"
+2025-12-02 10:43:52,932 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 10:44:00,180 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'Curitiba'"
+2025-12-02 10:44:00,644 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 10:44:06,759 - INFO - Executando: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 10:44:07,229 - INFO - Consulta para a intenção FILTRO_DATA foi bem-sucedida.
+2025-12-02 10:44:12,477 - INFO - Executando: b'SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY produto ORDER BY total DESC LIMIT 5'
+2025-12-02 10:44:12,944 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:44:18,122 - INFO - Executando: b'SELECT cod_cliente, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY cod_cliente ORDER BY total DESC LIMIT 5'
+2025-12-02 10:44:18,599 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-12-02 10:44:22,265 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE cod_cliente = '10179'"
+2025-12-02 10:44:22,744 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-02 10:44:26,095 - INFO - Executando: b'SELECT zs_cidade, SUM(zs_peso_liquido) as total FROM domrock.vendas  GROUP BY zs_cidade ORDER BY total DESC LIMIT 5'
+2025-12-02 10:44:26,555 - INFO - Consulta para a intenção TOP_CIDADES_FATURAMENTO foi bem-sucedida.
+2025-12-02 10:44:29,757 - INFO - Executando: b"SELECT produto, SUM(zs_peso_liquido) as total FROM domrock.vendas WHERE zs_cidade ILIKE 'Aruja' GROUP BY produto ORDER BY total DESC LIMIT 5"
+2025-12-02 10:44:30,226 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:44:36,255 - INFO - Executando: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE cod_cliente = '04967'"
+2025-12-02 10:44:36,730 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-02 10:44:47,277 - INFO - Pergunta classificada como FORA_DE_ESCOPO.
+2025-12-02 10:44:54,044 - INFO - Intenção não identificada pela NlpEngine.
+2025-12-02 10:44:57,235 - INFO - Intenção não identificada pela NlpEngine.
+2025-12-02 10:52:45,340 - INFO - Inicializando NlpEngine Híbrida...
+2025-12-02 10:52:54,021 - INFO - EntityRuler carregado com 16 padrões.
+2025-12-02 10:52:54,022 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:54:35,195 - INFO - Inicializando NlpEngine Híbrida...
+2025-12-02 10:54:42,047 - INFO - EntityRuler carregado com 16 padrões.
+2025-12-02 10:54:42,048 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:54:48,385 - INFO - Inicializando NlpEngine Híbrida...
+2025-12-02 10:54:55,521 - INFO - EntityRuler carregado com 16 padrões.
+2025-12-02 10:54:55,522 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:55:06,022 - INFO - Inicializando NlpEngine Híbrida...
+2025-12-02 10:55:13,605 - INFO - EntityRuler carregado com 16 padrões.
+2025-12-02 10:55:13,606 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:55:30,762 - INFO - Inicializando NlpEngine Híbrida...
+2025-12-02 10:55:36,672 - INFO - EntityRuler carregado com 16 padrões.
+2025-12-02 10:55:36,672 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:55:43,470 - INFO - Inicializando NlpEngine Híbrida...
+2025-12-02 10:55:51,126 - INFO - EntityRuler carregado com 16 padrões.
+2025-12-02 10:55:51,127 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:56:08,359 - INFO - Inicializando NlpEngine Híbrida...
+2025-12-02 10:56:16,162 - INFO - EntityRuler carregado com 16 padrões.
+2025-12-02 10:56:16,164 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 10:57:13,413 - INFO - Intenção não identificada pela NlpEngine.
+2025-12-02 10:57:21,632 - INFO - SQL: b'SELECT SUM(es_totalestoque) FROM domrock.estoque '
+2025-12-02 10:57:22,156 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:57:29,200 - INFO - SQL: b'SELECT SUM(es_totalestoque) FROM domrock.estoque '
+2025-12-02 10:57:29,655 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:57:43,761 - INFO - SQL: b'\n            SELECT produto, SUM(es_totalestoque) as total \n            FROM domrock.estoque  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 5\n        '
+2025-12-02 10:57:44,226 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-02 10:58:03,437 - INFO - SQL: b"\n            SELECT produto, SUM(zs_peso_liquido) as total \n            FROM domrock.vendas WHERE zs_cidade ILIKE 'Aruja' \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 5\n        "
+2025-12-02 10:58:03,962 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 10:58:10,225 - INFO - SQL: b"\n            SELECT produto, SUM(zs_peso_liquido) as total \n            FROM domrock.vendas WHERE zs_cidade ILIKE 'Sao Paulo' \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 5\n        "
+2025-12-02 10:58:10,684 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 11:01:32,227 - INFO - Inicializando NlpEngine Híbrida...
+2025-12-02 11:01:40,398 - INFO - EntityRuler carregado com 16 padrões.
+2025-12-02 11:01:40,398 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 11:01:52,061 - INFO - Inicializando NlpEngine Híbrida...
+2025-12-02 11:01:59,825 - INFO - EntityRuler carregado com 16 padrões.
+2025-12-02 11:01:59,826 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 11:02:02,525 - INFO - NLP Predict: {'intent': <Intencao.TOP_PRODUTOS_VENDIDOS: 5>, 'filters': [], 'n_top': 3}
+2025-12-02 11:02:03,451 - INFO - SQL: b'\n            SELECT produto, SUM(zs_peso_liquido) as total \n            FROM domrock.vendas  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 3\n        '
+2025-12-02 11:02:03,912 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 11:02:15,310 - INFO - NLP Predict: {'intent': <Intencao.TOP_PRODUTOS_VENDIDOS: 5>, 'filters': [{'type': 'cidade', 'column': 'zs_cidade', 'value': 'Arauja'}], 'n_top': 3}
+2025-12-02 11:02:16,241 - INFO - SQL: b"\n            SELECT produto, SUM(zs_peso_liquido) as total \n            FROM domrock.vendas WHERE zs_cidade ILIKE 'Arauja' \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 3\n        "
+2025-12-02 11:02:16,709 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 11:04:00,715 - INFO - NLP Predict: {'intent': <Intencao.TOTAL_ITENS_ESTOQUE: 2>, 'filters': [{'type': 'produto', 'column': 'produto', 'value': 'Chapa'}], 'n_top': 5}
+2025-12-02 11:04:01,699 - INFO - SQL: b"SELECT SUM(es_totalestoque) FROM domrock.estoque WHERE produto ILIKE 'Chapa'"
+2025-12-02 11:04:02,155 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 11:04:08,138 - INFO - NLP Predict: {'intent': <Intencao.TOTAL_ITENS_ESTOQUE: 2>, 'filters': [{'type': 'produto', 'column': 'produto', 'value': 'Bobina'}], 'n_top': 5}
+2025-12-02 11:04:09,085 - INFO - SQL: b"SELECT SUM(es_totalestoque) FROM domrock.estoque WHERE produto ILIKE 'Bobina'"
+2025-12-02 11:04:09,542 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 11:04:14,887 - INFO - NLP Predict: {'intent': <Intencao.TOTAL_ITENS_ESTOQUE: 2>, 'filters': [{'type': 'produto', 'column': 'produto', 'value': 'Bobina'}], 'n_top': 5}
+2025-12-02 11:04:16,138 - INFO - SQL: b"SELECT SUM(es_totalestoque) FROM domrock.estoque WHERE produto ILIKE 'Bobina'"
+2025-12-02 11:04:16,592 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 11:04:23,889 - INFO - NLP Predict: {'intent': <Intencao.TOP_PRODUTOS_ESTOQUE: 4>, 'filters': [], 'n_top': 3}
+2025-12-02 11:04:24,814 - INFO - SQL: b'\n            SELECT produto, SUM(es_totalestoque) as total \n            FROM domrock.estoque  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 3\n        '
+2025-12-02 11:04:25,271 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-02 11:04:30,175 - INFO - NLP Predict: {'intent': <Intencao.TOP_PRODUTOS_ESTOQUE: 4>, 'filters': [], 'n_top': 2}
+2025-12-02 11:04:31,127 - INFO - SQL: b'\n            SELECT produto, SUM(es_totalestoque) as total \n            FROM domrock.estoque  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 2\n        '
+2025-12-02 11:04:31,605 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-02 11:04:37,909 - INFO - NLP Predict: {'intent': <Intencao.FATURAMENTO_POR_CIDADE: 8>, 'filters': [{'type': 'cidade', 'column': 'zs_cidade', 'value': 'Pompeia'}], 'n_top': 5}
+2025-12-02 11:04:38,842 - INFO - SQL: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'Pompeia'"
+2025-12-02 11:04:39,310 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 11:04:47,181 - INFO - NLP Predict: {'intent': <Intencao.FATURAMENTO_POR_CIDADE: 8>, 'filters': [{'type': 'cidade', 'column': 'zs_cidade', 'value': 'cidade de São Paulo'}], 'n_top': 5}
+2025-12-02 11:04:48,105 - INFO - SQL: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'cidade de S\xc3\xa3o Paulo'"
+2025-12-02 11:04:48,569 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 11:04:52,169 - INFO - NLP Predict: {'intent': <Intencao.FILTRO_DATA: 11>, 'filters': [], 'n_top': 5}
+2025-12-02 11:04:53,157 - INFO - SQL: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 11:04:53,612 - INFO - Consulta para a intenção FILTRO_DATA foi bem-sucedida.
+2025-12-02 11:09:01,288 - INFO - Inicializando NlpEngine Blindada...
+2025-12-02 11:09:07,805 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 11:09:15,391 - INFO - Inicializando NlpEngine Blindada...
+2025-12-02 11:09:21,352 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 11:09:32,589 - INFO - Inicializando NlpEngine Blindada...
+2025-12-02 11:09:39,988 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 11:09:59,086 - INFO - Query: b'SELECT SUM(zs_peso_liquido) FROM domrock.vendas '
+2025-12-02 11:09:59,550 - INFO - Consulta para a intenção FILTRO_DATA foi bem-sucedida.
+2025-12-02 11:10:19,871 - INFO - Query: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade = 'cidade de S\xc3\xa3o Paulo'"
+2025-12-02 11:10:20,188 - INFO - Retentando com ILIKE...
+2025-12-02 11:10:20,341 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 11:10:29,405 - INFO - Query: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade = 'Curitiba'"
+2025-12-02 11:10:29,855 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 11:10:56,031 - INFO - Query: b'\n            SELECT produto, SUM(es_totalestoque) as total \n            FROM domrock.estoque  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 3\n        '
+2025-12-02 11:10:56,485 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-02 11:11:02,239 - INFO - Query: b'\n            SELECT produto, SUM(es_totalestoque) as total \n            FROM domrock.estoque  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 40\n        '
+2025-12-02 11:11:02,691 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-02 11:11:20,285 - INFO - Query: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade = 'Arauja'"
+2025-12-02 11:11:20,588 - INFO - Retentando com ILIKE...
+2025-12-02 11:11:20,740 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 11:12:40,655 - INFO - Query: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade = 'Curitiba'"
+2025-12-02 11:12:41,117 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 11:12:47,828 - INFO - Query: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE produto = 'Rolo' AND cod_cliente = '10179'"
+2025-12-02 11:12:48,300 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-02 11:13:00,592 - INFO - Query: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE produto = 'Chapa' AND cod_cliente = '10179'"
+2025-12-02 11:13:00,905 - INFO - Retentando com ILIKE...
+2025-12-02 11:13:01,057 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-02 11:13:19,540 - INFO - Query: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE produto = 'Bobina' AND cod_cliente = '10179'"
+2025-12-02 11:13:19,847 - INFO - Retentando com ILIKE...
+2025-12-02 11:13:20,008 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-02 11:13:25,553 - INFO - Query: b"SELECT SUM(es_totalestoque) FROM domrock.estoque WHERE produto = 'Bobina'"
+2025-12-02 11:13:26,018 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 11:13:35,617 - INFO - Query: b"SELECT SUM(es_totalestoque) FROM domrock.estoque WHERE produto = 'Chapa'"
+2025-12-02 11:13:36,080 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 11:15:15,306 - INFO - Query: b"\n            SELECT produto, SUM(zs_peso_liquido) as total \n            FROM domrock.vendas WHERE zs_cidade = 'Aruja' \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 3\n        "
+2025-12-02 11:15:15,759 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 11:19:29,637 - INFO - Inicializando NlpEngine Blindada...
+2025-12-02 11:19:37,361 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-02 12:30:59,071 - INFO - Query executada: b'\n            SELECT produto, SUM(zs_peso_liquido) as total \n            FROM domrock.vendas  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 3\n        '
+2025-12-02 12:30:59,730 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 12:31:06,141 - INFO - Query executada: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'cidade de S\xc3\xa3o Paulo'"
+2025-12-02 12:31:06,609 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 12:31:20,840 - INFO - Query executada: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'Aruja'"
+2025-12-02 12:31:21,312 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 12:31:28,970 - INFO - Query executada: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'Curitiba'"
+2025-12-02 12:31:29,433 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 12:31:39,022 - INFO - Query executada: b"SELECT SUM(es_totalestoque) FROM domrock.estoque WHERE produto ILIKE 'Bobina'"
+2025-12-02 12:31:39,505 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 12:31:46,675 - INFO - Query executada: b"SELECT SUM(es_totalestoque) FROM domrock.estoque WHERE produto ILIKE 'Chapa'"
+2025-12-02 12:31:47,141 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 12:31:58,064 - INFO - Intenção não identificada pela NlpEngine.
+2025-12-02 12:32:04,687 - INFO - Intenção não identificada pela NlpEngine.
+2025-12-02 12:32:13,532 - INFO - Query executada: b'\n            SELECT produto, SUM(zs_peso_liquido) as total \n            FROM domrock.vendas  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 3\n        '
+2025-12-02 12:32:14,006 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 12:32:23,992 - INFO - Query executada: b"\n            SELECT produto, SUM(zs_peso_liquido) as total \n            FROM domrock.vendas WHERE zs_cidade ILIKE 'Aruja' \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 3\n        "
+2025-12-02 12:32:24,453 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 12:32:35,208 - INFO - Query executada: b'\n            SELECT produto, SUM(es_totalestoque) as total \n            FROM domrock.estoque  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 50\n        '
+2025-12-02 12:32:35,661 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-02 12:32:42,680 - INFO - Query executada: b'\n            SELECT produto, SUM(zs_peso_liquido) as total \n            FROM domrock.vendas  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 5\n        '
+2025-12-02 12:32:43,135 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 12:32:55,692 - INFO - Query executada: b'\n            SELECT produto, SUM(zs_peso_liquido) as total \n            FROM domrock.vendas  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 3\n        '
+2025-12-02 12:32:56,160 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-02 12:32:59,918 - INFO - Query executada: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE cod_cliente = '10179'"
+2025-12-02 12:33:00,395 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-02 12:33:12,440 - INFO - Query executada: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE cod_cliente = '04967'"
+2025-12-02 12:33:12,908 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-02 12:33:23,616 - INFO - Query executada: b"SELECT SUM(es_totalestoque) FROM domrock.estoque WHERE produto ILIKE 'Chapa'"
+2025-12-02 12:33:24,081 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-02 12:33:31,054 - INFO - Query executada: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'Pompeia'"
+2025-12-02 12:33:31,529 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-02 12:33:44,299 - INFO - Query executada: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE produto ILIKE 'Chapa' AND zs_cidade ILIKE 'Pompeia'"
+2025-12-02 12:33:44,764 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-02 12:33:52,545 - INFO - Query executada: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE produto ILIKE 'Rolo' AND zs_cidade ILIKE 'Pompeia'"
+2025-12-02 12:33:53,027 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-02 12:34:04,565 - INFO - Query executada: b"SELECT SUM(zs_peso_liquido) FROM domrock.vendas WHERE zs_cidade ILIKE 'Arauja'"
+2025-12-02 12:34:05,041 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-02 12:34:10,659 - INFO - Pergunta classificada como FORA_DE_ESCOPO.
+2025-12-02 13:08:31,362 - INFO - Query executada: b'\n            SELECT produto, SUM(es_totalestoque) as total \n            FROM domrock.estoque  \n            GROUP BY produto \n            ORDER BY total DESC LIMIT 3\n        '
+2025-12-02 13:08:31,937 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-03 14:33:30,379 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 14:33:39,126 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 14:34:39,300 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 14:34:45,122 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 14:34:54,331 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 14:35:00,037 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 14:35:06,132 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 14:35:12,113 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 14:35:19,915 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 14:35:27,776 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 14:35:47,167 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 14:35:55,202 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 14:37:52,749 - INFO - Retentando query sem acentos...
+2025-12-03 14:37:53,065 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:37:54,525 - INFO - Retentando query sem acentos...
+2025-12-03 14:37:54,838 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:38:00,015 - INFO - Retentando query sem acentos...
+2025-12-03 14:38:00,323 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:38:09,983 - INFO - Consulta para a intenção FILTRO_DATA foi bem-sucedida.
+2025-12-03 14:38:29,914 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:39:10,468 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:41:09,140 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 14:41:14,998 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 14:41:16,450 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:41:22,041 - INFO - Retentando query sem acentos...
+2025-12-03 14:41:22,358 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:41:29,306 - INFO - Consulta para a intenção FILTRO_DATA foi bem-sucedida.
+2025-12-03 14:42:31,290 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 14:42:38,849 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 14:43:05,826 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:43:15,321 - INFO - Retentando query sem acentos...
+2025-12-03 14:43:15,635 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:43:32,920 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 14:43:38,450 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 14:43:50,955 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 14:43:56,944 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 14:44:01,457 - INFO - Retentando query sem acentos...
+2025-12-03 14:44:01,767 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:44:08,740 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:47:56,077 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:48:06,243 - INFO - Retentando query sem acentos...
+2025-12-03 14:48:06,997 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:48:19,468 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 14:48:37,014 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:01:59,381 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:02:15,636 - INFO - Retentando query sem acentos...
+2025-12-03 15:02:16,117 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:02:28,817 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-03 15:02:44,821 - INFO - Retentando query sem acentos...
+2025-12-03 15:02:45,111 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:02:54,723 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:03:08,667 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:03:44,837 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 15:03:50,868 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 15:04:00,354 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 15:04:08,196 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 15:04:25,000 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 15:04:32,679 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 15:04:34,100 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:04:35,488 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:04:45,908 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:05:04,587 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:05:11,232 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:05:17,566 - INFO - Retentando query sem acentos...
+2025-12-03 15:05:17,860 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:05:32,972 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 15:05:39,716 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 15:05:42,996 - INFO - Retentando query sem acentos...
+2025-12-03 15:05:43,294 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:06:14,899 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:06:21,257 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:09:47,165 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:09:53,526 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:10:00,250 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:10:05,357 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:10:19,783 - INFO - Intenção não identificada pela NlpEngine.
+2025-12-03 15:10:30,895 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:17:49,286 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 15:17:57,548 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 15:18:00,337 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:18:06,099 - INFO - Intenção não identificada pela NlpEngine.
+2025-12-03 15:18:17,450 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:18:24,096 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:18:44,210 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:18:50,240 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:19:01,771 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:19:11,570 - INFO - Retentando query sem acentos...
+2025-12-03 15:19:11,858 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 15:19:31,034 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 15:19:39,109 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 15:26:09,539 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:26:17,945 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:29:51,948 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 15:29:57,690 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 15:30:14,094 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 15:30:22,494 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 15:31:58,116 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 15:32:05,039 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 15:32:08,264 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:32:20,330 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:32:28,734 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:34:26,547 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 15:34:32,123 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 15:34:53,173 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:35:08,169 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-03 15:35:24,618 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:35:36,620 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 15:35:46,816 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-12-03 15:35:54,177 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-12-03 15:36:05,234 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 15:36:16,007 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 15:36:23,717 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 15:37:05,224 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 15:37:13,362 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 15:37:49,087 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-03 15:38:07,167 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-03 15:38:32,339 - ERROR - Erro SQL: could not translate host name "ep-rough-moon-aeexv2d7-pooler.c-2.us-east-2.aws.neon.tech" to address: Name or service not known
+
+2025-12-03 15:38:32,340 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-03 15:38:41,122 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-03 16:03:42,516 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-03 16:03:52,236 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-03 16:03:58,725 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-03 16:04:20,970 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 16:04:37,408 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-03 16:04:48,796 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.
+2025-12-03 16:05:06,106 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-12-03 16:05:13,220 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-12-03 16:05:29,418 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-03 16:06:13,381 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:06:21,247 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 16:06:36,359 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:06:43,803 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 16:15:17,983 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-03 16:15:57,483 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:16:05,651 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 16:27:53,937 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:28:02,732 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 16:28:19,741 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:28:27,360 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 16:29:31,224 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-03 16:29:41,240 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-03 16:30:01,042 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:30:06,683 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 16:30:12,898 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:30:18,474 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 16:30:24,614 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:30:30,169 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 16:30:38,473 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:30:46,562 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 16:31:03,782 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:31:11,898 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 16:35:24,923 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-03 16:35:28,223 - INFO - Retentando query sem acentos...
+2025-12-03 16:35:28,523 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 16:35:37,613 - INFO - Retentando query sem acentos...
+2025-12-03 16:35:37,912 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 16:35:46,668 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-03 16:35:56,205 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 16:36:02,753 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 16:36:13,843 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 16:36:21,868 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 16:36:27,046 - INFO - Retentando query sem acentos...
+2025-12-03 16:36:27,343 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 16:37:32,563 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 16:37:39,523 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-03 16:37:46,316 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-12-03 16:37:52,713 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-12-03 16:38:00,923 - INFO - Consulta para a intenção TOP_CIDADES_FATURAMENTO foi bem-sucedida.
+2025-12-03 16:38:19,844 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-03 16:38:31,591 - ERROR - Erro SQL: column "zs_cidade" does not exist
+LINE 1: ...T SUM(es_totalestoque) FROM domrock.estoque WHERE zs_cidade ...
+                                                             ^
+
+2025-12-03 16:38:31,598 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 16:38:35,514 - ERROR - Erro SQL: column "zs_cidade" does not exist
+LINE 1: ...T SUM(es_totalestoque) FROM domrock.estoque WHERE zs_cidade ...
+                                                             ^
+
+2025-12-03 16:38:35,515 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 16:38:42,427 - ERROR - Erro SQL: column "zs_cidade" does not exist
+LINE 1: ...T SUM(es_totalestoque) FROM domrock.estoque WHERE zs_cidade ...
+                                                             ^
+
+2025-12-03 16:38:42,427 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 16:38:46,969 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 16:38:53,948 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 16:39:01,541 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 16:39:09,539 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 16:39:16,788 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:39:30,560 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:39:38,333 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:39:48,001 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:40:01,239 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:40:09,112 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:40:18,261 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 16:40:24,241 - INFO - Consulta para a intenção TOTAL_PRODUTOS_DISTINTOS foi bem-sucedida.
+2025-12-03 16:40:36,007 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:40:41,891 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:40:52,516 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:41:02,772 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:41:39,400 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:41:47,042 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:41:52,611 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 16:42:31,691 - INFO - Pergunta classificada como FORA_DE_ESCOPO.
+2025-12-03 16:56:22,600 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:56:28,796 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 16:56:46,264 - INFO - Inicializando NlpEngine Blindada...
+2025-12-03 16:56:54,335 - INFO - Chatbot inicializado com a nova NlpEngine Híbrida.
+2025-12-03 17:05:46,628 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 17:06:11,264 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 17:06:19,306 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 17:07:41,697 - INFO - Retentando query sem acentos...
+2025-12-03 17:07:41,991 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 17:07:49,968 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 17:07:59,401 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 17:08:11,468 - INFO - Consulta para a intenção FATURAMENTO_TOTAL foi bem-sucedida.
+2025-12-03 17:08:17,385 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 17:08:25,047 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 17:08:30,206 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 17:08:45,420 - INFO - Consulta para a intenção TOP_PRODUTOS_ESTOQUE foi bem-sucedida.
+2025-12-03 17:12:55,105 - INFO - Consulta para a intenção FATURAMENTO_POR_CLIENTE foi bem-sucedida.
+2025-12-03 17:13:01,301 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-12-03 17:13:14,459 - INFO - Consulta para a intenção TOP_CLIENTES_FATURAMENTO foi bem-sucedida.
+2025-12-03 17:13:21,121 - INFO - Consulta para a intenção TOP_PRODUTOS_VENDIDOS foi bem-sucedida.
+2025-12-03 17:13:28,116 - INFO - Consulta para a intenção FATURAMENTO_POR_CIDADE foi bem-sucedida.
+2025-12-03 17:13:33,323 - INFO - Consulta para a intenção TOTAL_PRODUTOS_DISTINTOS foi bem-sucedida.
+2025-12-03 17:15:59,778 - ERROR - Erro SQL: column "zs_cidade" does not exist
+LINE 1: ...T SUM(es_totalestoque) FROM domrock.estoque WHERE zs_cidade ...
+                                                             ^
+
+2025-12-03 17:15:59,780 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 17:16:05,724 - INFO - Consulta para a intenção TOTAL_ITENS_ESTOQUE foi bem-sucedida.
+2025-12-03 17:16:19,222 - INFO - Consulta para a intenção FATURAMENTO_POR_PRODUTO foi bem-sucedida.

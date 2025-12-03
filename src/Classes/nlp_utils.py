@@ -1,168 +1,209 @@
-import re
-import numpy as np
+import spacy
+from spacy.pipeline import EntityRuler
 import pandas as pd
+import numpy as np
+import re
 import unidecode
-import torch
 from sentence_transformers import SentenceTransformer, util
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from datetime import datetime, timedelta
 from .Intencao import Intencao
 from .logger import log_info, log_error
-
-def normalize_text(text: str) -> str:
-    if not text: return ""
-    text = text.lower()
-    text = unidecode.unidecode(text)
-    text = re.sub(r'[^a-z0-9\s/]', '', text).strip()
-    return re.sub(r'\s+', ' ', text)
-
-def extract_number(text: str, default: int = 5) -> int:
-    nums = re.findall(r'\d+', text)
-    return int(nums[0]) if nums else default
-
-def extract_date_range(norm_text: str) -> dict | None:
-    today = datetime.now().date()
-    if "hoje" in norm_text: return {"start_date": today.strftime("%Y-%m-%d"), "end_date": today.strftime("%Y-%m-%d")}
-    if "ontem" in norm_text:
-        yesterday = today - timedelta(days=1)
-        return {"start_date": yesterday.strftime("%Y-%m-%d"), "end_date": yesterday.strftime("%Y-%m-%d")}
-    if "semana passada" in norm_text:
-        last_week_end = today - timedelta(days=today.weekday() + 1)
-        last_week_start = last_week_end - timedelta(days=6)
-        return {"start_date": last_week_start.strftime("%Y-%m-%d"), "end_date": last_week_end.strftime("%Y-%m-%d")}
-    if "mes passado" in norm_text:
-        first_day_current_month = today.replace(day=1)
-        last_day_last_month = first_day_current_month - timedelta(days=1)
-        first_day_last_month = last_day_last_month.replace(day=1)
-        return {"start_date": first_day_last_month.strftime("%Y-%m-%d"), "end_date": last_day_last_month.strftime("%Y-%m-%d")}
-    match = re.search(r"(?:entre|de)\s+(\d{2}/\d{2}/\d{2,4})\s+(?:a|e)\s+(\d{2}/\d{2}/\d{2,4})", norm_text)
-    if match:
-        start_str, end_str = match.groups()
-        fmt = "%d/%m/%Y" if len(start_str.split('/')[2]) == 4 else "%d/%m/%y"
-        try:
-            start_date = datetime.strptime(start_str, fmt).date()
-            end_date = datetime.strptime(end_str, fmt).date()
-            return {"start_date": start_date.strftime("%Y-%m-%d"), "end_date": end_date.strftime("%Y-%m-%d")}
-        except ValueError: pass
-    return None
-
-FILTERS_CONFIG = [
-    {"type": "cliente", "regex": r"(?:do\s+cliente|para\s+o\s+cliente|cliente)\s+([0-9]+)(?=\s+e\s|$)", "db_column": "cod_cliente"},
-    {"type": "cidade", "regex": r"(?:na\s+cidade\s+de|da\s+cidade\s+de|para\s+a\s+cidade\s+de|cidade\s+de|na\s+cidade|cidade)\s+([a-zA-Z\s]+?)(?=\s+e\s|\s+do\s|\s+com\s|$)", "db_column": "zs_cidade"},
-    {"type": "produto", "regex": r"(?:do\s+produto|para\s+o\s+produto|produto|do|da|de)\s+([a-zA-Z0-9-]+)(?=\s|$)", "db_column": "produto"},
-]
-
-STOPWORDS = {
-    # Artigos
-    "a", "o", "as", "os", "um", "uma", "uns", "umas",
-    # Preposições
-    "de", "da", "do", "das", "dos", "em", "no", "na", "nos", "nas", "por", "para", "com", "sem", "sob", "sobre",
-    # Conjunções
-    "e", "ou", "mas", "se", "porque", "que", "quando", "como",
-    # Advérbios comuns
-    "mais", "muito", "ja", "ainda", "ontem", "hoje", "amanha",
-    # Verbos comuns
-    "é", "sao", "foi", "era", "estava", "tem", "tinha", "ter", "ha", "houve",
-    # Palavras-chave do domínio que não devem ser filtros
-    "itens", "total", "faturamento", "vendas", "valor", "cidade", "produto", "cliente", "clientes", "estoque"
-}
+from db import get_connection
 
 class NlpEngine:
     def __init__(self, csv_path="../csv/perguntas.csv", embed_model_name="all-MiniLM-L6-v2"):
-        log_info("Inicializando NlpEngine com sistema de score Híbrido e Stopwords...")
-        self.perguntas_df = self._load_and_process_csv(csv_path)
-        self.vectorizer, self.tfidf_vectors = self._build_tfidf_model()
-        self.embed_model, self.bert_embeddings = self._build_bert_model(embed_model_name)
-        self.rule_based_patterns = {
-            "out_of_scope": r"(nao faturado|cancelado|devolvido)",
-            "distinct": r"(distintos|diferentes|unicos)",
-        }
-        self.CONFIDENCE_THRESHOLD = 0.68
-        self.FALLBACK_THRESHOLD = 0.58 
-        log_info("NlpEngine Híbrida inicializada e pronta.")
+        log_info("Inicializando NlpEngine Blindada...")
+        self.perguntas_df = pd.read_csv(csv_path)
+        self._init_intent_models(embed_model_name)
+        self._init_spacy_pipeline()
 
-    def _load_and_process_csv(self, path):
+    def _init_intent_models(self, model_name):
+        self.embed_model = SentenceTransformer(model_name)
+        self.bert_embeddings = self.embed_model.encode(
+            self.perguntas_df['pergunta'].tolist(), convert_to_tensor=True
+        )
+        self.vectorizer = TfidfVectorizer()
+        self.tfidf_vectors = self.vectorizer.fit_transform(self.perguntas_df['pergunta'])
+        self.CONFIDENCE_THRESHOLD = 0.60 # Baixei um pouco para ser mais permissivo
+
+    def _init_spacy_pipeline(self):
         try:
-            df = pd.read_csv(path)
-            df.dropna(subset=['pergunta', 'intent'], inplace=True)
-            log_info(f"{len(df.index)} perguntas carregadas e processadas do CSV.")
-            df['pergunta_proc'] = df['pergunta'].apply(normalize_text)
-            return df
-        except Exception as e: log_error(f"Erro crítico ao carregar/processar CSV: {e}"); return pd.DataFrame()
+            self.nlp = spacy.load("pt_core_news_md")
+        except OSError:
+            from spacy.cli import download
+            download("pt_core_news_md")
+            self.nlp = spacy.load("pt_core_news_md")
 
-    def _build_tfidf_model(self):
-        if self.perguntas_df.empty: return None, None
-        try: vectorizer = TfidfVectorizer(); tfidf_vectors = vectorizer.fit_transform(self.perguntas_df['pergunta_proc']); return vectorizer, tfidf_vectors
-        except Exception as e: log_error(f"Erro ao construir modelo TF-IDF: {e}"); return None, None
+        if "entity_ruler" not in self.nlp.pipe_names:
+            ruler = self.nlp.add_pipe("entity_ruler", before="ner")
+            
+            # Padrões Estáticos
+            patterns = [
+                {"label": "PRODUTO_SKU", "pattern": [{"TEXT": {"REGEX": "^[A-Z]{2,}-\d{3,4}$"}}]},
+                {"label": "CLIENTE_ID", "pattern": [{"LOWER": {"IN": ["cliente", "id", "cod"]}}, {"IS_DIGIT": True}]},
+            ]
 
-    def _build_bert_model(self, model_name):
-        if self.perguntas_df.empty: return None, None
-        try: m = SentenceTransformer(model_name); embs = m.encode(self.perguntas_df['pergunta_proc'].tolist(), convert_to_tensor=True); return m, embs
-        except Exception as e: log_error(f"Erro crítico ao carregar modelo BERT: {e}"); return None, None
+            # Padrões Dinâmicos (Carregados do Banco)
+            db_patterns = self._load_entities_from_db()
+            patterns.extend(db_patterns)
+
+            ruler.add_patterns(patterns)
+
+    def _load_entities_from_db(self) -> list:
+        patterns = []
+        try:
+            with get_connection() as conn:
+                with conn.cursor() as cursor:
+                    # --- CARREGAR CIDADES ---
+                    cursor.execute("SELECT DISTINCT zs_cidade FROM domrock.vendas WHERE zs_cidade IS NOT NULL")
+                    cidades = {row[0] for row in cursor.fetchall()}
+                    
+                    for real_name in cidades:
+                        # TRUQUE: Divide "São Paulo" em ["São", "Paulo"] para criar tokens separados
+                        # Padrão Original
+                        tokens_original = [{"LOWER": t.lower()} for t in real_name.split()]
+                        patterns.append({"label": "LOC_DB", "pattern": tokens_original, "id": real_name})
+                        
+                        # Padrão Sem Acento (unidecode)
+                        no_acc = unidecode.unidecode(real_name)
+                        if no_acc != real_name:
+                            tokens_no_acc = [{"LOWER": t.lower()} for t in no_acc.split()]
+                            patterns.append({"label": "LOC_DB", "pattern": tokens_no_acc, "id": real_name})
+
+                    # --- CARREGAR PRODUTOS ---
+                    cursor.execute("SELECT DISTINCT produto FROM domrock.vendas WHERE produto IS NOT NULL")
+                    produtos = {row[0] for row in cursor.fetchall()}
+                    
+                    for real_prod in produtos:
+                        tokens_prod = [{"LOWER": t.lower()} for t in real_prod.split()]
+                        patterns.append({"label": "PRODUTO_DB", "pattern": tokens_prod, "id": real_prod})
+                        
+                        no_acc_prod = unidecode.unidecode(real_prod)
+                        if no_acc_prod != real_prod:
+                            tokens_no_acc_prod = [{"LOWER": t.lower()} for t in no_acc_prod.split()]
+                            patterns.append({"label": "PRODUTO_DB", "pattern": tokens_no_acc_prod, "id": real_prod})
+
+        except Exception as e:
+            log_error(f"Erro ao carregar entidades: {e}")
+        
+        return patterns
+
+    def extract_entities(self, text: str) -> list:
+        doc = self.nlp(text)
+        filters = []
+        
+        # === ETAPA 1: Processa as Entidades (spacy + regras + regex) ===
+        for ent in doc.ents:
+            # 1. Match Exato do Banco
+            if ent.label_ == "PRODUTO_DB":
+                filters.append({"type": "produto", "column": "produto", "value": ent.ent_id_})
+            elif ent.label_ == "LOC_DB":
+                filters.append({"type": "cidade", "column": "zs_cidade", "value": ent.ent_id_})
+            
+            # 2. Padrões Regex (SKU/Cliente)
+            elif ent.label_ == "PRODUTO_SKU":
+                filters.append({"type": "produto", "column": "sku", "value": ent.text})
+            elif ent.label_ == "CLIENTE_ID":
+                nums = [t.text for t in ent if t.is_digit]
+                if nums: filters.append({"type": "cliente", "column": "cod_cliente", "value": nums[0]})
+
+            # 3. Fallback Genérico para Cidades
+            elif ent.label_ in ["LOC", "GPE"] and "cidade" not in [f['type'] for f in filters]:
+                raw_val = ent.text
+                trash_prefixes = ["na ", "no ", "em ", "de ", "do ", "da ", "para ", "a ", "o ", "as ", "os ", "cidade ", "municipio ", "estado "]
+                clean_val = raw_val.strip()
+                while True:
+                    original_val = clean_val
+                    for prefix in trash_prefixes:
+                        if clean_val.lower().startswith(prefix):
+                            clean_val = clean_val[len(prefix):].strip()
+                    if clean_val == original_val: break
+                
+                filters.append({"type": "cidade", "column": "zs_cidade", "value": clean_val})
+
+        # === ETAPA 2: Fallback para Produtos Desconhecidos ===
+        
+        has_product = any(f['type'] == 'produto' for f in filters)
+        
+        if not has_product:
+            # Captura tudo depois de "estoque de", "venda de", "produto"
+            match = re.search(r'(?:estoque|vendas?|faturamento|produto)\s+(?:de|do|da|dos|das|para)\s+(.+)', text, re.IGNORECASE)
+            
+            if match:
+                candidate = match.group(1).strip().replace("?", "")
+                
+                # === CORREÇÃO AQUI ===
+                # Verifica se esse "candidato a produto" não é na verdade um cliente ou cidade que JÁ achamos.
+                # Ex: se achamos cliente '10179', e o candidato é 'cliente 10179', isso é redundante.
+                is_redundant = False
+                for f in filters:
+                    # Se o valor do filtro (ex: "10179") está dentro do texto candidato (ex: "cliente 10179")
+                    if str(f['value']).lower() in candidate.lower():
+                        is_redundant = True
+                        break
+                
+                # Só adiciona se NÃO for redundante
+                if not is_redundant and len(candidate) > 1:
+                    filters.append({"type": "produto", "column": "produto", "value": candidate})
+
+        return filters
+
+    def _extract_number(self, text: str) -> int:
+        match = re.search(r'\b(\d+)\b', text)
+        return int(match.group(1)) if match else 5
 
     def predict_components(self, user_question: str) -> dict:
-        raw_question = user_question.lower()
-        norm_question = normalize_text(raw_question)
-        
-        components = {"intent": Intencao.DESCONHECIDO, "modifiers": {}, "filters": [], "n_top": extract_number(norm_question)}
-
-        if re.search(self.rule_based_patterns["out_of_scope"], norm_question): components["intent"] = Intencao.FORA_DE_ESCOPO; return components
-        if re.search(self.rule_based_patterns["distinct"], norm_question): components["modifiers"]["distinct"] = True
-
-        date_range = extract_date_range(raw_question)
-        if date_range:
-            components["filters"].append({"type": "date_range", "value": date_range})
-
-        for filt_config in FILTERS_CONFIG:
-            match = re.search(filt_config["regex"], norm_question)
-            if match:
-                value = match.group(1).strip()
-                value_words = set(value.split())
-                if not value_words.isdisjoint(STOPWORDS):
-                    continue
+            components = {"intent": Intencao.DESCONHECIDO, "filters": [], "n_top": 5}
+            
+            # 1. Extração de Entidades e Números
+            components["filters"] = self.extract_entities(user_question)
+            components["n_top"] = self._extract_number(user_question)
+            
+            # 2. Classificação Padrão (BERT + TFIDF)
+            q_emb = self.embed_model.encode(user_question, convert_to_tensor=True)
+            bert_sims = util.cos_sim(q_emb, self.bert_embeddings)[0].cpu().numpy()
+            q_vec = self.vectorizer.transform([user_question])
+            tfidf_sims = cosine_similarity(q_vec, self.tfidf_vectors)[0]
+            
+            combined_sims = (bert_sims * 0.7) + (tfidf_sims * 0.3)
+            best_idx = np.argmax(combined_sims)
+            
+            # Define a intenção baseada na IA
+            if combined_sims[best_idx] > self.CONFIDENCE_THRESHOLD:
+                intent_str = self.perguntas_df.iloc[best_idx]['intent']
+                components["intent"] = Intencao[intent_str]
+            
+            # ====================================================================
+            # 3. REGRAS DE DESEMPATE (AQUI CORRIGIMOS O "TOP 3 PRODUTOS")
+            # ====================================================================
+            
+            text = user_question.lower()
+            
+            # Se for uma pergunta de RANKING (tem "top", "mais", "maiores" ou número detectado)
+            is_ranking = "top" in text or "mais" in text or "maior" in text or "melhor" in text
+            
+            if is_ranking:
+                # Se falou "produto", "mercadoria", "item" -> Força Produto
+                if any(w in text for w in ["produto", "mercadoria", "item", "itens"]):
+                    if "estoque" in text:
+                        components["intent"] = Intencao.TOP_PRODUTOS_ESTOQUE
+                    else:
+                        # Assume "Vendidos/Faturados" se não falou estoque
+                        components["intent"] = Intencao.TOP_PRODUTOS_VENDIDOS
                 
-                if filt_config['type'] == 'produto' and any(f.get('type') == 'cidade' and value in f['value'] for f in components['filters']):
-                    continue
-                
-                components["filters"].append({"type": filt_config["type"], "column": filt_config["db_column"], "value": value})
-
-        intent, score = self._find_intent_by_similarity(norm_question)
-        components["intent"] = intent
-
-        if intent == Intencao.FILTRO_DATA and len(components["filters"]) > 1:
-            components["intent"] = Intencao.FATURAMENTO_TOTAL
-
-        log_info(f"Componentes Finais: {components} (Score: {score:.4f})")
-        return components
-
-    def _find_intent_by_similarity(self, question_proc: str, allowed_intents: list = None) -> tuple[Intencao, float]:
-        if not question_proc or self.perguntas_df.empty: return Intencao.DESCONHECIDO, 0.0
-
-        df = self.perguntas_df
-        bert_embeddings = self.bert_embeddings
-        tfidf_vectors = self.tfidf_vectors
+                # Se falou "cliente" -> Força Cliente
+                elif "cliente" in text:
+                    components["intent"] = Intencao.TOP_CLIENTES_FATURAMENTO
+                    
+                # Se falou "cidade" -> Força Cidade
+                elif "cidade" in text or "regiao" in text:
+                    components["intent"] = Intencao.TOP_CIDADES_FATURAMENTO
         
-        q_emb = self.embed_model.encode(question_proc, convert_to_tensor=True)
-        bert_sims = util.cos_sim(q_emb, bert_embeddings)[0]
-        bert_score = torch.max(bert_sims).item()
+            elif components["intent"] == Intencao.DESCONHECIDO and len(components["filters"]) > 0:
+                types = [f['type'] for f in components['filters']]
+                if 'cidade' in types: components["intent"] = Intencao.FATURAMENTO_POR_CIDADE
+                elif 'produto' in types: components["intent"] = Intencao.FATURAMENTO_POR_PRODUTO
+                elif 'cliente' in types: components["intent"] = Intencao.FATURAMENTO_POR_CLIENTE
 
-        q_vec = self.vectorizer.transform([question_proc])
-        tfidf_sims = cosine_similarity(q_vec, tfidf_vectors)[0]
-        tfidf_score = np.max(tfidf_sims)
-
-        combined_score = (bert_score * 0.8) + (float(tfidf_score) * 0.2)
-        
-        if combined_score > self.CONFIDENCE_THRESHOLD:
-            best_match_idx = torch.argmax(bert_sims).item() if bert_score >= tfidf_score else np.argmax(tfidf_sims).item()
-        elif combined_score > self.FALLBACK_THRESHOLD:
-            log_info(f"Usando Fallback de Embeddings. Score: {combined_score:.4f}")
-            best_match_idx = torch.argmax(bert_sims).item()
-        else:
-            return Intencao.DESCONHECIDO, combined_score
-
-        original_index = df.index[best_match_idx]
-        matched_row = self.perguntas_df.loc[original_index]
-        intent_str = matched_row['intent']
-        try: return Intencao[intent_str], combined_score
-        except KeyError: log_error(f"Intent '{intent_str}' do CSV não é válida."); return Intencao.DESCONHECIDO, combined_score
+            return components
